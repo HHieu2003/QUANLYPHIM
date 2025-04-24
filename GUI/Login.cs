@@ -48,8 +48,9 @@ namespace GUI
                 }
                 else // VaiTro == "khach"
                 {
-                    MessageBox.Show("Tài khoản khách không được phép đăng nhập vào hệ thống!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
+                    /* MessageBox.Show("Tài khoản khách không được phép đăng nhập vào hệ thống!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                     return;*/
+                    mainForm = new frmMain(nguoiDung.MaNguoiDung, nguoiDung.TenDangNhap);
                 }
 
                 this.Hide();

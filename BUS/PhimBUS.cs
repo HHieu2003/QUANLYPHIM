@@ -20,7 +20,37 @@ namespace BUS
             }
         }
 
-     
+        public static List<Phim> LayTheoTheLoai(string maTheLoai)
+        {
+            if (string.IsNullOrEmpty(maTheLoai))
+                throw new Exception("Mã thể loại không được để trống!");
+
+            try
+            {
+                var phimList = PhimDAL.LayTatCa();
+                return phimList.Where(p => p.MaTheLoai == maTheLoai).ToList();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Lỗi khi lấy danh sách phim theo thể loại {maTheLoai}: {ex.Message}");
+            }
+        }
+
+        public static List<Phim> TimKiem(string keyword)
+        {
+            if (string.IsNullOrEmpty(keyword))
+                throw new Exception("Từ khóa tìm kiếm không được để trống!");
+
+            try
+            {
+                var phimList = PhimDAL.LayTatCa();
+                return phimList.Where(p => p.TenPhim.ToLower().Contains(keyword.ToLower())).ToList();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Lỗi khi tìm kiếm phim với từ khóa '{keyword}': {ex.Message}");
+            }
+        }
 
         public static void CapNhat(Phim obj)
         {
@@ -39,6 +69,7 @@ namespace BUS
                 throw new Exception("Mã phim đã tồn tại!");
             PhimDAL.Them(obj);
         }
+
         public static Phim LayTheoMa(string maPhim)
         {
             if (string.IsNullOrEmpty(maPhim))

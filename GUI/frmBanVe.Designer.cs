@@ -46,6 +46,7 @@ namespace GUI
             this.pnlHeader = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.pnlMain = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.lblMaKhachHang = new System.Windows.Forms.Label();
             this.txtMaKhachHang = new System.Windows.Forms.TextBox();
             this.lblHoTen = new System.Windows.Forms.Label();
@@ -69,6 +70,7 @@ namespace GUI
             this.btnThanhToan = new System.Windows.Forms.Button();
             this.btnInHoaDon = new System.Windows.Forms.Button();
             this.txtHoaDon = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
             this.pnlHeader.SuspendLayout();
             this.pnlMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDoAn)).BeginInit();
@@ -101,6 +103,8 @@ namespace GUI
             // pnlMain
             // 
             this.pnlMain.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.pnlMain.Controls.Add(this.button2);
+            this.pnlMain.Controls.Add(this.button1);
             this.pnlMain.Controls.Add(this.lblMaKhachHang);
             this.pnlMain.Controls.Add(this.txtMaKhachHang);
             this.pnlMain.Controls.Add(this.lblHoTen);
@@ -130,6 +134,16 @@ namespace GUI
             this.pnlMain.Name = "pnlMain";
             this.pnlMain.Size = new System.Drawing.Size(966, 530);
             this.pnlMain.TabIndex = 0;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(325, 13);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 28;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // lblMaKhachHang
             // 
@@ -409,6 +423,16 @@ namespace GUI
             this.txtHoaDon.Size = new System.Drawing.Size(526, 424);
             this.txtHoaDon.TabIndex = 25;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(347, 120);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(53, 52);
+            this.button2.TabIndex = 29;
+            this.button2.Text = "button2";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // frmBanVe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -426,5 +450,8 @@ namespace GUI
             this.ResumeLayout(false);
 
         }
+
+        private Button button1;
+        private Button button2;
     }
 }

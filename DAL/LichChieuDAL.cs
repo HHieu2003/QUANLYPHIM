@@ -10,90 +10,112 @@ namespace DAL
         public static List<LichChieu> LayTatCa()
         {
             List<LichChieu> list = new List<LichChieu>();
-            conn.Open();
-            SqlCommand cmd = new SqlCommand("SELECT * FROM LichChieu", conn);
-            SqlDataReader reader = cmd.ExecuteReader();
-            while (reader.Read())
+            using (SqlConnection conn = GetConnection())
             {
-                list.Add(new LichChieu
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("SELECT * FROM LichChieu", conn);
+                using (SqlDataReader reader = cmd.ExecuteReader())
                 {
-                    MaLichChieu = reader["MaLichChieu"].ToString(),
-                    MaPhim = reader["MaPhim"].ToString(),
-                    MaPhong = reader["MaPhong"].ToString(),
-                    GioBatDau = (DateTime)reader["GioBatDau"],
-                    GiaVe = (decimal)reader["GiaVe"]
-                });
+                    while (reader.Read())
+                    {
+                        list.Add(new LichChieu
+                        {
+                            MaLichChieu = reader["MaLichChieu"].ToString(),
+                            MaPhim = reader["MaPhim"].ToString(),
+                            MaPhong = reader["MaPhong"].ToString(),
+                            GioBatDau = Convert.ToDateTime(reader["GioBatDau"]),
+                            GiaVe = Convert.ToDecimal(reader["GiaVe"])
+                        });
+                    }
+                }
             }
-            conn.Close();
             return list;
         }
 
         public static LichChieu LayTheoMa(string maLichChieu)
         {
-            LichChieu lichChieu = null;
-            try
+            if (string.IsNullOrEmpty(maLichChieu))
+                throw new ArgumentException("Mã lịch chiếu không được để trống!");
+
+            using (SqlConnection conn = GetConnection())
             {
                 conn.Open();
                 SqlCommand cmd = new SqlCommand("SELECT * FROM LichChieu WHERE MaLichChieu = @MaLichChieu", conn);
                 cmd.Parameters.AddWithValue("@MaLichChieu", maLichChieu);
-                SqlDataReader reader = cmd.ExecuteReader();
-                if (reader.Read())
+                using (SqlDataReader reader = cmd.ExecuteReader())
                 {
-                    lichChieu = new LichChieu
+                    if (reader.Read())
                     {
-                        MaLichChieu = reader["MaLichChieu"].ToString(),
-                        MaPhim = reader["MaPhim"].ToString(),
-                        MaPhong = reader["MaPhong"].ToString(),
-                        GioBatDau = (DateTime)reader["GioBatDau"],
-                        GiaVe = Convert.ToDecimal(reader["GiaVe"])
-                    };
+                        return new LichChieu
+                        {
+                            MaLichChieu = reader["MaLichChieu"].ToString(),
+                            MaPhim = reader["MaPhim"].ToString(),
+                            MaPhong = reader["MaPhong"].ToString(),
+                            GioBatDau = Convert.ToDateTime(reader["GioBatDau"]),
+                            GiaVe = Convert.ToDecimal(reader["GiaVe"])
+                        };
+                    }
+                    return null;
                 }
-                reader.Close();
             }
-            catch (Exception ex)
-            {
-                throw new Exception("Lỗi khi lấy thông tin lịch chiếu: " + ex.Message);
-            }
-            finally
-            {
-                conn.Close();
-            }
-            return lichChieu;
         }
 
         public static void Them(LichChieu obj)
         {
-            conn.Open();
-            SqlCommand cmd = new SqlCommand("INSERT INTO LichChieu (MaLichChieu, MaPhim, MaPhong, GioBatDau, GiaVe) VALUES (@MaLichChieu, @MaPhim, @MaPhong, @GioBatDau, @GiaVe)", conn);
-            cmd.Parameters.AddWithValue("@MaLichChieu", obj.MaLichChieu);
-            cmd.Parameters.AddWithValue("@MaPhim", obj.MaPhim);
-            cmd.Parameters.AddWithValue("@MaPhong", obj.MaPhong);
-            cmd.Parameters.AddWithValue("@GioBatDau", obj.GioBatDau);
-            cmd.Parameters.AddWithValue("@GiaVe", obj.GiaVe);
-            cmd.ExecuteNonQuery();
-            conn.Close();
+            if (obj == null)
+                throw new ArgumentNullException(nameof(obj));
+            if (string.IsNullOrEmpty(obj.MaLichChieu))
+                throw new ArgumentException("Mã lịch chiếu không được để trống!");
+
+            using (SqlConnection conn = GetConnection())
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(
+                    "INSERT INTO LichChieu (MaLichChieu, MaPhim, MaPhong, GioBatDau, GiaVe) VALUES (@MaLichChieu, @MaPhim, @MaPhong, @GioBatDau, @GiaVe)",
+                    conn);
+                cmd.Parameters.AddWithValue("@MaLichChieu", obj.MaLichChieu);
+                cmd.Parameters.AddWithValue("@MaPhim", obj.MaPhim);
+                cmd.Parameters.AddWithValue("@MaPhong", obj.MaPhong);
+                cmd.Parameters.AddWithValue("@GioBatDau", obj.GioBatDau);
+                cmd.Parameters.AddWithValue("@GiaVe", obj.GiaVe);
+                cmd.ExecuteNonQuery();
+            }
         }
 
         public static void CapNhat(LichChieu obj)
         {
-            conn.Open();
-            SqlCommand cmd = new SqlCommand("UPDATE LichChieu SET MaPhim=@MaPhim, MaPhong=@MaPhong, GioBatDau=@GioBatDau, GiaVe=@GiaVe WHERE MaLichChieu=@MaLichChieu", conn);
-            cmd.Parameters.AddWithValue("@MaLichChieu", obj.MaLichChieu);
-            cmd.Parameters.AddWithValue("@MaPhim", obj.MaPhim);
-            cmd.Parameters.AddWithValue("@MaPhong", obj.MaPhong);
-            cmd.Parameters.AddWithValue("@GioBatDau", obj.GioBatDau);
-            cmd.Parameters.AddWithValue("@GiaVe", obj.GiaVe);
-            cmd.ExecuteNonQuery();
-            conn.Close();
+            if (obj == null)
+                throw new ArgumentNullException(nameof(obj));
+            if (string.IsNullOrEmpty(obj.MaLichChieu))
+                throw new ArgumentException("Mã lịch chiếu không được để trống!");
+
+            using (SqlConnection conn = GetConnection())
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(
+                    "UPDATE LichChieu SET MaPhim = @MaPhim, MaPhong = @MaPhong, GioBatDau = @GioBatDau, GiaVe = @GiaVe WHERE MaLichChieu = @MaLichChieu",
+                    conn);
+                cmd.Parameters.AddWithValue("@MaLichChieu", obj.MaLichChieu);
+                cmd.Parameters.AddWithValue("@MaPhim", obj.MaPhim);
+                cmd.Parameters.AddWithValue("@MaPhong", obj.MaPhong);
+                cmd.Parameters.AddWithValue("@GioBatDau", obj.GioBatDau);
+                cmd.Parameters.AddWithValue("@GiaVe", obj.GiaVe);
+                cmd.ExecuteNonQuery();
+            }
         }
 
         public static void Xoa(string id)
         {
-            conn.Open();
-            SqlCommand cmd = new SqlCommand("DELETE FROM LichChieu WHERE MaLichChieu = @id", conn);
-            cmd.Parameters.AddWithValue("@id", id);
-            cmd.ExecuteNonQuery();
-            conn.Close();
+            if (string.IsNullOrEmpty(id))
+                throw new ArgumentException("Mã lịch chiếu không được để trống!");
+
+            using (SqlConnection conn = GetConnection())
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("DELETE FROM LichChieu WHERE MaLichChieu = @id", conn);
+                cmd.Parameters.AddWithValue("@id", id);
+                cmd.ExecuteNonQuery();
+            }
         }
     }
 }

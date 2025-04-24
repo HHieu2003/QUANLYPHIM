@@ -124,7 +124,24 @@ CREATE TABLE BaoCao (
     NguoiTao NVARCHAR(10) NULL,
     FOREIGN KEY (NguoiTao) REFERENCES NguoiDung(MaNguoiDung) ON DELETE SET NULL
 );
+CREATE TABLE GiaoDich (
+    MaGiaoDich NVARCHAR(50) PRIMARY KEY,
+    MaXacNhan NVARCHAR(10) NOT NULL UNIQUE,
+    MaKhachHang NVARCHAR(10) NOT NULL,
+    MaDonHang NVARCHAR(10) NULL, -- Có thể null nếu không mua đồ ăn
+    NgayGiaoDich DATETIME NOT NULL,
+    TongTien DECIMAL(18, 2) NOT NULL,
+    FOREIGN KEY (MaKhachHang) REFERENCES KhachHang(MaKhachHang),
+    FOREIGN KEY (MaDonHang) REFERENCES DonHang(MaDonHang)
+);
+ALTER TABLE GiaoDich
+ADD TrangThai NVARCHAR(20) DEFAULT 'ChuaXuLy' CHECK (TrangThai IN ('ChuaXuLy', 'DaXuLy'));
 
+ALTER TABLE Ve
+ADD MaGiaoDich NVARCHAR(50) NULL;
+
+ALTER TABLE Ve
+ADD CONSTRAINT FK_Ve_MaGiaoDich FOREIGN KEY (MaGiaoDich) REFERENCES GiaoDich(MaGiaoDich);
 STT | Form Tên | Quản lý đối tượng | Gọi từ BUS
 1 | frmNguoiDung | Người dùng | NguoiDungBUS
 2 | frmPhongChieu | Phòng chiếu | PhongChieuBUS

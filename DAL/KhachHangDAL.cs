@@ -10,164 +10,134 @@ namespace DAL
         public List<KhachHang> LayTatCa()
         {
             List<KhachHang> list = new List<KhachHang>();
-            try
+            using (SqlConnection conn = GetConnection())
             {
                 conn.Open();
                 SqlCommand cmd = new SqlCommand("SELECT * FROM KhachHang", conn);
-                SqlDataReader reader = cmd.ExecuteReader();
-                while (reader.Read())
+                using (SqlDataReader reader = cmd.ExecuteReader())
                 {
-                    list.Add(new KhachHang
+                    while (reader.Read())
                     {
-                        MaKhachHang = reader["MaKhachHang"].ToString(),
-                        HoTen = reader["HoTen"].ToString(),
-                        SoDienThoai = reader["SoDienThoai"].ToString(),
-                        Email = reader["Email"].ToString()
-                    });
+                        list.Add(new KhachHang
+                        {
+                            MaKhachHang = reader["MaKhachHang"].ToString(),
+                            HoTen = reader["HoTen"].ToString(),
+                            SoDienThoai = reader["SoDienThoai"].ToString(),
+                            Email = reader["Email"]?.ToString()
+                        });
+                    }
                 }
-                reader.Close();
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Lỗi khi lấy danh sách khách hàng: " + ex.Message);
-            }
-            finally
-            {
-                conn.Close();
             }
             return list;
         }
 
         public KhachHang LayTheoMa(string maKhachHang)
         {
-            KhachHang khachHang = null;
-            try
+            if (string.IsNullOrEmpty(maKhachHang))
+                throw new ArgumentException("Mã khách hàng không được để trống!");
+
+            using (SqlConnection conn = GetConnection())
             {
                 conn.Open();
                 SqlCommand cmd = new SqlCommand("SELECT * FROM KhachHang WHERE MaKhachHang = @MaKhachHang", conn);
                 cmd.Parameters.AddWithValue("@MaKhachHang", maKhachHang);
-                SqlDataReader reader = cmd.ExecuteReader();
-                if (reader.Read())
+                using (SqlDataReader reader = cmd.ExecuteReader())
                 {
-                    khachHang = new KhachHang
+                    if (reader.Read())
                     {
-                        MaKhachHang = reader["MaKhachHang"].ToString(),
-                        HoTen = reader["HoTen"].ToString(),
-                        SoDienThoai = reader["SoDienThoai"].ToString(),
-                        Email = reader["Email"].ToString()
-                    };
+                        return new KhachHang
+                        {
+                            MaKhachHang = reader["MaKhachHang"].ToString(),
+                            HoTen = reader["HoTen"].ToString(),
+                            SoDienThoai = reader["SoDienThoai"].ToString(),
+                            Email = reader["Email"]?.ToString()
+                        };
+                    }
+                    return null;
                 }
-                reader.Close();
             }
-            catch (Exception ex)
-            {
-                throw new Exception("Lỗi khi lấy thông tin khách hàng: " + ex.Message);
-            }
-            finally
-            {
-                conn.Close();
-            }
-            return khachHang;
         }
 
         public KhachHang TimKiemTheoSoDienThoai(string soDienThoai)
         {
-            KhachHang khachHang = null;
-            try
+            if (string.IsNullOrEmpty(soDienThoai))
+                throw new ArgumentException("Số điện thoại không được để trống!");
+
+            using (SqlConnection conn = GetConnection())
             {
                 conn.Open();
                 SqlCommand cmd = new SqlCommand("SELECT * FROM KhachHang WHERE SoDienThoai = @SoDienThoai", conn);
                 cmd.Parameters.AddWithValue("@SoDienThoai", soDienThoai);
-                SqlDataReader reader = cmd.ExecuteReader();
-                if (reader.Read())
+                using (SqlDataReader reader = cmd.ExecuteReader())
                 {
-                    khachHang = new KhachHang
+                    if (reader.Read())
                     {
-                        MaKhachHang = reader["MaKhachHang"].ToString(),
-                        HoTen = reader["HoTen"].ToString(),
-                        SoDienThoai = reader["SoDienThoai"].ToString(),
-                        Email = reader["Email"].ToString()
-                    };
+                        return new KhachHang
+                        {
+                            MaKhachHang = reader["MaKhachHang"].ToString(),
+                            HoTen = reader["HoTen"].ToString(),
+                            SoDienThoai = reader["SoDienThoai"].ToString(),
+                            Email = reader["Email"]?.ToString()
+                        };
+                    }
+                    return null;
                 }
-                reader.Close();
             }
-            catch (Exception ex)
-            {
-                throw new Exception("Lỗi khi tìm kiếm khách hàng theo số điện thoại: " + ex.Message);
-            }
-            finally
-            {
-                conn.Close();
-            }
-            return khachHang;
         }
 
         public void Them(KhachHang khachHang)
         {
-            try
+            if (khachHang == null)
+                throw new ArgumentNullException(nameof(khachHang));
+            if (string.IsNullOrEmpty(khachHang.MaKhachHang))
+                throw new ArgumentException("Mã khách hàng không được để trống!");
+
+            using (SqlConnection conn = GetConnection())
             {
                 conn.Open();
                 SqlCommand cmd = new SqlCommand(
                     "INSERT INTO KhachHang (MaKhachHang, HoTen, SoDienThoai, Email) VALUES (@MaKhachHang, @HoTen, @SoDienThoai, @Email)",
-                    conn
-                );
+                    conn);
                 cmd.Parameters.AddWithValue("@MaKhachHang", khachHang.MaKhachHang);
                 cmd.Parameters.AddWithValue("@HoTen", khachHang.HoTen);
                 cmd.Parameters.AddWithValue("@SoDienThoai", khachHang.SoDienThoai);
                 cmd.Parameters.AddWithValue("@Email", (object)khachHang.Email ?? DBNull.Value);
                 cmd.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Lỗi khi thêm khách hàng: " + ex.Message);
-            }
-            finally
-            {
-                conn.Close();
             }
         }
 
         public void CapNhat(KhachHang khachHang)
         {
-            try
+            if (khachHang == null)
+                throw new ArgumentNullException(nameof(khachHang));
+            if (string.IsNullOrEmpty(khachHang.MaKhachHang))
+                throw new ArgumentException("Mã khách hàng không được để trống!");
+
+            using (SqlConnection conn = GetConnection())
             {
                 conn.Open();
                 SqlCommand cmd = new SqlCommand(
                     "UPDATE KhachHang SET HoTen = @HoTen, SoDienThoai = @SoDienThoai, Email = @Email WHERE MaKhachHang = @MaKhachHang",
-                    conn
-                );
+                    conn);
                 cmd.Parameters.AddWithValue("@MaKhachHang", khachHang.MaKhachHang);
                 cmd.Parameters.AddWithValue("@HoTen", khachHang.HoTen);
                 cmd.Parameters.AddWithValue("@SoDienThoai", khachHang.SoDienThoai);
                 cmd.Parameters.AddWithValue("@Email", (object)khachHang.Email ?? DBNull.Value);
                 cmd.ExecuteNonQuery();
             }
-            catch (Exception ex)
-            {
-                throw new Exception("Lỗi khi cập nhật khách hàng: " + ex.Message);
-            }
-            finally
-            {
-                conn.Close();
-            }
         }
 
         public void Xoa(string maKhachHang)
         {
-            try
+            if (string.IsNullOrEmpty(maKhachHang))
+                throw new ArgumentException("Mã khách hàng không được để trống!");
+
+            using (SqlConnection conn = GetConnection())
             {
                 conn.Open();
                 SqlCommand cmd = new SqlCommand("DELETE FROM KhachHang WHERE MaKhachHang = @MaKhachHang", conn);
                 cmd.Parameters.AddWithValue("@MaKhachHang", maKhachHang);
                 cmd.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Lỗi khi xóa khách hàng: " + ex.Message);
-            }
-            finally
-            {
-                conn.Close();
             }
         }
     }

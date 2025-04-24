@@ -10,84 +10,109 @@ namespace DAL
         public static List<Ve> LayTatCa()
         {
             List<Ve> list = new List<Ve>();
+            using (SqlConnection conn = GetConnection())
+            {
+              conn.Open();
+                SqlCommand cmd = new SqlCommand("SELECT * FROM Ve", conn);
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        list.Add(new Ve
+                        {
+                            MaVe = reader["MaVe"].ToString(),
+
+                            MaLichChieu = reader["MaLichChieu"].ToString(),
+                            MaLoaiVe = reader["MaLoaiVe"].ToString(),
+                            MaKhachHang = reader["MaKhachHang"].ToString(),
+                            SoGhe = reader["SoGhe"].ToString(),
+                            NgayDat = reader["NgayDat"] != DBNull.Value
+                                ? Convert.ToDateTime(reader["NgayDat"])
+                                : default(DateTime)
+                        });
+                    }
+                }
+            }
+            return list;
+        }
+
+        public static void Them(Ve ve)
+        {
             try
             {
                 conn.Open();
-                SqlCommand cmd = new SqlCommand("SELECT * FROM Ve", conn);
+                SqlCommand cmd = new SqlCommand(
+                    "INSERT INTO Ve (MaVe, MaLichChieu, MaLoaiVe, MaKhachHang, SoGhe, NgayDat, MaGiaoDich) " +
+                    "VALUES (@MaVe, @MaLichChieu, @MaLoaiVe, @MaKhachHang, @SoGhe, @NgayDat, @MaGiaoDich)", conn);
+                cmd.Parameters.AddWithValue("@MaVe", ve.MaVe);
+                cmd.Parameters.AddWithValue("@MaLichChieu", ve.MaLichChieu);
+                cmd.Parameters.AddWithValue("@MaLoaiVe", ve.MaLoaiVe);
+                cmd.Parameters.AddWithValue("@MaKhachHang", ve.MaKhachHang);
+                cmd.Parameters.AddWithValue("@SoGhe", ve.SoGhe);
+                cmd.Parameters.AddWithValue("@NgayDat", ve.NgayDat);
+                cmd.Parameters.AddWithValue("@MaGiaoDich", (object)ve.MaGiaoDich ?? DBNull.Value);
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Lỗi khi thêm vé '{ve.MaVe}': {ex.Message}");
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+   
+
+        public static List<Ve> LayTheoGiaoDich(string maGiaoDich)
+        {
+            List<Ve> veList = new List<Ve>();
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("SELECT * FROM Ve WHERE MaGiaoDich = @MaGiaoDich", conn);
+                cmd.Parameters.AddWithValue("@MaGiaoDich", maGiaoDich);
                 SqlDataReader reader = cmd.ExecuteReader();
                 while (reader.Read())
                 {
-                    list.Add(new Ve
+                    Ve ve = new Ve
                     {
                         MaVe = reader["MaVe"].ToString(),
                         MaLichChieu = reader["MaLichChieu"].ToString(),
                         MaLoaiVe = reader["MaLoaiVe"].ToString(),
                         MaKhachHang = reader["MaKhachHang"].ToString(),
                         SoGhe = reader["SoGhe"].ToString(),
-                        NgayDat = reader["NgayDat"] != DBNull.Value
-                            ? Convert.ToDateTime(reader["NgayDat"])
-                            : default(DateTime)
-                    });
+                        NgayDat = Convert.ToDateTime(reader["NgayDat"]),
+                        MaGiaoDich = reader["MaGiaoDich"] != DBNull.Value ? reader["MaGiaoDich"].ToString() : null
+                    };
+                    veList.Add(ve);
                 }
-                reader.Close();
             }
             catch (Exception ex)
             {
-                throw new Exception("Lỗi khi lấy danh sách vé: " + ex.Message);
+                throw new Exception($"Lỗi khi lấy danh sách vé '{maGiaoDich}': {ex.Message}");
             }
             finally
             {
                 conn.Close();
             }
-            return list;
-        }
-
-
-        public static void Them(Ve obj)
-        {
-            try
-            {
-                conn.Open();
-                SqlCommand cmd = new SqlCommand("INSERT INTO Ve (MaVe, MaLichChieu, MaLoaiVe, MaKhachHang, SoGhe, NgayDat) VALUES (@MaVe, @MaLichChieu, @MaLoaiVe, @MaKhachHang, @SoGhe, @NgayDat)", conn);
-                cmd.Parameters.AddWithValue("@MaVe", obj.MaVe);
-                cmd.Parameters.AddWithValue("@MaLichChieu", obj.MaLichChieu);
-                cmd.Parameters.AddWithValue("@MaLoaiVe", obj.MaLoaiVe);
-                cmd.Parameters.AddWithValue("@MaKhachHang", obj.MaKhachHang);
-                cmd.Parameters.AddWithValue("@SoGhe", obj.SoGhe);
-                cmd.Parameters.AddWithValue("@NgayDat", obj.NgayDat == default(DateTime)
-                    ? (object)DBNull.Value
-                    : obj.NgayDat);
-                cmd.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Lỗi khi thêm vé: " + ex.Message);
-            }
-            finally
-            {
-                conn.Close();
-            }
+            return veList;
         }
 
         public static void Xoa(string id)
         {
-            try
+            if (string.IsNullOrEmpty(id))
+                throw new ArgumentException("Mã vé không được để trống!");
+
+            using (SqlConnection conn = GetConnection())
             {
                 conn.Open();
                 SqlCommand cmd = new SqlCommand("DELETE FROM Ve WHERE MaVe = @id", conn);
-                cmd.Parameters.AddWithValue("@id", id);
+                cmd.Parameters.AddWithValue("@id", Guid.Parse(id));
                 cmd.ExecuteNonQuery();
             }
-            catch (Exception ex)
-            {
-                throw new Exception("Lỗi khi xóa vé: " + ex.Message);
-            }
-            finally
-            {
-                conn.Close();
-            }
         }
-
         public static List<Ve> LayTheoLichChieu(string maLichChieu)
         {
             List<Ve> list = new List<Ve>();

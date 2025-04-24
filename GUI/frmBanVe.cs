@@ -423,7 +423,7 @@ namespace GUI
 
             hoaDon += $"\n\nTổng tiền: {(tongTienVe + tongTienDoAn):N0} VND\n{Environment.NewLine}{Environment.NewLine}";
             hoaDon += $"\nNgày đặt: {DateTime.Now:dd/MM/yyyy HH:mm:ss}\n\n{Environment.NewLine}{Environment.NewLine}";
-            hoaDon += "\nCảm ơn quý khách đã sử dụng dịch vụ!{Environment.NewLine}{Environment.NewLine}";
+            hoaDon += $"\nCảm ơn quý khách đã sử dụng dịch vụ!{Environment.NewLine}{Environment.NewLine}";
 
             txtHoaDon.Text = hoaDon;
         }
@@ -444,6 +444,33 @@ namespace GUI
         {
             var btn = (Button)sender;
             btn.BackColor = Color.FromArgb(26, 166, 154);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string maKhachHang = txtMaKhachHang.Text.Trim();
+            if (string.IsNullOrEmpty(maKhachHang))
+            {
+                MessageBox.Show("Vui lòng nhập thông tin khách hàng trước khi mua đồ ăn!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            using (var frm = new frmBanDoAn(maKhachHang))
+            {
+                if (frm.ShowDialog() == DialogResult.OK)
+                {
+                    MessageBox.Show("Đã đặt đồ ăn thành công! ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    TinhTongTien(); // Cập nhật lại tổng tiền trong frmBanVe nếu cần
+                }
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            using (var frm = new frmNhanVienXuLy())
+            {
+                frm.ShowDialog();
+            }
         }
     }
 }

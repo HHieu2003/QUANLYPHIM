@@ -18,7 +18,7 @@ namespace BUS
             }
             catch (Exception ex)
             {
-                throw new Exception("Lỗi khi lấy danh sách khách hàng: " + ex.Message);
+                throw new Exception($"Lỗi khi lấy danh sách khách hàng: {ex.Message}");
             }
         }
 
@@ -33,7 +33,7 @@ namespace BUS
             }
             catch (Exception ex)
             {
-                throw new Exception("Lỗi khi lấy thông tin khách hàng: " + ex.Message);
+                throw new Exception($"Lỗi khi lấy thông tin khách hàng với mã {maKhachHang}: {ex.Message}");
             }
         }
 
@@ -48,13 +48,25 @@ namespace BUS
             }
             catch (Exception ex)
             {
-                throw new Exception("Lỗi khi tìm kiếm khách hàng theo số điện thoại: " + ex.Message);
+                throw new Exception($"Lỗi khi tìm kiếm khách hàng với số điện thoại {soDienThoai}: {ex.Message}");
             }
         }
+        public static bool KiemTraTonTai(string maKhachHang)
+        {
+            if (string.IsNullOrEmpty(maKhachHang))
+                throw new Exception("Mã khách hàng không được để trống!");
 
+            try
+            {
+                return true ;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Lỗi khi kiểm tra khách hàng '{maKhachHang}': {ex.Message}");
+            }
+        }
         public static void Them(KhachHang khachHang)
         {
-            // Kiểm tra thông tin đầu vào
             if (string.IsNullOrEmpty(khachHang.MaKhachHang))
                 throw new Exception("Mã khách hàng không được để trống!");
 
@@ -70,10 +82,9 @@ namespace BUS
             if (!string.IsNullOrEmpty(khachHang.Email) && !Regex.IsMatch(khachHang.Email, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
                 throw new Exception("Email không đúng định dạng!");
 
-            // Kiểm tra mã khách hàng đã tồn tại
             var khachHangTonTai = khachHangDAL.LayTheoMa(khachHang.MaKhachHang);
             if (khachHangTonTai != null)
-                throw new Exception("Mã khách hàng đã tồn tại!");
+                throw new Exception($"Mã khách hàng {khachHang.MaKhachHang} đã tồn tại!");
 
             try
             {
@@ -81,13 +92,12 @@ namespace BUS
             }
             catch (Exception ex)
             {
-                throw new Exception("Lỗi khi thêm khách hàng: " + ex.Message);
+                throw new Exception($"Lỗi khi thêm khách hàng với mã {khachHang.MaKhachHang}: {ex.Message}");
             }
         }
 
         public static void CapNhat(KhachHang khachHang)
         {
-            // Kiểm tra thông tin đầu vào
             if (string.IsNullOrEmpty(khachHang.MaKhachHang))
                 throw new Exception("Mã khách hàng không được để trống!");
 
@@ -103,10 +113,9 @@ namespace BUS
             if (!string.IsNullOrEmpty(khachHang.Email) && !Regex.IsMatch(khachHang.Email, @"^[^@\s]+@[^@\s]+\.[^@\s]+$"))
                 throw new Exception("Email không đúng định dạng!");
 
-            // Kiểm tra khách hàng có tồn tại
             var khachHangTonTai = khachHangDAL.LayTheoMa(khachHang.MaKhachHang);
             if (khachHangTonTai == null)
-                throw new Exception("Khách hàng không tồn tại!");
+                throw new Exception($"Khách hàng với mã {khachHang.MaKhachHang} không tồn tại!");
 
             try
             {
@@ -114,7 +123,7 @@ namespace BUS
             }
             catch (Exception ex)
             {
-                throw new Exception("Lỗi khi cập nhật khách hàng: " + ex.Message);
+                throw new Exception($"Lỗi khi cập nhật khách hàng với mã {khachHang.MaKhachHang}: {ex.Message}");
             }
         }
 
@@ -123,10 +132,9 @@ namespace BUS
             if (string.IsNullOrEmpty(maKhachHang))
                 throw new Exception("Mã khách hàng không được để trống!");
 
-            // Kiểm tra khách hàng có tồn tại
             var khachHangTonTai = khachHangDAL.LayTheoMa(maKhachHang);
             if (khachHangTonTai == null)
-                throw new Exception("Khách hàng không tồn tại!");
+                throw new Exception($"Khách hàng với mã {maKhachHang} không tồn tại!");
 
             try
             {
@@ -134,7 +142,7 @@ namespace BUS
             }
             catch (Exception ex)
             {
-                throw new Exception("Lỗi khi xóa khách hàng: " + ex.Message);
+                throw new Exception($"Lỗi khi xóa khách hàng với mã {maKhachHang}: {ex.Message}");
             }
         }
     }

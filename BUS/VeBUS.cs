@@ -10,35 +10,110 @@ namespace BUS
     {
         public static List<Ve> LayTatCa()
         {
-            return VeDAL.LayTatCa();
+            try
+            {
+                return VeDAL.LayTatCa();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Lỗi khi lấy danh sách vé: {ex.Message}");
+            }
         }
 
         public static void Them(Ve obj)
         {
+            if (obj == null)
+                throw new Exception("Vé không được để trống!");
+            /*if (obj.MaVe == Guid.Empty)
+                throw new Exception("Mã vé không được để trống!");*/
+            if (string.IsNullOrEmpty(obj.MaLichChieu))
+                throw new Exception("Mã lịch chiếu không được để trống!");
+            if (string.IsNullOrEmpty(obj.MaLoaiVe))
+                throw new Exception("Mã loại vé không được để trống!");
+            if (string.IsNullOrEmpty(obj.MaKhachHang))
+                throw new Exception("Mã khách hàng không được để trống!");
+            if (string.IsNullOrEmpty(obj.SoGhe))
+                throw new Exception("Số ghế không được để trống!");
+
             var danhSach = VeDAL.LayTatCa();
             if (danhSach.Any(v => v.MaVe == obj.MaVe))
-                throw new Exception("Mã vé đã tồn tại!");
+                throw new Exception($"Mã vé {obj.MaVe} đã tồn tại!");
             if (danhSach.Any(v => v.MaLichChieu == obj.MaLichChieu && v.SoGhe == obj.SoGhe))
-                throw new Exception("Ghế này đã được đặt cho lịch chiếu này!");
-            VeDAL.Them(obj);
+                throw new Exception($"Ghế {obj.SoGhe} đã được đặt cho lịch chiếu này!");
+
+            try
+            {
+                VeDAL.Them(obj);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Lỗi khi thêm vé với mã {obj.MaVe}: {ex.Message}");
+            }
         }
 
         public static void Xoa(string id)
         {
-            VeDAL.Xoa(id);
+            if (string.IsNullOrEmpty(id))
+                throw new Exception("Mã vé không được để trống!");
+
+            try
+            {
+                VeDAL.Xoa(id);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Lỗi khi xóa vé với mã {id}: {ex.Message}");
+            }
         }
 
         public static List<Ve> LayTheoLichChieu(string maLichChieu)
         {
-            return VeDAL.LayTheoLichChieu(maLichChieu);
+            if (string.IsNullOrEmpty(maLichChieu))
+                throw new Exception("Mã lịch chiếu không được để trống!");
+
+            try
+            {
+                return VeDAL.LayTheoLichChieu(maLichChieu);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Lỗi khi lấy danh sách vé theo lịch chiếu {maLichChieu}: {ex.Message}");
+            }
         }
 
         public static decimal TinhGiaVe(string maLichChieu, string maLoaiVe)
         {
-            var lichChieu = LichChieuBUS.LayTatCa().FirstOrDefault(lc => lc.MaLichChieu == maLichChieu);
-            var loaiVe = LoaiVeBUS.LayTatCa().FirstOrDefault(lv => lv.MaLoaiVe == maLoaiVe);
-            if (lichChieu == null || loaiVe == null) return 0;
-            return lichChieu.GiaVe + loaiVe.PhuThu;
+            if (string.IsNullOrEmpty(maLichChieu))
+                throw new Exception("Mã lịch chiếu không được để trống!");
+            if (string.IsNullOrEmpty(maLoaiVe))
+                throw new Exception("Mã loại vé không được để trống!");
+
+            try
+            {
+                var lichChieu = LichChieuBUS.LayTheoMa(maLichChieu);
+                var loaiVe = LoaiVeBUS.LayTheoMa(maLoaiVe);
+                if (lichChieu == null || loaiVe == null)
+                    return 0;
+                return lichChieu.GiaVe + loaiVe.PhuThu;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Lỗi khi tính giá vé: {ex.Message}");
+            }
+        }
+        public static List<Ve> LayTheoGiaoDich(string maGiaoDich)
+        {
+            if (string.IsNullOrEmpty(maGiaoDich))
+                throw new Exception("Mã giao dịch không được để trống!");
+
+            try
+            {
+                return VeDAL.LayTheoGiaoDich(maGiaoDich);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Lỗi khi lấy danh sách vé theo giao dịch '{maGiaoDich}': {ex.Message}");
+            }
         }
     }
 }

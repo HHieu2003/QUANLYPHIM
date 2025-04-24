@@ -3,6 +3,22 @@
   "WorkspaceRootPath": "C:\\Users\\H I U\\Desktop\\QUANLYPHIM\\QUANLYPHIM\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{ED564B8B-E563-4CD7-857F-E97FB984992A}|GUI\\GUI.csproj|c:\\users\\h i u\\desktop\\quanlyphim\\quanlyphim\\gui\\frmnhanvienxuly.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED564B8B-E563-4CD7-857F-E97FB984992A}|GUI\\GUI.csproj|solutionrelative:gui\\frmnhanvienxuly.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{ED564B8B-E563-4CD7-857F-E97FB984992A}|GUI\\GUI.csproj|c:\\users\\h i u\\desktop\\quanlyphim\\quanlyphim\\gui\\frmnhanvienxuly.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED564B8B-E563-4CD7-857F-E97FB984992A}|GUI\\GUI.csproj|solutionrelative:gui\\frmnhanvienxuly.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{501260AC-2756-4523-9119-53451D4DF3F7}|BUS\\BUS.csproj|c:\\users\\h i u\\desktop\\quanlyphim\\quanlyphim\\bus\\giaodichbus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{501260AC-2756-4523-9119-53451D4DF3F7}|BUS\\BUS.csproj|solutionrelative:bus\\giaodichbus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B637E904-ED1B-4E57-B0B4-679F477745B5}|DAL\\DAL.csproj|c:\\users\\h i u\\desktop\\quanlyphim\\quanlyphim\\dal\\giaodichdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B637E904-ED1B-4E57-B0B4-679F477745B5}|DAL\\DAL.csproj|solutionrelative:dal\\giaodichdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{ED564B8B-E563-4CD7-857F-E97FB984992A}|GUI\\GUI.csproj|c:\\users\\h i u\\desktop\\quanlyphim\\quanlyphim\\gui\\frmbanve.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ED564B8B-E563-4CD7-857F-E97FB984992A}|GUI\\GUI.csproj|solutionrelative:gui\\frmbanve.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,20 +27,20 @@
       "RelativeMoniker": "D:0:0:{ED564B8B-E563-4CD7-857F-E97FB984992A}|GUI\\GUI.csproj|solutionrelative:gui\\frmbanve.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ED564B8B-E563-4CD7-857F-E97FB984992A}|GUI\\GUI.csproj|c:\\users\\h i u\\desktop\\quanlyphim\\quanlyphim\\gui\\frmveandloaive.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{ED564B8B-E563-4CD7-857F-E97FB984992A}|GUI\\GUI.csproj|solutionrelative:gui\\frmveandloaive.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{ED564B8B-E563-4CD7-857F-E97FB984992A}|GUI\\GUI.csproj|c:\\users\\h i u\\desktop\\quanlyphim\\quanlyphim\\gui\\frmsodoghe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{ED564B8B-E563-4CD7-857F-E97FB984992A}|GUI\\GUI.csproj|solutionrelative:gui\\frmsodoghe.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{ED564B8B-E563-4CD7-857F-E97FB984992A}|GUI\\GUI.csproj|c:\\users\\h i u\\desktop\\quanlyphim\\quanlyphim\\gui\\frmbandoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{ED564B8B-E563-4CD7-857F-E97FB984992A}|GUI\\GUI.csproj|solutionrelative:gui\\frmbandoan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{ED564B8B-E563-4CD7-857F-E97FB984992A}|GUI\\GUI.csproj|c:\\users\\h i u\\desktop\\quanlyphim\\quanlyphim\\gui\\mainformadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{ED564B8B-E563-4CD7-857F-E97FB984992A}|GUI\\GUI.csproj|solutionrelative:gui\\mainformadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{ED564B8B-E563-4CD7-857F-E97FB984992A}|GUI\\GUI.csproj|c:\\users\\h i u\\desktop\\quanlyphim\\quanlyphim\\gui\\frmphongchieu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{ED564B8B-E563-4CD7-857F-E97FB984992A}|GUI\\GUI.csproj|solutionrelative:gui\\frmphongchieu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{B637E904-ED1B-4E57-B0B4-679F477745B5}|DAL\\DAL.csproj|c:\\users\\h i u\\desktop\\quanlyphim\\quanlyphim\\dal\\doandal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B637E904-ED1B-4E57-B0B4-679F477745B5}|DAL\\DAL.csproj|solutionrelative:dal\\doandal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{501260AC-2756-4523-9119-53451D4DF3F7}|BUS\\BUS.csproj|c:\\users\\h i u\\desktop\\quanlyphim\\quanlyphim\\bus\\doanbus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{501260AC-2756-4523-9119-53451D4DF3F7}|BUS\\BUS.csproj|solutionrelative:bus\\doanbus.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 11,
           "Children": [
             {
               "$type": "Bookmark",
@@ -47,75 +63,129 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "frmNhanVienXuLy.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\H I U\\Desktop\\QUANLYPHIM\\QUANLYPHIM\\GUI\\frmNhanVienXuLy.Designer.cs",
+              "RelativeDocumentMoniker": "GUI\\frmNhanVienXuLy.Designer.cs",
+              "ToolTip": "C:\\Users\\H I U\\Desktop\\QUANLYPHIM\\QUANLYPHIM\\GUI\\frmNhanVienXuLy.Designer.cs",
+              "RelativeToolTip": "GUI\\frmNhanVienXuLy.Designer.cs",
+              "ViewState": "AQIAAFcAAAAAAAAAAAAgwGwAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T21:39:06.188Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "GiaoDichBUS.cs",
+              "DocumentMoniker": "C:\\Users\\H I U\\Desktop\\QUANLYPHIM\\QUANLYPHIM\\BUS\\GiaoDichBUS.cs",
+              "RelativeDocumentMoniker": "BUS\\GiaoDichBUS.cs",
+              "ToolTip": "C:\\Users\\H I U\\Desktop\\QUANLYPHIM\\QUANLYPHIM\\BUS\\GiaoDichBUS.cs",
+              "RelativeToolTip": "BUS\\GiaoDichBUS.cs",
+              "ViewState": "AQIAACoAAAAAAAAAAADwv0AAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T21:38:25.029Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "GiaoDichDAL.cs",
+              "DocumentMoniker": "C:\\Users\\H I U\\Desktop\\QUANLYPHIM\\QUANLYPHIM\\DAL\\GiaoDichDAL.cs",
+              "RelativeDocumentMoniker": "DAL\\GiaoDichDAL.cs",
+              "ToolTip": "C:\\Users\\H I U\\Desktop\\QUANLYPHIM\\QUANLYPHIM\\DAL\\GiaoDichDAL.cs",
+              "RelativeToolTip": "DAL\\GiaoDichDAL.cs",
+              "ViewState": "AQIAAFoAAAAAAAAAAADwv3AAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T21:27:57.87Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "frmBanVe.cs",
+              "DocumentMoniker": "C:\\Users\\H I U\\Desktop\\QUANLYPHIM\\QUANLYPHIM\\GUI\\frmBanVe.cs",
+              "RelativeDocumentMoniker": "GUI\\frmBanVe.cs",
+              "ToolTip": "C:\\Users\\H I U\\Desktop\\QUANLYPHIM\\QUANLYPHIM\\GUI\\frmBanVe.cs",
+              "RelativeToolTip": "GUI\\frmBanVe.cs",
+              "ViewState": "AQIAAMMBAAAAAAAAAAAkwNgBAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T21:26:17.604Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "frmBanVe.cs [Design]",
               "DocumentMoniker": "C:\\Users\\H I U\\Desktop\\QUANLYPHIM\\QUANLYPHIM\\GUI\\frmBanVe.cs",
               "RelativeDocumentMoniker": "GUI\\frmBanVe.cs",
               "ToolTip": "C:\\Users\\H I U\\Desktop\\QUANLYPHIM\\QUANLYPHIM\\GUI\\frmBanVe.cs [Design]",
               "RelativeToolTip": "GUI\\frmBanVe.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T14:26:42.868Z",
+              "WhenOpened": "2025-04-24T21:25:56.15Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "frmBanVe.cs",
-              "DocumentMoniker": "C:\\Users\\H I U\\Desktop\\QUANLYPHIM\\QUANLYPHIM\\GUI\\frmBanVe.cs",
-              "RelativeDocumentMoniker": "GUI\\frmBanVe.cs",
-              "ToolTip": "C:\\Users\\H I U\\Desktop\\QUANLYPHIM\\QUANLYPHIM\\GUI\\frmBanVe.cs",
-              "RelativeToolTip": "GUI\\frmBanVe.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABoAAAA5AAAA",
+              "DocumentIndex": 6,
+              "Title": "frmBanDoAn.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\H I U\\Desktop\\QUANLYPHIM\\QUANLYPHIM\\GUI\\frmBanDoAn.cs",
+              "RelativeDocumentMoniker": "GUI\\frmBanDoAn.cs",
+              "ToolTip": "C:\\Users\\H I U\\Desktop\\QUANLYPHIM\\QUANLYPHIM\\GUI\\frmBanDoAn.cs [Design]",
+              "RelativeToolTip": "GUI\\frmBanDoAn.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T14:24:30.81Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "frmSoDoGhe.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\H I U\\Desktop\\QUANLYPHIM\\QUANLYPHIM\\GUI\\frmSoDoGhe.cs",
-              "RelativeDocumentMoniker": "GUI\\frmSoDoGhe.cs",
-              "ToolTip": "C:\\Users\\H I U\\Desktop\\QUANLYPHIM\\QUANLYPHIM\\GUI\\frmSoDoGhe.cs [Design]",
-              "RelativeToolTip": "GUI\\frmSoDoGhe.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T14:22:39.355Z",
+              "WhenOpened": "2025-04-24T21:25:55.224Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "frmVeAndLoaiVe.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\H I U\\Desktop\\QUANLYPHIM\\QUANLYPHIM\\GUI\\frmVeAndLoaiVe.cs",
-              "RelativeDocumentMoniker": "GUI\\frmVeAndLoaiVe.cs",
-              "ToolTip": "C:\\Users\\H I U\\Desktop\\QUANLYPHIM\\QUANLYPHIM\\GUI\\frmVeAndLoaiVe.cs [Design]",
-              "RelativeToolTip": "GUI\\frmVeAndLoaiVe.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T14:17:05.009Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "MainFormAdmin.cs [Design]",
               "DocumentMoniker": "C:\\Users\\H I U\\Desktop\\QUANLYPHIM\\QUANLYPHIM\\GUI\\MainFormAdmin.cs",
               "RelativeDocumentMoniker": "GUI\\MainFormAdmin.cs",
               "ToolTip": "C:\\Users\\H I U\\Desktop\\QUANLYPHIM\\QUANLYPHIM\\GUI\\MainFormAdmin.cs [Design]",
               "RelativeToolTip": "GUI\\MainFormAdmin.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T14:17:03.961Z",
+              "WhenOpened": "2025-04-24T21:25:42.982Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "frmPhongChieu.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\H I U\\Desktop\\QUANLYPHIM\\QUANLYPHIM\\GUI\\frmPhongChieu.cs",
-              "RelativeDocumentMoniker": "GUI\\frmPhongChieu.cs",
-              "ToolTip": "C:\\Users\\H I U\\Desktop\\QUANLYPHIM\\QUANLYPHIM\\GUI\\frmPhongChieu.cs [Design]",
-              "RelativeToolTip": "GUI\\frmPhongChieu.cs [Design]",
+              "DocumentIndex": 8,
+              "Title": "DoAnDAL.cs",
+              "DocumentMoniker": "C:\\Users\\H I U\\Desktop\\QUANLYPHIM\\QUANLYPHIM\\DAL\\DoAnDAL.cs",
+              "RelativeDocumentMoniker": "DAL\\DoAnDAL.cs",
+              "ToolTip": "C:\\Users\\H I U\\Desktop\\QUANLYPHIM\\QUANLYPHIM\\DAL\\DoAnDAL.cs",
+              "RelativeToolTip": "DAL\\DoAnDAL.cs",
+              "ViewState": "AQIAAF4AAAAAAAAAAAAmwHYAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-24T14:16:20.894Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-04-24T21:22:17.44Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "DoAnBUS.cs",
+              "DocumentMoniker": "C:\\Users\\H I U\\Desktop\\QUANLYPHIM\\QUANLYPHIM\\BUS\\DoAnBUS.cs",
+              "RelativeDocumentMoniker": "BUS\\DoAnBUS.cs",
+              "ToolTip": "C:\\Users\\H I U\\Desktop\\QUANLYPHIM\\QUANLYPHIM\\BUS\\DoAnBUS.cs",
+              "RelativeToolTip": "BUS\\DoAnBUS.cs",
+              "ViewState": "AQIAAEoAAAAAAAAAAAAIwFcAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T21:21:58.799Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmNhanVienXuLy.cs",
+              "DocumentMoniker": "C:\\Users\\H I U\\Desktop\\QUANLYPHIM\\QUANLYPHIM\\GUI\\frmNhanVienXuLy.cs",
+              "RelativeDocumentMoniker": "GUI\\frmNhanVienXuLy.cs",
+              "ToolTip": "C:\\Users\\H I U\\Desktop\\QUANLYPHIM\\QUANLYPHIM\\GUI\\frmNhanVienXuLy.cs",
+              "RelativeToolTip": "GUI\\frmNhanVienXuLy.cs",
+              "ViewState": "AQIAALgAAAAAAAAAAAAswMoAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T21:21:01.748Z",
+              "EditorCaption": ""
             }
           ]
         },

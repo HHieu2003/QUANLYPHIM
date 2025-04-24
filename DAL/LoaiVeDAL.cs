@@ -10,122 +10,103 @@ namespace DAL
         public static List<LoaiVe> LayTatCa()
         {
             List<LoaiVe> list = new List<LoaiVe>();
-            try
+            using (SqlConnection conn = GetConnection())
             {
                 conn.Open();
                 SqlCommand cmd = new SqlCommand("SELECT * FROM LoaiVe", conn);
-                SqlDataReader reader = cmd.ExecuteReader();
-                while (reader.Read())
+                using (SqlDataReader reader = cmd.ExecuteReader())
                 {
-                    list.Add(new LoaiVe
+                    while (reader.Read())
                     {
-                        MaLoaiVe = reader["MaLoaiVe"].ToString(),
-                        TenLoaiVe = reader["TenLoaiVe"].ToString(),
-                        PhuThu = Convert.ToDecimal(reader["PhuThu"])
-                    });
+                        list.Add(new LoaiVe
+                        {
+                            MaLoaiVe = reader["MaLoaiVe"].ToString(),
+                            TenLoaiVe = reader["TenLoaiVe"].ToString(),
+                            PhuThu = Convert.ToDecimal(reader["PhuThu"])
+                        });
+                    }
                 }
-                reader.Close();
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Lỗi khi lấy danh sách loại vé: " + ex.Message);
-            }
-            finally
-            {
-                conn.Close();
             }
             return list;
         }
 
         public static LoaiVe LayTheoMa(string maLoaiVe)
         {
-            LoaiVe loaiVe = null;
-            try
+            if (string.IsNullOrEmpty(maLoaiVe))
+                throw new ArgumentException("Mã loại vé không được để trống!");
+
+            using (SqlConnection conn = GetConnection())
             {
                 conn.Open();
                 SqlCommand cmd = new SqlCommand("SELECT * FROM LoaiVe WHERE MaLoaiVe = @MaLoaiVe", conn);
                 cmd.Parameters.AddWithValue("@MaLoaiVe", maLoaiVe);
-                SqlDataReader reader = cmd.ExecuteReader();
-                if (reader.Read())
+                using (SqlDataReader reader = cmd.ExecuteReader())
                 {
-                    loaiVe = new LoaiVe
+                    if (reader.Read())
                     {
-                        MaLoaiVe = reader["MaLoaiVe"].ToString(),
-                        TenLoaiVe = reader["TenLoaiVe"].ToString(),
-                        PhuThu = Convert.ToDecimal(reader["PhuThu"])
-                    };
+                        return new LoaiVe
+                        {
+                            MaLoaiVe = reader["MaLoaiVe"].ToString(),
+                            TenLoaiVe = reader["TenLoaiVe"].ToString(),
+                            PhuThu = Convert.ToDecimal(reader["PhuThu"])
+                        };
+                    }
+                    return null;
                 }
-                reader.Close();
             }
-            catch (Exception ex)
-            {
-                throw new Exception("Lỗi khi lấy thông tin loại vé: " + ex.Message);
-            }
-            finally
-            {
-                conn.Close();
-            }
-            return loaiVe;
         }
 
         public static void Them(LoaiVe obj)
         {
-            try
+            if (obj == null)
+                throw new ArgumentNullException(nameof(obj));
+            if (string.IsNullOrEmpty(obj.MaLoaiVe))
+                throw new ArgumentException("Mã loại vé không được để trống!");
+
+            using (SqlConnection conn = GetConnection())
             {
                 conn.Open();
-                SqlCommand cmd = new SqlCommand("INSERT INTO LoaiVe (MaLoaiVe, TenLoaiVe, PhuThu) VALUES (@MaLoaiVe, @TenLoaiVe, @PhuThu)", conn);
+                SqlCommand cmd = new SqlCommand(
+                    "INSERT INTO LoaiVe (MaLoaiVe, TenLoaiVe, PhuThu) VALUES (@MaLoaiVe, @TenLoaiVe, @PhuThu)",
+                    conn);
                 cmd.Parameters.AddWithValue("@MaLoaiVe", obj.MaLoaiVe);
                 cmd.Parameters.AddWithValue("@TenLoaiVe", obj.TenLoaiVe);
                 cmd.Parameters.AddWithValue("@PhuThu", obj.PhuThu);
                 cmd.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Lỗi khi thêm loại vé: " + ex.Message);
-            }
-            finally
-            {
-                conn.Close();
-            }
-        }
-
-        public static void Xoa(string id)
-        {
-            try
-            {
-                conn.Open();
-                SqlCommand cmd = new SqlCommand("DELETE FROM LoaiVe WHERE MaLoaiVe = @id", conn);
-                cmd.Parameters.AddWithValue("@id", id);
-                cmd.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Lỗi khi xóa loại vé: " + ex.Message);
-            }
-            finally
-            {
-                conn.Close();
             }
         }
 
         public static void Sua(LoaiVe obj)
         {
-            try
+            if (obj == null)
+                throw new ArgumentNullException(nameof(obj));
+            if (string.IsNullOrEmpty(obj.MaLoaiVe))
+                throw new ArgumentException("Mã loại vé không được để trống!");
+
+            using (SqlConnection conn = GetConnection())
             {
                 conn.Open();
-                SqlCommand cmd = new SqlCommand("UPDATE LoaiVe SET TenLoaiVe = @TenLoaiVe, PhuThu = @PhuThu WHERE MaLoaiVe = @MaLoaiVe", conn);
+                SqlCommand cmd = new SqlCommand(
+                    "UPDATE LoaiVe SET TenLoaiVe = @TenLoaiVe, PhuThu = @PhuThu WHERE MaLoaiVe = @MaLoaiVe",
+                    conn);
                 cmd.Parameters.AddWithValue("@MaLoaiVe", obj.MaLoaiVe);
                 cmd.Parameters.AddWithValue("@TenLoaiVe", obj.TenLoaiVe);
                 cmd.Parameters.AddWithValue("@PhuThu", obj.PhuThu);
                 cmd.ExecuteNonQuery();
             }
-            catch (Exception ex)
+        }
+
+        public static void Xoa(string id)
+        {
+            if (string.IsNullOrEmpty(id))
+                throw new ArgumentException("Mã loại vé không được để trống!");
+
+            using (SqlConnection conn = GetConnection())
             {
-                throw new Exception("Lỗi khi sửa loại vé: " + ex.Message);
-            }
-            finally
-            {
-                conn.Close();
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("DELETE FROM LoaiVe WHERE MaLoaiVe = @id", conn);
+                cmd.Parameters.AddWithValue("@id", id);
+                cmd.ExecuteNonQuery();
             }
         }
     }

@@ -8,7 +8,10 @@ namespace DTO
         public string MaLichChieu { get; set; }
         public string MaLoaiVe { get; set; }
         public string MaKhachHang { get; set; }
+        public string MaGiaoDich { get; set; }
+
         public string SoGhe { get; set; }
+        
         public DateTime NgayDat { get; set; }
     }
 }
