@@ -93,7 +93,7 @@ namespace GUI
 
         private void btnVe_Click(object sender, EventArgs e)
         {
-            LoadFormToPanel(new frmVe());
+            LoadFormToPanel(new frmBanVe());
         }
 
         private void btnKhachHang_Click(object sender, EventArgs e)

@@ -42,6 +42,7 @@ namespace DAL
             return list;
         }
 
+
         public static void Them(Ve obj)
         {
             try

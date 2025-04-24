@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmBanVe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBanVe.Designer.cs">
+      <DependentUpon>frmBanVe.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmBaoCao.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +106,12 @@
     <Compile Include="frmPhongChieu.Designer.cs">
       <DependentUpon>frmPhongChieu.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSoDoGhe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSoDoGhe.Designer.cs">
+      <DependentUpon>frmSoDoGhe.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTheLoaiPhim.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +123,12 @@
     </Compile>
     <Compile Include="frmVe.Designer.cs">
       <DependentUpon>frmVe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVeAndLoaiVe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVeAndLoaiVe.Designer.cs">
+      <DependentUpon>frmVeAndLoaiVe.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -132,6 +150,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmBanVe.resx">
+      <DependentUpon>frmBanVe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLichChieu.resx">
       <DependentUpon>frmLichChieu.cs</DependentUpon>
     </EmbeddedResource>
@@ -141,11 +162,17 @@
     <EmbeddedResource Include="frmPhongChieu.resx">
       <DependentUpon>frmPhongChieu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmSoDoGhe.resx">
+      <DependentUpon>frmSoDoGhe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmTheLoaiPhim.resx">
       <DependentUpon>frmTheLoaiPhim.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmVe.resx">
       <DependentUpon>frmVe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVeAndLoaiVe.resx">
+      <DependentUpon>frmVeAndLoaiVe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

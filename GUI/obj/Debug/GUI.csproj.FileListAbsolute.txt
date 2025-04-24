@@ -37,3 +37,6 @@ C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\obj\Debug\GUI.frmLichChieu.reso
 C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\obj\Debug\GUI.frmTheLoaiPhim.resources
 C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\obj\Debug\GUI.frmPhongChieu.resources
 C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\obj\Debug\GUI.frmVe.resources
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\obj\Debug\GUI.frmVeAndLoaiVe.resources
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\obj\Debug\GUI.frmBanVe.resources
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\obj\Debug\GUI.frmSoDoGhe.resources

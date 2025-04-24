@@ -30,5 +30,20 @@ namespace BUS
         {
             PhongChieuDAL.Xoa(id);
         }
+
+        public static PhongChieu LayTheoMa(string maPhong)
+        {
+            if (string.IsNullOrEmpty(maPhong))
+                throw new Exception("Mã phòng chiếu không được để trống!");
+
+            try
+            {
+                return PhongChieuDAL.LayTheoMa(maPhong);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Lỗi khi lấy thông tin phòng chiếu: " + ex.Message);
+            }
+        }
     }
 }

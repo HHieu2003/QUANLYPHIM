@@ -12,7 +12,20 @@ namespace BUS
         {
             return LichChieuDAL.LayTatCa();
         }
+        public static LichChieu LayTheoMa(string maLichChieu)
+        {
+            if (string.IsNullOrEmpty(maLichChieu))
+                throw new Exception("Mã lịch chiếu không được để trống!");
 
+            try
+            {
+                return LichChieuDAL.LayTheoMa(maLichChieu);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Lỗi khi lấy thông tin lịch chiếu: " + ex.Message);
+            }
+        }
         public static void Them(LichChieu obj)
         {
             var danhSach = LichChieuDAL.LayTatCa();

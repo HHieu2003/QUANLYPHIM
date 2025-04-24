@@ -65,7 +65,7 @@ namespace GUI
             this.pnlHeader.Controls.Add(this.lblTitle);
             this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlHeader.Location = new System.Drawing.Point(0, 0);
-            this.pnlHeader.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlHeader.Margin = new System.Windows.Forms.Padding(2);
             this.pnlHeader.Name = "pnlHeader";
             this.pnlHeader.Size = new System.Drawing.Size(960, 39);
             this.pnlHeader.TabIndex = 1;
@@ -86,13 +86,13 @@ namespace GUI
             // tblLayout
             // 
             this.tblLayout.ColumnCount = 2;
-            this.tblLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 76.25F));
-            this.tblLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.75F));
+            this.tblLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40.10417F));
+            this.tblLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 59.89583F));
             this.tblLayout.Controls.Add(this.pnlInput, 0, 0);
             this.tblLayout.Controls.Add(this.dgvVe, 1, 0);
             this.tblLayout.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tblLayout.Location = new System.Drawing.Point(0, 39);
-            this.tblLayout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tblLayout.Margin = new System.Windows.Forms.Padding(2);
             this.tblLayout.Name = "tblLayout";
             this.tblLayout.RowCount = 1;
             this.tblLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -128,10 +128,10 @@ namespace GUI
             this.pnlInput.Controls.Add(this.btnTimKiem);
             this.pnlInput.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlInput.Location = new System.Drawing.Point(2, 2);
-            this.pnlInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlInput.Margin = new System.Windows.Forms.Padding(2);
             this.pnlInput.Name = "pnlInput";
             this.pnlInput.Padding = new System.Windows.Forms.Padding(15, 13, 15, 13);
-            this.pnlInput.Size = new System.Drawing.Size(728, 425);
+            this.pnlInput.Size = new System.Drawing.Size(381, 425);
             this.pnlInput.TabIndex = 0;
             // 
             // lblMaVe
@@ -150,7 +150,7 @@ namespace GUI
             this.txtMaVe.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtMaVe.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtMaVe.Location = new System.Drawing.Point(98, 46);
-            this.txtMaVe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMaVe.Margin = new System.Windows.Forms.Padding(2);
             this.txtMaVe.Name = "txtMaVe";
             this.txtMaVe.Size = new System.Drawing.Size(226, 29);
             this.txtMaVe.TabIndex = 1;
@@ -171,7 +171,7 @@ namespace GUI
             this.cboLichChieu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboLichChieu.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.cboLichChieu.Location = new System.Drawing.Point(98, 78);
-            this.cboLichChieu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboLichChieu.Margin = new System.Windows.Forms.Padding(2);
             this.cboLichChieu.Name = "cboLichChieu";
             this.cboLichChieu.Size = new System.Drawing.Size(226, 29);
             this.cboLichChieu.TabIndex = 3;
@@ -193,7 +193,7 @@ namespace GUI
             this.cboLoaiVe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboLoaiVe.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.cboLoaiVe.Location = new System.Drawing.Point(98, 110);
-            this.cboLoaiVe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboLoaiVe.Margin = new System.Windows.Forms.Padding(2);
             this.cboLoaiVe.Name = "cboLoaiVe";
             this.cboLoaiVe.Size = new System.Drawing.Size(226, 29);
             this.cboLoaiVe.TabIndex = 5;
@@ -215,7 +215,7 @@ namespace GUI
             this.cboKhachHang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboKhachHang.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.cboKhachHang.Location = new System.Drawing.Point(98, 143);
-            this.cboKhachHang.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboKhachHang.Margin = new System.Windows.Forms.Padding(2);
             this.cboKhachHang.Name = "cboKhachHang";
             this.cboKhachHang.Size = new System.Drawing.Size(226, 29);
             this.cboKhachHang.TabIndex = 7;
@@ -233,10 +233,11 @@ namespace GUI
             // 
             // tblGhe
             // 
+            this.tblGhe.AutoScroll = true;
             this.tblGhe.AutoSize = true;
-            this.tblGhe.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tblGhe.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 225F));
             this.tblGhe.Location = new System.Drawing.Point(98, 176);
-            this.tblGhe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tblGhe.Margin = new System.Windows.Forms.Padding(2);
             this.tblGhe.Name = "tblGhe";
             this.tblGhe.Size = new System.Drawing.Size(225, 98);
             this.tblGhe.TabIndex = 9;
@@ -245,7 +246,7 @@ namespace GUI
             // 
             this.lblSoGhe.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.lblSoGhe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(166)))), ((int)(((byte)(154)))));
-            this.lblSoGhe.Location = new System.Drawing.Point(375, 10);
+            this.lblSoGhe.Location = new System.Drawing.Point(22, 280);
             this.lblSoGhe.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblSoGhe.Name = "lblSoGhe";
             this.lblSoGhe.Size = new System.Drawing.Size(75, 20);
@@ -256,8 +257,8 @@ namespace GUI
             // 
             this.txtSoGhe.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSoGhe.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtSoGhe.Location = new System.Drawing.Point(451, 10);
-            this.txtSoGhe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSoGhe.Location = new System.Drawing.Point(98, 280);
+            this.txtSoGhe.Margin = new System.Windows.Forms.Padding(2);
             this.txtSoGhe.Name = "txtSoGhe";
             this.txtSoGhe.ReadOnly = true;
             this.txtSoGhe.Size = new System.Drawing.Size(226, 29);
@@ -267,7 +268,7 @@ namespace GUI
             // 
             this.lblGiaVe.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.lblGiaVe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(166)))), ((int)(((byte)(154)))));
-            this.lblGiaVe.Location = new System.Drawing.Point(375, 42);
+            this.lblGiaVe.Location = new System.Drawing.Point(22, 312);
             this.lblGiaVe.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblGiaVe.Name = "lblGiaVe";
             this.lblGiaVe.Size = new System.Drawing.Size(75, 20);
@@ -278,8 +279,8 @@ namespace GUI
             // 
             this.txtGiaVe.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtGiaVe.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtGiaVe.Location = new System.Drawing.Point(451, 42);
-            this.txtGiaVe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtGiaVe.Location = new System.Drawing.Point(98, 312);
+            this.txtGiaVe.Margin = new System.Windows.Forms.Padding(2);
             this.txtGiaVe.Name = "txtGiaVe";
             this.txtGiaVe.ReadOnly = true;
             this.txtGiaVe.Size = new System.Drawing.Size(226, 29);
@@ -289,7 +290,7 @@ namespace GUI
             // 
             this.lblNgayDat.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.lblNgayDat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(166)))), ((int)(((byte)(154)))));
-            this.lblNgayDat.Location = new System.Drawing.Point(375, 74);
+            this.lblNgayDat.Location = new System.Drawing.Point(22, 344);
             this.lblNgayDat.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNgayDat.Name = "lblNgayDat";
             this.lblNgayDat.Size = new System.Drawing.Size(75, 20);
@@ -300,8 +301,8 @@ namespace GUI
             // 
             this.txtNgayDat.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNgayDat.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtNgayDat.Location = new System.Drawing.Point(451, 74);
-            this.txtNgayDat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNgayDat.Location = new System.Drawing.Point(98, 344);
+            this.txtNgayDat.Margin = new System.Windows.Forms.Padding(2);
             this.txtNgayDat.Name = "txtNgayDat";
             this.txtNgayDat.ReadOnly = true;
             this.txtNgayDat.Size = new System.Drawing.Size(226, 29);
@@ -314,8 +315,8 @@ namespace GUI
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnThem.ForeColor = System.Drawing.Color.White;
-            this.btnThem.Location = new System.Drawing.Point(451, 107);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThem.Location = new System.Drawing.Point(98, 377);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(2);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(75, 26);
             this.btnThem.TabIndex = 16;
@@ -332,8 +333,8 @@ namespace GUI
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoa.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnXoa.ForeColor = System.Drawing.Color.White;
-            this.btnXoa.Location = new System.Drawing.Point(533, 107);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnXoa.Location = new System.Drawing.Point(180, 377);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(75, 26);
             this.btnXoa.TabIndex = 17;
@@ -350,8 +351,8 @@ namespace GUI
             this.btnLamMoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLamMoi.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnLamMoi.ForeColor = System.Drawing.Color.White;
-            this.btnLamMoi.Location = new System.Drawing.Point(435, 143);
-            this.btnLamMoi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLamMoi.Location = new System.Drawing.Point(98, 410);
+            this.btnLamMoi.Margin = new System.Windows.Forms.Padding(2);
             this.btnLamMoi.Name = "btnLamMoi";
             this.btnLamMoi.Size = new System.Drawing.Size(75, 26);
             this.btnLamMoi.TabIndex = 18;
@@ -368,8 +369,8 @@ namespace GUI
             this.btnHuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnHuy.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnHuy.ForeColor = System.Drawing.Color.White;
-            this.btnHuy.Location = new System.Drawing.Point(517, 143);
-            this.btnHuy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnHuy.Location = new System.Drawing.Point(180, 410);
+            this.btnHuy.Margin = new System.Windows.Forms.Padding(2);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(75, 26);
             this.btnHuy.TabIndex = 19;
@@ -395,7 +396,7 @@ namespace GUI
             this.txtTimKiem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTimKiem.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtTimKiem.Location = new System.Drawing.Point(98, 13);
-            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(2);
             this.txtTimKiem.Name = "txtTimKiem";
             this.txtTimKiem.Size = new System.Drawing.Size(150, 29);
             this.txtTimKiem.TabIndex = 21;
@@ -408,9 +409,9 @@ namespace GUI
             this.btnTimKiem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnTimKiem.ForeColor = System.Drawing.Color.White;
             this.btnTimKiem.Location = new System.Drawing.Point(255, 13);
-            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTimKiem.Margin = new System.Windows.Forms.Padding(2);
             this.btnTimKiem.Name = "btnTimKiem";
-            this.btnTimKiem.Size = new System.Drawing.Size(75, 20);
+            this.btnTimKiem.Size = new System.Drawing.Size(75, 29);
             this.btnTimKiem.TabIndex = 22;
             this.btnTimKiem.Text = "🔍 Tìm";
             this.btnTimKiem.UseVisualStyleBackColor = false;
@@ -424,12 +425,12 @@ namespace GUI
             this.dgvVe.AllowUserToDeleteRows = false;
             this.dgvVe.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvVe.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvVe.Location = new System.Drawing.Point(747, 13);
+            this.dgvVe.Location = new System.Drawing.Point(400, 13);
             this.dgvVe.Margin = new System.Windows.Forms.Padding(15, 13, 15, 13);
             this.dgvVe.Name = "dgvVe";
             this.dgvVe.ReadOnly = true;
             this.dgvVe.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvVe.Size = new System.Drawing.Size(198, 403);
+            this.dgvVe.Size = new System.Drawing.Size(545, 403);
             this.dgvVe.TabIndex = 1;
             // 
             // frmVe
@@ -440,7 +441,7 @@ namespace GUI
             this.ClientSize = new System.Drawing.Size(960, 468);
             this.Controls.Add(this.tblLayout);
             this.Controls.Add(this.pnlHeader);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmVe";
             this.Text = "Quản lý vé";
             this.pnlHeader.ResumeLayout(false);

@@ -10,7 +10,14 @@ namespace BUS
     {
         public static List<Phim> LayTatCa()
         {
-            return PhimDAL.LayTatCa();
+            try
+            {
+                return PhimDAL.LayTatCa();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Lỗi khi lấy danh sách phim: " + ex.Message);
+            }
         }
 
      
@@ -31,6 +38,20 @@ namespace BUS
             if (danhSach.Any(p => p.MaPhim == obj.MaPhim))
                 throw new Exception("Mã phim đã tồn tại!");
             PhimDAL.Them(obj);
+        }
+        public static Phim LayTheoMa(string maPhim)
+        {
+            if (string.IsNullOrEmpty(maPhim))
+                throw new Exception("Mã phim không được để trống!");
+
+            try
+            {
+                return PhimDAL.LayTheoMa(maPhim);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Lỗi khi lấy thông tin phim: " + ex.Message);
+            }
         }
     }
 }

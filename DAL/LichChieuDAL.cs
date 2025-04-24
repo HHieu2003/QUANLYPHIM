@@ -28,6 +28,39 @@ namespace DAL
             return list;
         }
 
+        public static LichChieu LayTheoMa(string maLichChieu)
+        {
+            LichChieu lichChieu = null;
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("SELECT * FROM LichChieu WHERE MaLichChieu = @MaLichChieu", conn);
+                cmd.Parameters.AddWithValue("@MaLichChieu", maLichChieu);
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
+                    lichChieu = new LichChieu
+                    {
+                        MaLichChieu = reader["MaLichChieu"].ToString(),
+                        MaPhim = reader["MaPhim"].ToString(),
+                        MaPhong = reader["MaPhong"].ToString(),
+                        GioBatDau = (DateTime)reader["GioBatDau"],
+                        GiaVe = Convert.ToDecimal(reader["GiaVe"])
+                    };
+                }
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Lỗi khi lấy thông tin lịch chiếu: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return lichChieu;
+        }
+
         public static void Them(LichChieu obj)
         {
             conn.Open();

@@ -38,6 +38,39 @@ namespace DAL
             return list;
         }
 
+
+
+        public static PhongChieu LayTheoMa(string maPhong)
+        {
+            PhongChieu phongChieu = null;
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("SELECT * FROM PhongChieu WHERE MaPhong = @MaPhong", conn);
+                cmd.Parameters.AddWithValue("@MaPhong", maPhong);
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
+                    phongChieu = new PhongChieu
+                    {
+                        MaPhong = reader["MaPhong"].ToString(),
+                        TenPhong = reader["TenPhong"].ToString(),
+                        SoLuongGhe = Convert.ToInt32(reader["SoLuongGhe"]),
+                        TrangThai = reader["TrangThai"].ToString()
+                    };
+                }
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Lỗi khi lấy thông tin phòng chiếu: " + ex.Message);
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return phongChieu;
+        }
         public static void Them(PhongChieu obj)
         {
             try

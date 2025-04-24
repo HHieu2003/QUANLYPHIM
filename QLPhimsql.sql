@@ -1,6 +1,5 @@
-﻿create database QuanLyPhim;
-
-use QuanLyPhim;
+﻿CREATE DATABASE QuanLyPhim;
+USE QuanLyPhim;
 
 -- 1. Người dùng
 CREATE TABLE NguoiDung (
@@ -29,18 +28,21 @@ CREATE TABLE TheLoaiPhim (
 CREATE TABLE Phim (
     MaPhim NVARCHAR(10) PRIMARY KEY,
     TenPhim NVARCHAR(200) NOT NULL,
-    MaTheLoai NVARCHAR(10) FOREIGN KEY REFERENCES TheLoaiPhim(MaTheLoai),
+    MaTheLoai NVARCHAR(10) NULL,
     ThoiLuong INT NOT NULL,
-    MoTa NVARCHAR(500)
+    MoTa NVARCHAR(500),
+    FOREIGN KEY (MaTheLoai) REFERENCES TheLoaiPhim(MaTheLoai) ON DELETE SET NULL
 );
 
 -- 5. Lịch chiếu
 CREATE TABLE LichChieu (
     MaLichChieu NVARCHAR(10) PRIMARY KEY,
-    MaPhim NVARCHAR(10) FOREIGN KEY REFERENCES Phim(MaPhim),
-    MaPhong NVARCHAR(10) FOREIGN KEY REFERENCES PhongChieu(MaPhong),
+    MaPhim NVARCHAR(10) NULL,
+    MaPhong NVARCHAR(10) NULL,
     GioBatDau DATETIME NOT NULL,
-    GiaVe DECIMAL(10,2) NOT NULL
+    GiaVe DECIMAL(10,2) NOT NULL,
+    FOREIGN KEY (MaPhim) REFERENCES Phim(MaPhim) ON DELETE SET NULL,
+    FOREIGN KEY (MaPhong) REFERENCES PhongChieu(MaPhong) ON DELETE SET NULL
 );
 
 -- 6. Loại vé
@@ -60,20 +62,24 @@ CREATE TABLE KhachHang (
 
 -- 8. Vé
 CREATE TABLE Ve (
-    MaVe NVARCHAR(10) PRIMARY KEY,
-    MaLichChieu NVARCHAR(10) FOREIGN KEY REFERENCES LichChieu(MaLichChieu),
-    MaLoaiVe NVARCHAR(10) FOREIGN KEY REFERENCES LoaiVe(MaLoaiVe),
-    MaKhachHang NVARCHAR(10) FOREIGN KEY REFERENCES KhachHang(MaKhachHang),
+    MaVe UNIQUEIDENTIFIER PRIMARY KEY,
+    MaLichChieu NVARCHAR(10) NULL,
+    MaLoaiVe NVARCHAR(10) NULL,
+    MaKhachHang NVARCHAR(10) NULL,
     SoGhe NVARCHAR(10) NOT NULL,
-    NgayDat DATETIME DEFAULT GETDATE()
+    NgayDat DATETIME DEFAULT GETDATE(),
+    FOREIGN KEY (MaLichChieu) REFERENCES LichChieu(MaLichChieu) ON DELETE SET NULL,
+    FOREIGN KEY (MaLoaiVe) REFERENCES LoaiVe(MaLoaiVe) ON DELETE SET NULL,
+    FOREIGN KEY (MaKhachHang) REFERENCES KhachHang(MaKhachHang) ON DELETE SET NULL
 );
 
 -- 9. Đơn hàng (Hóa đơn)
 CREATE TABLE DonHang (
-    MaDonHang NVARCHAR(10) PRIMARY KEY,
-    MaKhachHang NVARCHAR(10) FOREIGN KEY REFERENCES KhachHang(MaKhachHang),
+    MaDonHang NVARCHAR(50) PRIMARY KEY,
+    MaKhachHang NVARCHAR(10) NULL,
     NgayTao DATETIME DEFAULT GETDATE(),
-    TongTien DECIMAL(12,2)
+    TongTien DECIMAL(12,2),
+    FOREIGN KEY (MaKhachHang) REFERENCES KhachHang(MaKhachHang) ON DELETE SET NULL
 );
 
 -- 10. Món ăn
@@ -86,12 +92,14 @@ CREATE TABLE DoAn (
 
 -- 11. Chi tiết đơn hàng đồ ăn
 CREATE TABLE ChiTietDoAn (
-    MaChiTiet NVARCHAR(10) PRIMARY KEY,
-    MaDonHang NVARCHAR(10) FOREIGN KEY REFERENCES DonHang(MaDonHang),
-    MaDoAn NVARCHAR(10) FOREIGN KEY REFERENCES DoAn(MaDoAn),
+    MaChiTiet NVARCHAR(50) PRIMARY KEY,
+    MaDonHang NVARCHAR(50) NULL,
+    MaDoAn NVARCHAR(10) NULL,
     SoLuong INT NOT NULL,
     Gia DECIMAL(10,2) NOT NULL,
-    ThanhTien DECIMAL(12,2)
+    ThanhTien DECIMAL(12,2),
+    FOREIGN KEY (MaDonHang) REFERENCES DonHang(MaDonHang) ON DELETE SET NULL,
+    FOREIGN KEY (MaDoAn) REFERENCES DoAn(MaDoAn) ON DELETE SET NULL
 );
 
 -- Trigger cập nhật Thành Tiền
@@ -113,7 +121,8 @@ CREATE TABLE BaoCao (
     TieuDe NVARCHAR(200),
     NoiDung NVARCHAR(MAX),
     NgayTao DATETIME DEFAULT GETDATE(),
-    NguoiTao NVARCHAR(10) FOREIGN KEY REFERENCES NguoiDung(MaNguoiDung)
+    NguoiTao NVARCHAR(10) NULL,
+    FOREIGN KEY (NguoiTao) REFERENCES NguoiDung(MaNguoiDung) ON DELETE SET NULL
 );
 
 STT | Form Tên | Quản lý đối tượng | Gọi từ BUS
@@ -203,11 +212,12 @@ INSERT INTO KhachHang VALUES
 
 -- 8. Vé
 INSERT INTO Ve VALUES
-('VE01', 'LC01', 'LV01', 'KH01', 'A1', GETDATE()),
-('VE02', 'LC02', 'LV02', 'KH02', 'B2', GETDATE()),
-('VE03', 'LC03', 'LV03', 'KH03', 'C3', GETDATE()),
-('VE04', 'LC04', 'LV01', 'KH04', 'D4', GETDATE()),
-('VE05', 'LC05', 'LV05', 'KH05', 'E5', GETDATE());
+(NEWID(), 'LC01', 'LV01', 'KH01', 'A1', GETDATE()),
+(NEWID(), 'LC02', 'LV02', 'KH02', 'B2', GETDATE()),
+(NEWID(), 'LC03', 'LV03', 'KH03', 'C3', GETDATE()),
+(NEWID(), 'LC04', 'LV01', 'KH04', 'D4', GETDATE()),
+(NEWID(), 'LC05', 'LV05', 'KH05', 'E5', GETDATE());
+
 
 -- 9. Đơn hàng
 INSERT INTO DonHang VALUES
