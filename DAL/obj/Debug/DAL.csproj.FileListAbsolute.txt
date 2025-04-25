@@ -1,0 +1,27 @@
+D:\Visual Studio\QUANLYPHIM\DAL\bin\Debug\DAL.dll
+D:\Visual Studio\QUANLYPHIM\DAL\bin\Debug\DAL.pdb
+D:\Visual Studio\QUANLYPHIM\DAL\bin\Debug\DTO.dll
+D:\Visual Studio\QUANLYPHIM\DAL\bin\Debug\DTO.pdb
+D:\Visual Studio\QUANLYPHIM\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+D:\Visual Studio\QUANLYPHIM\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\Visual Studio\QUANLYPHIM\DAL\obj\Debug\DAL.csproj.Up2Date
+D:\Visual Studio\QUANLYPHIM\DAL\obj\Debug\DAL.dll
+D:\Visual Studio\QUANLYPHIM\DAL\obj\Debug\DAL.pdb
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\DAL\bin\Debug\DAL.dll
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\DAL\bin\Debug\DAL.pdb
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\DAL\bin\Debug\DTO.dll
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\DAL\bin\Debug\DTO.pdb
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\DAL\obj\Debug\DAL.csproj.Up2Date
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\DAL\obj\Debug\DAL.dll
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\DAL\obj\Debug\DAL.pdb
+D:\Visual Studio\QUANLYPHIM-master\DAL\bin\Debug\DAL.dll
+D:\Visual Studio\QUANLYPHIM-master\DAL\bin\Debug\DAL.pdb
+D:\Visual Studio\QUANLYPHIM-master\DAL\bin\Debug\DTO.dll
+D:\Visual Studio\QUANLYPHIM-master\DAL\bin\Debug\DTO.pdb
+D:\Visual Studio\QUANLYPHIM-master\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+D:\Visual Studio\QUANLYPHIM-master\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\Visual Studio\QUANLYPHIM-master\DAL\obj\Debug\DAL.csproj.Up2Date
+D:\Visual Studio\QUANLYPHIM-master\DAL\obj\Debug\DAL.dll
+D:\Visual Studio\QUANLYPHIM-master\DAL\obj\Debug\DAL.pdb

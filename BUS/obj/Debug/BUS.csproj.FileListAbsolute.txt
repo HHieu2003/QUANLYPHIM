@@ -1,0 +1,33 @@
+D:\Visual Studio\QUANLYPHIM\BUS\bin\Debug\BUS.dll
+D:\Visual Studio\QUANLYPHIM\BUS\bin\Debug\BUS.pdb
+D:\Visual Studio\QUANLYPHIM\BUS\bin\Debug\DAL.dll
+D:\Visual Studio\QUANLYPHIM\BUS\bin\Debug\DTO.dll
+D:\Visual Studio\QUANLYPHIM\BUS\bin\Debug\DAL.pdb
+D:\Visual Studio\QUANLYPHIM\BUS\bin\Debug\DTO.pdb
+D:\Visual Studio\QUANLYPHIM\BUS\obj\Debug\BUS.csproj.AssemblyReference.cache
+D:\Visual Studio\QUANLYPHIM\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+D:\Visual Studio\QUANLYPHIM\BUS\obj\Debug\BUS.csproj.Up2Date
+D:\Visual Studio\QUANLYPHIM\BUS\obj\Debug\BUS.dll
+D:\Visual Studio\QUANLYPHIM\BUS\obj\Debug\BUS.pdb
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\BUS\bin\Debug\BUS.dll
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\BUS\bin\Debug\BUS.pdb
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\BUS\bin\Debug\DAL.dll
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\BUS\bin\Debug\DTO.dll
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\BUS\bin\Debug\DAL.pdb
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\BUS\bin\Debug\DTO.pdb
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\BUS\obj\Debug\BUS.csproj.AssemblyReference.cache
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\BUS\obj\Debug\BUS.csproj.Up2Date
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\BUS\obj\Debug\BUS.dll
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\BUS\obj\Debug\BUS.pdb
+D:\Visual Studio\QUANLYPHIM-master\BUS\bin\Debug\BUS.dll
+D:\Visual Studio\QUANLYPHIM-master\BUS\bin\Debug\BUS.pdb
+D:\Visual Studio\QUANLYPHIM-master\BUS\bin\Debug\DAL.dll
+D:\Visual Studio\QUANLYPHIM-master\BUS\bin\Debug\DTO.dll
+D:\Visual Studio\QUANLYPHIM-master\BUS\bin\Debug\DAL.pdb
+D:\Visual Studio\QUANLYPHIM-master\BUS\bin\Debug\DTO.pdb
+D:\Visual Studio\QUANLYPHIM-master\BUS\obj\Debug\BUS.csproj.AssemblyReference.cache
+D:\Visual Studio\QUANLYPHIM-master\BUS\obj\Debug\BUS.csproj.CoreCompileInputs.cache
+D:\Visual Studio\QUANLYPHIM-master\BUS\obj\Debug\BUS.csproj.Up2Date
+D:\Visual Studio\QUANLYPHIM-master\BUS\obj\Debug\BUS.dll
+D:\Visual Studio\QUANLYPHIM-master\BUS\obj\Debug\BUS.pdb

@@ -1,0 +1,103 @@
+D:\Visual Studio\QUANLYPHIM\GUI\bin\Debug\GUI.exe.config
+D:\Visual Studio\QUANLYPHIM\GUI\bin\Debug\GUI.exe
+D:\Visual Studio\QUANLYPHIM\GUI\bin\Debug\GUI.pdb
+D:\Visual Studio\QUANLYPHIM\GUI\bin\Debug\BUS.dll
+D:\Visual Studio\QUANLYPHIM\GUI\bin\Debug\DTO.dll
+D:\Visual Studio\QUANLYPHIM\GUI\bin\Debug\DAL.dll
+D:\Visual Studio\QUANLYPHIM\GUI\bin\Debug\BUS.pdb
+D:\Visual Studio\QUANLYPHIM\GUI\bin\Debug\DTO.pdb
+D:\Visual Studio\QUANLYPHIM\GUI\bin\Debug\DAL.pdb
+D:\Visual Studio\QUANLYPHIM\GUI\obj\Debug\GUI.csproj.AssemblyReference.cache
+D:\Visual Studio\QUANLYPHIM\GUI\obj\Debug\GUI.Properties.Resources.resources
+D:\Visual Studio\QUANLYPHIM\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
+D:\Visual Studio\QUANLYPHIM\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+D:\Visual Studio\QUANLYPHIM\GUI\obj\Debug\GUI.csproj.Up2Date
+D:\Visual Studio\QUANLYPHIM\GUI\obj\Debug\GUI.exe
+D:\Visual Studio\QUANLYPHIM\GUI\obj\Debug\GUI.pdb
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\obj\Debug\GUI.csproj.AssemblyReference.cache
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\obj\Debug\GUI.Properties.Resources.resources
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\obj\Debug\GUI.exe
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\obj\Debug\GUI.pdb
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\GUI.exe.config
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\GUI.exe
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\GUI.pdb
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\BUS.dll
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\DAL.dll
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\DTO.dll
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\BUS.pdb
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\DAL.pdb
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\DTO.pdb
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\obj\Debug\GUI.Login.resources
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\obj\Debug\GUI.csproj.Up2Date
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\obj\Debug\GUI.MainFormAdmin.resources
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\obj\Debug\GUI.frmPhim.resources
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\obj\Debug\GUI.frmLichChieu.resources
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\obj\Debug\GUI.frmTheLoaiPhim.resources
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\obj\Debug\GUI.frmPhongChieu.resources
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\obj\Debug\GUI.frmVe.resources
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\obj\Debug\GUI.frmVeAndLoaiVe.resources
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\obj\Debug\GUI.frmBanVe.resources
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\obj\Debug\GUI.frmSoDoGhe.resources
+D:\Visual Studio\QUANLYPHIM-master\GUI\obj\Debug\GUI.csproj.AssemblyReference.cache
+D:\Visual Studio\QUANLYPHIM-master\GUI\obj\Debug\GUI.exe
+D:\Visual Studio\QUANLYPHIM-master\GUI\obj\Debug\GUI.pdb
+D:\Visual Studio\QUANLYPHIM-master\GUI\bin\Debug\GUI.exe.config
+D:\Visual Studio\QUANLYPHIM-master\GUI\bin\Debug\GUI.exe
+D:\Visual Studio\QUANLYPHIM-master\GUI\bin\Debug\GUI.pdb
+D:\Visual Studio\QUANLYPHIM-master\GUI\bin\Debug\BUS.dll
+D:\Visual Studio\QUANLYPHIM-master\GUI\bin\Debug\DAL.dll
+D:\Visual Studio\QUANLYPHIM-master\GUI\bin\Debug\DTO.dll
+D:\Visual Studio\QUANLYPHIM-master\GUI\bin\Debug\BUS.pdb
+D:\Visual Studio\QUANLYPHIM-master\GUI\bin\Debug\DAL.pdb
+D:\Visual Studio\QUANLYPHIM-master\GUI\bin\Debug\DTO.pdb
+D:\Visual Studio\QUANLYPHIM-master\GUI\obj\Debug\GUI.frmBanVe.resources
+D:\Visual Studio\QUANLYPHIM-master\GUI\obj\Debug\GUI.frmLichChieu.resources
+D:\Visual Studio\QUANLYPHIM-master\GUI\obj\Debug\GUI.frmPhim.resources
+D:\Visual Studio\QUANLYPHIM-master\GUI\obj\Debug\GUI.frmPhongChieu.resources
+D:\Visual Studio\QUANLYPHIM-master\GUI\obj\Debug\GUI.frmSoDoGhe.resources
+D:\Visual Studio\QUANLYPHIM-master\GUI\obj\Debug\GUI.frmTheLoaiPhim.resources
+D:\Visual Studio\QUANLYPHIM-master\GUI\obj\Debug\GUI.frmVe.resources
+D:\Visual Studio\QUANLYPHIM-master\GUI\obj\Debug\GUI.frmVeAndLoaiVe.resources
+D:\Visual Studio\QUANLYPHIM-master\GUI\obj\Debug\GUI.Login.resources
+D:\Visual Studio\QUANLYPHIM-master\GUI\obj\Debug\GUI.MainFormAdmin.resources
+D:\Visual Studio\QUANLYPHIM-master\GUI\obj\Debug\GUI.Properties.Resources.resources
+D:\Visual Studio\QUANLYPHIM-master\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
+D:\Visual Studio\QUANLYPHIM-master\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+D:\Visual Studio\QUANLYPHIM-master\GUI\obj\Debug\GUI.csproj.Up2Date
+D:\Visual Studio\QUANLYPHIM-master\GUI\bin\Debug\BouncyCastle.Cryptography.dll
+D:\Visual Studio\QUANLYPHIM-master\GUI\bin\Debug\itextsharp.dll
+D:\Visual Studio\QUANLYPHIM-master\GUI\bin\Debug\BouncyCastle.Cryptography.xml
+D:\Visual Studio\QUANLYPHIM-master\GUI\bin\Debug\itextsharp.xml
+C:\Users\H I U\Desktop\QUANLYPHIM-master\QUANLYPHIM-master\GUI\bin\Debug\GUI.exe.config
+C:\Users\H I U\Desktop\QUANLYPHIM-master\QUANLYPHIM-master\GUI\bin\Debug\GUI.exe
+C:\Users\H I U\Desktop\QUANLYPHIM-master\QUANLYPHIM-master\GUI\bin\Debug\GUI.pdb
+C:\Users\H I U\Desktop\QUANLYPHIM-master\QUANLYPHIM-master\GUI\bin\Debug\BouncyCastle.Cryptography.dll
+C:\Users\H I U\Desktop\QUANLYPHIM-master\QUANLYPHIM-master\GUI\bin\Debug\BUS.dll
+C:\Users\H I U\Desktop\QUANLYPHIM-master\QUANLYPHIM-master\GUI\bin\Debug\DAL.dll
+C:\Users\H I U\Desktop\QUANLYPHIM-master\QUANLYPHIM-master\GUI\bin\Debug\DTO.dll
+C:\Users\H I U\Desktop\QUANLYPHIM-master\QUANLYPHIM-master\GUI\bin\Debug\itextsharp.dll
+C:\Users\H I U\Desktop\QUANLYPHIM-master\QUANLYPHIM-master\GUI\bin\Debug\BUS.pdb
+C:\Users\H I U\Desktop\QUANLYPHIM-master\QUANLYPHIM-master\GUI\bin\Debug\DAL.pdb
+C:\Users\H I U\Desktop\QUANLYPHIM-master\QUANLYPHIM-master\GUI\bin\Debug\DTO.pdb
+C:\Users\H I U\Desktop\QUANLYPHIM-master\QUANLYPHIM-master\GUI\bin\Debug\BouncyCastle.Cryptography.xml
+C:\Users\H I U\Desktop\QUANLYPHIM-master\QUANLYPHIM-master\GUI\bin\Debug\itextsharp.xml
+C:\Users\H I U\Desktop\QUANLYPHIM-master\QUANLYPHIM-master\GUI\obj\Debug\GUI.csproj.AssemblyReference.cache
+C:\Users\H I U\Desktop\QUANLYPHIM-master\QUANLYPHIM-master\GUI\obj\Debug\GUI.frmBanVe.resources
+C:\Users\H I U\Desktop\QUANLYPHIM-master\QUANLYPHIM-master\GUI\obj\Debug\GUI.frmLichChieu.resources
+C:\Users\H I U\Desktop\QUANLYPHIM-master\QUANLYPHIM-master\GUI\obj\Debug\GUI.frmPhim.resources
+C:\Users\H I U\Desktop\QUANLYPHIM-master\QUANLYPHIM-master\GUI\obj\Debug\GUI.frmPhongChieu.resources
+C:\Users\H I U\Desktop\QUANLYPHIM-master\QUANLYPHIM-master\GUI\obj\Debug\GUI.frmSoDoGhe.resources
+C:\Users\H I U\Desktop\QUANLYPHIM-master\QUANLYPHIM-master\GUI\obj\Debug\GUI.frmTheLoaiPhim.resources
+C:\Users\H I U\Desktop\QUANLYPHIM-master\QUANLYPHIM-master\GUI\obj\Debug\GUI.frmVe.resources
+C:\Users\H I U\Desktop\QUANLYPHIM-master\QUANLYPHIM-master\GUI\obj\Debug\GUI.frmVeAndLoaiVe.resources
+C:\Users\H I U\Desktop\QUANLYPHIM-master\QUANLYPHIM-master\GUI\obj\Debug\GUI.Login.resources
+C:\Users\H I U\Desktop\QUANLYPHIM-master\QUANLYPHIM-master\GUI\obj\Debug\GUI.MainFormAdmin.resources
+C:\Users\H I U\Desktop\QUANLYPHIM-master\QUANLYPHIM-master\GUI\obj\Debug\GUI.Properties.Resources.resources
+C:\Users\H I U\Desktop\QUANLYPHIM-master\QUANLYPHIM-master\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
+C:\Users\H I U\Desktop\QUANLYPHIM-master\QUANLYPHIM-master\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+C:\Users\H I U\Desktop\QUANLYPHIM-master\QUANLYPHIM-master\GUI\obj\Debug\GUI.csproj.Up2Date
+C:\Users\H I U\Desktop\QUANLYPHIM-master\QUANLYPHIM-master\GUI\obj\Debug\GUI.exe
+C:\Users\H I U\Desktop\QUANLYPHIM-master\QUANLYPHIM-master\GUI\obj\Debug\GUI.pdb
+C:\Users\H I U\Desktop\QUANLYPHIM-master\QUANLYPHIM-master\GUI\obj\Debug\GUI.Register.resources
