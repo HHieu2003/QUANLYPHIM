@@ -188,16 +188,7 @@ namespace GUI
 
         private void btnMuaDoAn_Click(object sender, EventArgs e)
         {
-            using (var frm = new frmBanDoAn(maKhachHang))
-            {
-                if (frm.ShowDialog() == DialogResult.OK)
-                {
-                    maDonHang = frm.MaDonHang;
-                    var donHang = DonHangBUS.LayTheoMa(maDonHang);
-                    tongTienDoAn = donHang.TongTien;
-                    TinhTongTien();
-                }
-            }
+         
         }
 
         private string TaoMaXacNhan()
@@ -284,15 +275,15 @@ namespace GUI
             var phim = PhimBUS.LayTatCa().FirstOrDefault(p => p.MaPhim == lichChieu.MaPhim);
             var loaiVe = LoaiVeBUS.LayTatCa().FirstOrDefault(lv => lv.MaLoaiVe == cboLoaiVe.SelectedValue.ToString());
 
-            string hoaDon = $"----- HÓA ĐƠN BÁN VÉ -----\n\n";
-            hoaDon += $"Mã xác nhận: {maXacNhan}\n\n";
-            hoaDon += $"Khách hàng: {hoTenKhachHang}\n\n";
-            hoaDon += $"Phim: {phim.TenPhim}\n";
-            hoaDon += $"Lịch chiếu: {lichChieu.GioBatDau:dd/MM/yyyy HH:mm}\n";
-            hoaDon += $"Loại vé: {loaiVe.TenLoaiVe}\n";
-            hoaDon += $"Danh sách ghế: {string.Join(", ", selectedGheList)}\n";
-            hoaDon += $"Số lượng vé: {veListToCreate.Count}\n";
-            hoaDon += $"Tổng tiền vé: {tongTienVe:N0} VND\n";
+            string hoaDon = $"----- HÓA ĐƠN BÁN VÉ -----\n\n{Environment.NewLine}{Environment.NewLine}";
+            hoaDon += $"Mã xác nhận: {maXacNhan}\n\n{Environment.NewLine}{Environment.NewLine}";
+            hoaDon += $"Khách hàng: {hoTenKhachHang}\n\n{Environment.NewLine}{Environment.NewLine}";
+            hoaDon += $"Phim: {phim.TenPhim}\n{Environment.NewLine}{Environment.NewLine}";
+            hoaDon += $"Lịch chiếu: {lichChieu.GioBatDau:dd/MM/yyyy HH:mm}\n{Environment.NewLine}{Environment.NewLine}";
+            hoaDon += $"Loại vé: {loaiVe.TenLoaiVe}\n{Environment.NewLine}{Environment.NewLine}";
+            hoaDon += $"Danh sách ghế: {string.Join(", ", selectedGheList)}\n{Environment.NewLine}{Environment.NewLine}";
+            hoaDon += $"Số lượng vé: {veListToCreate.Count}\n{Environment.NewLine}{Environment.NewLine}";
+            hoaDon += $"Tổng tiền vé: {tongTienVe:N0} VND\n{Environment.NewLine}{Environment.NewLine}";
 
             if (maDonHang != null)
             {
@@ -312,14 +303,14 @@ namespace GUI
                             hoaDon += $"{tenDoAn} {soLuong} x {gia} = {thanhTien}\n";
                         }
                     }
-                    hoaDon += $"Tổng tiền đồ ăn: {tongTienDoAn:N0} VND\n";
+                    hoaDon += $"Tổng tiền đồ ăn: {tongTienDoAn:N0} VND\n{Environment.NewLine}{Environment.NewLine}";
                 }
             }
 
-            hoaDon += $"\nTổng tiền: {(tongTienVe + tongTienDoAn):N0} VND\n";
-            hoaDon += $"Ngày đặt: {DateTime.Now:dd/MM/yyyy HH:mm:ss}\n\n";
-            hoaDon += $"Cảm ơn quý khách đã sử dụng dịch vụ!\n";
-            hoaDon += $"Vui lòng sử dụng mã xác nhận {maXacNhan} tại rạp để nhận vé và đồ ăn (nếu có).";
+            hoaDon += $"\nTổng tiền: {(tongTienVe + tongTienDoAn):N0} VND\n{Environment.NewLine}{Environment.NewLine}";
+            hoaDon += $"Ngày đặt: {DateTime.Now:dd/MM/yyyy HH:mm:ss}\n\n{Environment.NewLine}{Environment.NewLine}";
+            hoaDon += $"Cảm ơn quý khách đã sử dụng dịch vụ!\n{Environment.NewLine}{Environment.NewLine}";
+            hoaDon += $"{Environment.NewLine}{Environment.NewLine}Vui lòng sử dụng mã xác nhận {maXacNhan} tại rạp để nhận vé và đồ ăn (nếu có).";
 
             txtHoaDon.Text = hoaDon;
             return hoaDon;

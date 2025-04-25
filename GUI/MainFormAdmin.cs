@@ -26,12 +26,14 @@ namespace GUI
                 btnPhongChieu, 
                 btnDoAn,
                 btnDonHang,
-                btnChiTietDoAn
+                btnChiTietDoAn,
+               btnBanVe
+                
              };
 
             string[] texts = {
                 "📺  Lịch chiếu", 
-                "🎫  Vé & loại vé", 
+                "🎫  Vé và loại vé", 
                 "👤  Khách hàng", 
                 "👨‍💼  Người dùng",
                 "🎬  Quản lý phim",
@@ -40,14 +42,15 @@ namespace GUI
                 "🏢  Phòng chiếu", 
                 "🍿  Quản lý đồ ăn", 
                 "🧾  Đơn hàng", 
-                "📦  Chi tiết đồ ăn"
+                "📦  Chi tiết đồ ăn",
+                "Bán vé "
                };
 
             for (int i = 0; i < buttons.Length; i++)
             {
                 buttons[i].Text = texts[i];
                 buttons[i].Dock = DockStyle.Top;
-                buttons[i].Height = 55;
+                buttons[i].Height = 53;
                 buttons[i].FlatStyle = FlatStyle.Flat;
                 buttons[i].FlatAppearance.BorderSize = 0;
                 buttons[i].BackColor = Color.FromArgb(45, 45, 48);
@@ -93,9 +96,12 @@ namespace GUI
 
         private void btnVe_Click(object sender, EventArgs e)
         {
-            LoadFormToPanel(new frmBanVe());
+            LoadFormToPanel(new frmVeAndLoaiVe());
         }
-
+        private void btnBanVe_Click(object sender, EventArgs e)
+        {
+           /* LoadFormToPanel(new frmBanVe());*/
+        }
         private void btnKhachHang_Click(object sender, EventArgs e)
         {
             LoadFormToPanel(new frmKhachHang());
@@ -113,7 +119,12 @@ namespace GUI
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult result = MessageBox.Show("Bạn có chắc chắn muốn thoát không?", "Xác nhận",
+                                                 MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
         private void btnTheLoaiPhim_Click(object sender, EventArgs e)

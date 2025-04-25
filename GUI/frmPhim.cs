@@ -70,8 +70,25 @@ namespace GUI
                 var row = dgvPhim.SelectedRows[0];
                 txtMaPhim.Text = row.Cells["MaPhim"].Value.ToString();
                 txtTenPhim.Text = row.Cells["TenPhim"].Value.ToString();
-                var tenTheLoai = row.Cells["TenTheLoai"].Value.ToString();
-                cboTheLoai.SelectedValue = TheLoaiPhimBUS.LayTatCa().FirstOrDefault(t => t.TenTheLoai == tenTheLoai)?.MaTheLoai;
+                // Handle potential null value for TenTheLoai
+                // Handle potential null value for TenTheLoai
+                var tenTheLoai = row.Cells["TenTheLoai"].Value?.ToString();
+                if (!string.IsNullOrEmpty(tenTheLoai))
+                {
+                    var maTheLoai = TheLoaiPhimBUS.LayTatCa().FirstOrDefault(t => t.TenTheLoai == tenTheLoai)?.MaTheLoai;
+                    if (maTheLoai != null)
+                    {
+                        cboTheLoai.SelectedValue = maTheLoai;
+                    }
+                    else
+                    {
+                        cboTheLoai.SelectedIndex = -1; // Reset ComboBox if no matching genre ID
+                    }
+                }
+                else
+                {
+                    cboTheLoai.SelectedIndex = -1; // Reset ComboBox if no genre name
+                }
                 txtThoiLuong.Text = row.Cells["ThoiLuong"].Value.ToString();
                 txtMoTa.Text = row.Cells["MoTa"].Value.ToString();
                 txtMaPhim.Enabled = false;

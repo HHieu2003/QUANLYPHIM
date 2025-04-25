@@ -38,11 +38,11 @@ namespace GUI
             cboPhim.DisplayMember = "TenPhim";
             cboPhim.ValueMember = "MaPhim";
 
-            // Load danh sách phòng chiếu vào ComboBox
-            cboPhong.DataSource = phongList;
+            // Load danh sách phòng chiếu có trạng thái "hoatdong" vào ComboBox
+            var phongHoatDongList = phongList.Where(p => p.TrangThai == "hoatdong").ToList();
+            cboPhong.DataSource = phongHoatDongList;
             cboPhong.DisplayMember = "TenPhong";
             cboPhong.ValueMember = "MaPhong";
-
             // Reset form
             ResetForm();
         }
@@ -75,10 +75,27 @@ namespace GUI
             {
                 var row = dgvLichChieu.SelectedRows[0];
                 txtMaLichChieu.Text = row.Cells["MaLichChieu"].Value.ToString();
-                var tenPhim = row.Cells["TenPhim"].Value.ToString();
-                cboPhim.SelectedValue = PhimBUS.LayTatCa().FirstOrDefault(p => p.TenPhim == tenPhim)?.MaPhim;
-                var tenPhong = row.Cells["TenPhong"].Value.ToString();
-                cboPhong.SelectedValue = PhongChieuBUS.LayTatCa().FirstOrDefault(p => p.TenPhong == tenPhong)?.MaPhong;
+                // Handle potential null value for TenPhim
+                var tenPhim = row.Cells["TenPhim"].Value?.ToString();
+                if (!string.IsNullOrEmpty(tenPhim))
+                {
+                    cboPhim.SelectedValue = PhimBUS.LayTatCa().FirstOrDefault(p => p.TenPhim == tenPhim)?.MaPhim;
+                }
+                else
+                {
+                    cboPhim.SelectedIndex = -1; // Reset ComboBox if no matching movie
+                }
+
+                // Handle potential null value for TenPhong
+                var tenPhong = row.Cells["TenPhong"].Value?.ToString();
+                if (!string.IsNullOrEmpty(tenPhong))
+                {
+                    cboPhong.SelectedValue = PhongChieuBUS.LayTatCa().FirstOrDefault(p => p.TenPhong == tenPhong)?.MaPhong;
+                }
+                else
+                {
+                    cboPhong.SelectedIndex = -1; // Reset ComboBox if no matching room
+                }
                 dtpGioBatDau.Value = (DateTime)row.Cells["GioBatDau"].Value;
                 txtGiaVe.Text = row.Cells["GiaVe"].Value.ToString();
                 txtMaLichChieu.Enabled = false;

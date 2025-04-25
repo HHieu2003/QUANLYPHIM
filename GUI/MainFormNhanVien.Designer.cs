@@ -5,15 +5,7 @@ namespace GUI
 {
     partial class MainFormNhanVien
     {
-        private System.ComponentModel.IContainer components = null;
-        private Panel pnlMenu, pnlHeader, pnlContent, pnlFooter;
-        private Label lblTitle;
-        private Label lblWelcome;
-        private Timer welcomeTimer;
-        private Button btnPhim, btnLichChieu, btnVe, btnKhachHang, btnNguoiDung, btnBaoCao;
-        private Button btnTheLoaiPhim, btnPhongChieu, btnDoAn, btnDonHang, btnChiTietDoAn;
-        private Button btnThoat;
-
+        private System.ComponentModel.IContainer components = null; private Panel pnlMenu, pnlHeader, pnlContent, pnlFooter; private Label lblTitle; private Label lblWelcome; private Timer welcomeTimer; private Button btnPhim, btnLichChieu, btnVe, btnKhachHang, btnNguoiDung, btnBaoCao; private Button btnTheLoaiPhim, btnPhongChieu, btnDoAn, btnDonHang, btnChiTietDoAn; private Button btnThoat; private Button btnBanVe; private Button btnBanDoAn; private Button btnBanVeOnline; // Added new button
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null)) components.Dispose();
@@ -41,6 +33,9 @@ namespace GUI
             this.btnDonHang = new Button();
             this.btnChiTietDoAn = new Button();
             this.btnThoat = new Button();
+            this.btnBanVe = new Button();
+            this.btnBanDoAn = new Button();
+            this.btnBanVeOnline = new Button(); // Initialize new button
 
             this.pnlMenu.SuspendLayout();
             this.pnlHeader.SuspendLayout();
@@ -62,13 +57,14 @@ namespace GUI
             this.pnlMenu.Dock = DockStyle.Left;
             this.pnlMenu.Width = 300;
             this.pnlMenu.Controls.AddRange(new Control[] {
-                btnPhim, btnTheLoaiPhim, btnLichChieu, btnPhongChieu,
-                btnVe, btnDonHang,
-                btnDoAn, btnChiTietDoAn,
-                btnKhachHang, btnNguoiDung,
-                btnBaoCao,
-                pnlFooter
-            });
+            btnPhim, btnTheLoaiPhim, btnLichChieu, btnPhongChieu,
+            btnVe, btnBanVe, btnBanDoAn, btnBanVeOnline, // Added btnBanVeOnline
+            btnDonHang,
+            btnDoAn, btnChiTietDoAn,
+            btnKhachHang, btnNguoiDung,
+            btnBaoCao,
+            pnlFooter
+        });
 
             // pnlFooter
             this.pnlFooter.Dock = DockStyle.Bottom;
@@ -108,8 +104,31 @@ namespace GUI
             this.welcomeTimer.Interval = 2500; // 2.5 giây
             this.welcomeTimer.Tick += new System.EventHandler(this.WelcomeTimer_Tick);
 
+            // btnBanDoAn
+            this.btnBanDoAn.Text = "🍽️  Bán đồ ăn";
+            this.btnBanDoAn.Dock = DockStyle.Top;
+            this.btnBanDoAn.Height = 55;
+            this.btnBanDoAn.FlatStyle = FlatStyle.Flat;
+            this.btnBanDoAn.FlatAppearance.BorderSize = 0;
+            this.btnBanDoAn.BackColor = Color.FromArgb(45, 45, 48);
+            this.btnBanDoAn.ForeColor = Color.White;
+            this.btnBanDoAn.Font = new Font("Segoe UI", 12.5F, FontStyle.Bold);
+            this.btnBanDoAn.TextAlign = ContentAlignment.MiddleLeft;
+            this.btnBanDoAn.Padding = new Padding(20, 0, 0, 0);
+            this.btnBanDoAn.Click += new System.EventHandler(this.btnBanDoAn_Click);
 
-
+            // btnBanVeOnline
+            this.btnBanVeOnline.Text = "🌐  Bán vé online";
+            this.btnBanVeOnline.Dock = DockStyle.Top;
+            this.btnBanVeOnline.Height = 55;
+            this.btnBanVeOnline.FlatStyle = FlatStyle.Flat;
+            this.btnBanVeOnline.FlatAppearance.BorderSize = 0;
+            this.btnBanVeOnline.BackColor = Color.FromArgb(45, 45, 48);
+            this.btnBanVeOnline.ForeColor = Color.White;
+            this.btnBanVeOnline.Font = new Font("Segoe UI", 12.5F, FontStyle.Bold);
+            this.btnBanVeOnline.TextAlign = ContentAlignment.MiddleLeft;
+            this.btnBanVeOnline.Padding = new Padding(20, 0, 0, 0);
+            this.btnBanVeOnline.Click += new System.EventHandler(this.btnBanVeOnline_Click);
 
             // btnThoat
             this.btnThoat.Text = "🚪  Thoát";
@@ -129,12 +148,12 @@ namespace GUI
             this.btnKhachHang.Click += new System.EventHandler(this.btnKhachHang_Click);
             this.btnBaoCao.Click += new System.EventHandler(this.btnBaoCao_Click);
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
-
             this.btnTheLoaiPhim.Click += new System.EventHandler(this.btnTheLoaiPhim_Click);
             this.btnPhongChieu.Click += new System.EventHandler(this.btnPhongChieu_Click);
             this.btnDoAn.Click += new System.EventHandler(this.btnDoAn_Click);
             this.btnDonHang.Click += new System.EventHandler(this.btnDonHang_Click);
             this.btnChiTietDoAn.Click += new System.EventHandler(this.btnChiTietDoAn_Click);
+            this.btnBanVe.Click += new System.EventHandler(this.btnBanVe_Click);
 
             // Thêm panel
             this.Controls.Add(this.pnlContent);

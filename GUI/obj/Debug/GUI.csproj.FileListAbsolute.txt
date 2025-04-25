@@ -36,7 +36,6 @@ C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\obj\Debug\GUI.frmPhim.resources
 C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\obj\Debug\GUI.frmLichChieu.resources
 C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\obj\Debug\GUI.frmTheLoaiPhim.resources
 C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\obj\Debug\GUI.frmPhongChieu.resources
-C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\obj\Debug\GUI.frmVe.resources
 C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\obj\Debug\GUI.frmVeAndLoaiVe.resources
 C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\obj\Debug\GUI.frmBanVe.resources
 C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\obj\Debug\GUI.frmSoDoGhe.resources
@@ -101,3 +100,9 @@ C:\Users\H I U\Desktop\QUANLYPHIM-master\QUANLYPHIM-master\GUI\obj\Debug\GUI.csp
 C:\Users\H I U\Desktop\QUANLYPHIM-master\QUANLYPHIM-master\GUI\obj\Debug\GUI.exe
 C:\Users\H I U\Desktop\QUANLYPHIM-master\QUANLYPHIM-master\GUI\obj\Debug\GUI.pdb
 C:\Users\H I U\Desktop\QUANLYPHIM-master\QUANLYPHIM-master\GUI\obj\Debug\GUI.Register.resources
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\BouncyCastle.Cryptography.dll
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\itextsharp.dll
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\BouncyCastle.Cryptography.xml
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\itextsharp.xml
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\obj\Debug\GUI.Register.resources
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\obj\Debug\GUI.frmBaoCao.resources

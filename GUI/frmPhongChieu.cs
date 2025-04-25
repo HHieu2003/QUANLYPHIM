@@ -25,7 +25,7 @@ namespace GUI
 
             // Load trạng thái vào ComboBox
             cboTrangThai.Items.Clear();
-            cboTrangThai.Items.AddRange(new string[] { "Hoatdong", "baotri" });
+            cboTrangThai.Items.AddRange(new string[] { "hoatdong", "baotri" });
 
             // Reset form
             ResetForm();
@@ -45,7 +45,7 @@ namespace GUI
         {
             txtMaPhong.Clear();
             txtTenPhong.Clear();
-            txtSoLuongGhe.Clear();
+            txtSoLuongGhe.Text = 100.ToString();
             txtTimKiem.Clear();
             cboTrangThai.SelectedIndex = -1;
             txtMaPhong.Enabled = true;
@@ -98,6 +98,8 @@ namespace GUI
                 MaPhong = txtMaPhong.Text.Trim(),
                 TenPhong = txtTenPhong.Text.Trim(),
                 SoLuongGhe = int.Parse(txtSoLuongGhe.Text.Trim()),
+              
+
                 TrangThai = cboTrangThai.SelectedItem.ToString()
             };
 

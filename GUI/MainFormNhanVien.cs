@@ -1,44 +1,43 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GUI
 {
     public partial class MainFormNhanVien : Form
     {
+        private string maNhanVien; private string hoTenNhanVien;
         private void InitializeSidebarButtons()
         {
             Button[] buttons = {
-                btnLichChieu,
-                btnVe,
-                btnKhachHang,
-                btnPhim,
-                btnBaoCao,
-                btnTheLoaiPhim,
-                btnPhongChieu,
-                btnDoAn,
-                btnDonHang,
-                btnChiTietDoAn
-             };
+            btnLichChieu,
+            btnVe,
+            btnKhachHang,
+            btnPhim,
+            btnBaoCao,
+            btnTheLoaiPhim,
+            btnPhongChieu,
+            btnDoAn,
+            btnDonHang,
+            btnChiTietDoAn,
+            btnBanDoAn,
+            btnBanVeOnline // Added new button
+        };
 
             string[] texts = {
-                "📺  Lịch chiếu",
-                "🎫  Vé & loại vé",
-                "👤  Khách hàng",
-                "🎬  Quản lý phim",
-                "📊  Báo cáo",
-                "🎞️  Thể loại phim",
-                "🏢  Phòng chiếu",
-                "🍿  Quản lý đồ ăn",
-                "🧾  Đơn hàng",
-                "📦  Chi tiết đồ ăn"
-               };
+            "📺  Lịch chiếu",
+            "🎫  Vé & loại vé",
+            "👤  Khách hàng",
+            "🎬  Quản lý phim",
+            "📊  Báo cáo",
+            "🎞️  Thể loại phim",
+            "🏢  Phòng chiếu",
+            "🍿  Quản lý đồ ăn",
+            "🧾  Đơn hàng",
+            "📦  Chi tiết đồ ăn",
+            "🍽️  Bán đồ ăn",
+            "🌐  Bán vé " // Added new button text
+        };
 
             for (int i = 0; i < buttons.Length; i++)
             {
@@ -55,9 +54,11 @@ namespace GUI
             }
         }
 
-        public MainFormNhanVien()
+        public MainFormNhanVien(string maNhanVien, string hoTenNhanVien)
         {
             InitializeComponent();
+            this.maNhanVien = maNhanVien;
+            this.hoTenNhanVien = hoTenNhanVien;
             welcomeTimer.Start();
             InitializeSidebarButtons();
         }
@@ -78,6 +79,16 @@ namespace GUI
             pnlContent.Controls.Remove(lblWelcome);
         }
 
+        private void btnBanVe_Click(object sender, EventArgs e)
+        {
+            LoadFormToPanel(new frmBanVe(maNhanVien, hoTenNhanVien));
+        }
+
+        private void btnBanVeOnline_Click(object sender, EventArgs e)
+        {
+            LoadFormToPanel(new frmBanVe(maNhanVien, hoTenNhanVien));
+        }
+
         private void btnPhim_Click(object sender, EventArgs e)
         {
             LoadFormToPanel(new frmPhim());
@@ -90,7 +101,7 @@ namespace GUI
 
         private void btnVe_Click(object sender, EventArgs e)
         {
-            LoadFormToPanel(new frmVe());
+            LoadFormToPanel(new frmVeAndLoaiVe());
         }
 
         private void btnKhachHang_Click(object sender, EventArgs e)
@@ -98,7 +109,6 @@ namespace GUI
             LoadFormToPanel(new frmKhachHang());
         }
 
-      
         private void btnBaoCao_Click(object sender, EventArgs e)
         {
             LoadFormToPanel(new frmBaoCao());
@@ -132,6 +142,11 @@ namespace GUI
         private void btnChiTietDoAn_Click(object sender, EventArgs e)
         {
             LoadFormToPanel(new frmChiTietDoAn());
+        }
+
+        private void btnBanDoAn_Click(object sender, EventArgs e)
+        {
+            LoadFormToPanel(new frmBanDoAn(maNhanVien, hoTenNhanVien));
         }
     }
 }

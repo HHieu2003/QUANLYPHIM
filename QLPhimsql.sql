@@ -131,8 +131,8 @@ CREATE TABLE GiaoDich (
     MaDonHang NVARCHAR(10) NULL, -- Có thể null nếu không mua đồ ăn
     NgayGiaoDich DATETIME NOT NULL,
     TongTien DECIMAL(18, 2) NOT NULL,
-    FOREIGN KEY (MaKhachHang) REFERENCES KhachHang(MaKhachHang),
-    FOREIGN KEY (MaDonHang) REFERENCES DonHang(MaDonHang)
+    FOREIGN KEY (MaKhachHang) REFERENCES KhachHang(MaKhachHang) ON DELETE SET NULL,
+    FOREIGN KEY (MaDonHang) REFERENCES DonHang(MaDonHang) ON DELETE SET NULL
 );
 ALTER TABLE GiaoDich
 ADD TrangThai NVARCHAR(20) DEFAULT 'ChuaXuLy' CHECK (TrangThai IN ('ChuaXuLy', 'DaXuLy'));

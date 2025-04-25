@@ -44,7 +44,8 @@ namespace GUI
                 }
                 else if (nguoiDung.VaiTro == "nhanvien")
                 {
-                    mainForm = new MainFormNhanVien();
+
+                    mainForm = new MainFormNhanVien(nguoiDung.MaNguoiDung, nguoiDung.TenDangNhap); // Truyền MaNguoiDung và HoTen
                 }
                 else // VaiTro == "khach"
                 {

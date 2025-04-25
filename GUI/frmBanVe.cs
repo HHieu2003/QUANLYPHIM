@@ -10,18 +10,23 @@ namespace GUI
 {
     public partial class frmBanVe : Form
     {
-        private List<string> selectedGheList = new List<string>(); // Danh sách ghế được chọn
-        private List<Ve> veListToCreate = new List<Ve>(); // Danh sách vé sẽ tạo
-        private List<DoAn> doAnList; // Danh sách đồ ăn
-        private Dictionary<string, int> selectedDoAnDict = new Dictionary<string, int>(); // Danh sách đồ ăn được chọn (MaDoAn, SoLuong)
+        private string maNhanVien;
+        private string hoTenNhanVien;
+        private List<string> selectedGheList = new List<string>();
+        private List<Ve> veListToCreate = new List<Ve>();
+        private List<DoAn> doAnList;
+        private Dictionary<string, int> selectedDoAnDict = new Dictionary<string, int>();
         private decimal tongTienVe = 0;
         private decimal tongTienDoAn = 0;
 
-        public frmBanVe()
+        public frmBanVe(string maNhanVien, string hoTenNhanVien)
         {
             InitializeComponent();
+            this.maNhanVien = maNhanVien;
+            this.hoTenNhanVien = hoTenNhanVien;
+            txtMaNhanVien.Text = maNhanVien;
+            txtHoTenNhanVien.Text = hoTenNhanVien;
             LoadData();
-            // Thiết lập thuộc tính cho txtHoaDon
             txtHoaDon.Multiline = true;
             txtHoaDon.WordWrap = true;
             txtHoaDon.Font = new Font("Courier New", 10);
@@ -30,7 +35,6 @@ namespace GUI
 
         private void LoadData()
         {
-            // Load phim
             var phimList = PhimBUS.LayTatCa();
             if (phimList == null || phimList.Count == 0)
             {
@@ -43,7 +47,6 @@ namespace GUI
             cboPhim.SelectedIndex = -1;
             cboPhim.SelectedIndexChanged += cboPhim_SelectedIndexChanged;
 
-            // Load loại vé
             var loaiVeList = LoaiVeBUS.LayTatCa();
             if (loaiVeList == null || loaiVeList.Count == 0)
             {
@@ -53,7 +56,6 @@ namespace GUI
             cboLoaiVe.DisplayMember = "TenLoaiVe";
             cboLoaiVe.ValueMember = "MaLoaiVe";
 
-            // Load đồ ăn
             doAnList = DoAnBUS.LayTatCa();
             if (doAnList == null || doAnList.Count == 0)
             {
@@ -64,7 +66,6 @@ namespace GUI
             dgvDoAn.Columns["MoTa"].Visible = false;
             dgvDoAn.Columns["TenDoAn"].HeaderText = "Tên Đồ Ăn";
             dgvDoAn.Columns["Gia"].HeaderText = "Giá (VND)";
-            // Thêm cột số lượng
             DataGridViewTextBoxColumn colSoLuong = new DataGridViewTextBoxColumn
             {
                 Name = "SoLuong",
@@ -73,20 +74,14 @@ namespace GUI
             };
             dgvDoAn.Columns.Add(colSoLuong);
 
-            // Đăng ký sự kiện CellValueChanged sau khi cột SoLuong được thêm
             dgvDoAn.CellValueChanged -= dgvDoAn_CellValueChanged;
             dgvDoAn.CellValueChanged += dgvDoAn_CellValueChanged;
 
-            // Reset form
             ResetForm();
         }
 
         private void ResetForm()
         {
-            txtMaKhachHang.Clear();
-            txtHoTen.Clear();
-            txtSoDienThoai.Clear();
-            txtEmail.Clear();
             cboPhim.SelectedIndex = -1;
             cboLichChieu.DataSource = null;
             selectedGheList.Clear();
@@ -102,38 +97,6 @@ namespace GUI
             foreach (DataGridViewRow row in dgvDoAn.Rows)
             {
                 row.Cells["SoLuong"].Value = null;
-            }
-        }
-
-        private void btnTraCuuKhachHang_Click(object sender, EventArgs e)
-        {
-            string soDienThoai = txtSoDienThoai.Text.Trim();
-            if (string.IsNullOrEmpty(soDienThoai))
-            {
-                MessageBox.Show("Vui lòng nhập số điện thoại để tra cứu!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            try
-            {
-                var khachHang = KhachHangBUS.TimKiemTheoSoDienThoai(soDienThoai);
-                if (khachHang != null)
-                {
-                    txtMaKhachHang.Text = khachHang.MaKhachHang;
-                    txtHoTen.Text = khachHang.HoTen;
-                    txtEmail.Text = khachHang.Email;
-                }
-                else
-                {
-                    MessageBox.Show("Khách hàng không tồn tại. Vui lòng nhập thông tin để thêm mới khi thanh toán!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtMaKhachHang.Clear();
-                    txtHoTen.Clear();
-                    txtEmail.Clear();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -191,7 +154,6 @@ namespace GUI
 
         private void TinhTongTien()
         {
-            // Tính tiền vé
             if (cboLichChieu.SelectedValue == null || cboLoaiVe.SelectedValue == null || selectedGheList.Count == 0)
             {
                 tongTienVe = 0;
@@ -202,10 +164,8 @@ namespace GUI
                 tongTienVe = giaVe * selectedGheList.Count;
             }
 
-            // Tính tiền đồ ăn
             TinhTongTienDoAn();
 
-            // Tổng tiền
             decimal tongTien = tongTienVe + tongTienDoAn;
             txtTongTien.Text = tongTien.ToString("N0");
         }
@@ -235,7 +195,6 @@ namespace GUI
             }
         }
 
-        // Hàm tạo mã xác nhận ngẫu nhiên
         private string TaoMaXacNhan()
         {
             Random random = new Random();
@@ -245,17 +204,6 @@ namespace GUI
 
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
-            // Kiểm tra thông tin khách hàng
-            string soDienThoai = txtSoDienThoai.Text.Trim();
-            string hoTen = txtHoTen.Text.Trim();
-            string email = txtEmail.Text.Trim();
-
-            if (string.IsNullOrEmpty(soDienThoai) || string.IsNullOrEmpty(hoTen))
-            {
-                MessageBox.Show("Vui lòng nhập đầy đủ số điện thoại và họ tên khách hàng!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
             if (selectedGheList.Count == 0)
             {
                 MessageBox.Show("Vui lòng chọn ghế!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -268,39 +216,26 @@ namespace GUI
                 return;
             }
 
-            // Kiểm tra khách hàng đã tồn tại hay chưa
-            string maKhachHang = null;
-            var khachHang = KhachHangBUS.TimKiemTheoSoDienThoai(soDienThoai);
-            if (khachHang != null)
+            string maKhachHang = "KH" + Guid.NewGuid().ToString().Substring(0, 8);
+            KhachHang khachHangMoi = new KhachHang
             {
-                // Khách hàng đã tồn tại, sử dụng MaKhachHang
-                maKhachHang = khachHang.MaKhachHang;
+                MaKhachHang = maKhachHang,
+                HoTen = "KhachHangMacDinh",
+                SoDienThoai = "0000000000",
+                Email = "khachhang@macdinh.com"
+            };
+            try
+            {
+                KhachHangBUS.Them(khachHangMoi);
             }
-            else
+            catch (Exception ex)
             {
-                // Khách hàng chưa tồn tại, thêm mới
-                maKhachHang = "KH" + Guid.NewGuid().ToString().Substring(0, 8); // Tạo mã khách hàng mới
-                KhachHang khachHangMoi = new KhachHang
-                {
-                    MaKhachHang = maKhachHang,
-                    HoTen = hoTen,
-                    SoDienThoai = soDienThoai,
-                    Email = email
-                };
-                try
-                {
-                    KhachHangBUS.Them(khachHangMoi);
-                    MessageBox.Show("Đã thêm khách hàng mới!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Lỗi khi thêm khách hàng: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
+                MessageBox.Show($"Lỗi khi thêm khách hàng mặc định: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
 
-            // Tạo vé
             veListToCreate.Clear();
+            string maGiaoDich = "GD-" + Guid.NewGuid().ToString().Substring(0, 8);
             foreach (var soGhe in selectedGheList)
             {
                 Ve ve = new Ve
@@ -310,16 +245,16 @@ namespace GUI
                     MaLoaiVe = cboLoaiVe.SelectedValue.ToString(),
                     MaKhachHang = maKhachHang,
                     SoGhe = soGhe,
-                    NgayDat = DateTime.Now
+                    NgayDat = DateTime.Now,
+                    MaGiaoDich = maGiaoDich
                 };
                 veListToCreate.Add(ve);
             }
 
-            // Tạo đơn hàng (nếu có đồ ăn)
             string maDonHang = null;
             if (selectedDoAnDict.Count > 0)
             {
-                maDonHang = Guid.NewGuid().ToString().Substring(0,10);
+                maDonHang = Guid.NewGuid().ToString().Substring(0, 10);
                 DonHang donHang = new DonHang
                 {
                     MaDonHang = maDonHang,
@@ -344,7 +279,7 @@ namespace GUI
                     {
                         ChiTietDoAn chiTiet = new ChiTietDoAn
                         {
-                            MaChiTiet = Guid.NewGuid().ToString().Substring(0,10),
+                            MaChiTiet = Guid.NewGuid().ToString().Substring(0, 10),
                             MaDonHang = maDonHang,
                             MaDoAn = item.Key,
                             SoLuong = item.Value,
@@ -364,17 +299,27 @@ namespace GUI
                 }
             }
 
-            // Thêm vé vào database
             try
             {
+                string maXacNhan = TaoMaXacNhan();
+                GiaoDich giaoDich = new GiaoDich
+                {
+                    MaGiaoDich = maGiaoDich,
+                    MaXacNhan = maXacNhan,
+                    MaKhachHang = maKhachHang,
+                    MaDonHang = maDonHang,
+                    NgayGiaoDich = DateTime.Now,
+                    TongTien = tongTienVe + tongTienDoAn
+                };
+                GiaoDichBUS.Them(giaoDich);
+
                 foreach (var ve in veListToCreate)
                 {
                     VeBUS.Them(ve);
                 }
-                // Tạo mã xác nhận và hiển thị
-                string maXacNhan = TaoMaXacNhan();
+
                 MessageBox.Show($"Thanh toán thành công! Đã tạo vé.\nMã xác nhận của bạn: {maXacNhan}", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                HienThiHoaDon(maDonHang, maXacNhan); // Truyền mã xác nhận vào hóa đơn
+                HienThiHoaDon(maDonHang, maXacNhan);
                 btnThanhToan.Enabled = false;
                 btnInHoaDon.Enabled = true;
             }
@@ -389,41 +334,40 @@ namespace GUI
             var lichChieu = LichChieuBUS.LayTatCa().FirstOrDefault(lc => lc.MaLichChieu == cboLichChieu.SelectedValue.ToString());
             var phim = PhimBUS.LayTatCa().FirstOrDefault(p => p.MaPhim == lichChieu.MaPhim);
             var loaiVe = LoaiVeBUS.LayTatCa().FirstOrDefault(lv => lv.MaLoaiVe == cboLoaiVe.SelectedValue.ToString());
-            var khachHang = KhachHangBUS.TimKiemTheoSoDienThoai(txtSoDienThoai.Text.Trim());
 
-            // Định dạng hóa đơn
-            string hoaDon = $"----- HÓA ĐƠN BÁN VÉ -----{Environment.NewLine}{Environment.NewLine}";
-            hoaDon += $"Mã xác nhận: {maXacNhan}{Environment.NewLine}{Environment.NewLine}";
-            hoaDon += $"Khách hàng: {khachHang.HoTen}{Environment.NewLine}";
-            hoaDon += $"Số điện thoại: {khachHang.SoDienThoai}{Environment.NewLine}{Environment.NewLine}";
-            hoaDon += $"Phim: {phim.TenPhim}{Environment.NewLine}";
-            hoaDon += $"Lịch chiếu: {lichChieu.GioBatDau:dd/MM/yyyy HH:mm}{Environment.NewLine}";
-            hoaDon += $"Loại vé: {loaiVe.TenLoaiVe}{Environment.NewLine}";
-            hoaDon += $"\nDanh sách ghế: {string.Join(", ", selectedGheList)}{Environment.NewLine}";
-            hoaDon += $"\nSố lượng vé: {veListToCreate.Count}{Environment.NewLine}";
-            hoaDon += $"\nTổng tiền vé: {tongTienVe:N0} VND{Environment.NewLine}";
+            string hoaDon = $"----- HÓA ĐƠN BÁN VÉ -----\n\n{Environment.NewLine}{Environment.NewLine}";
+            hoaDon += $"Mã xác nhận: {maXacNhan}\n\n{Environment.NewLine}{Environment.NewLine}";
+            hoaDon += $"Nhân viên: {hoTenNhanVien} (Mã: {maNhanVien})\n\n{Environment.NewLine}{Environment.NewLine}";
+            hoaDon += $"Phim: {phim.TenPhim}\n{Environment.NewLine}{Environment.NewLine}";
+            hoaDon += $"Lịch chiếu: {lichChieu.GioBatDau:dd/MM/yyyy HH:mm}\n{Environment.NewLine}{Environment.NewLine}";
+            hoaDon += $"Loại vé: {loaiVe.TenLoaiVe}\n{Environment.NewLine}{Environment.NewLine}";
+            hoaDon += $"\nDanh sách ghế: {string.Join(", ", selectedGheList)}\n{Environment.NewLine}{Environment.NewLine}";
+            hoaDon += $"\nSố lượng vé: {veListToCreate.Count}\n{Environment.NewLine}{Environment.NewLine}";
+            hoaDon += $"\nTổng tiền vé: {tongTienVe:N0} VND\n{Environment.NewLine}{Environment.NewLine}";
+
+
 
             if (maDonHang != null)
             {
                 var chiTietDoAnList = ChiTietDoAnBUS.LayTheoDon(maDonHang);
                 if (chiTietDoAnList != null && chiTietDoAnList.Count > 0)
                 {
-                    hoaDon += $"\n----- ĐỒ ĂN -----\n{Environment.NewLine}{Environment.NewLine}";
+                    hoaDon += $"\n----- ĐỒ ĂN -----\n\n{Environment.NewLine}{Environment.NewLine}";
                     foreach (var chiTiet in chiTietDoAnList)
                     {
                         var doAn = doAnList.FirstOrDefault(da => da.MaDoAn == chiTiet.MaDoAn);
                         if (doAn != null)
                         {
-                            hoaDon += $"{doAn.TenDoAn}: {chiTiet.SoLuong} x {chiTiet.Gia:N0} = {chiTiet.ThanhTien:N0} VND\n{Environment.NewLine}{Environment.NewLine}";
+                            hoaDon += $"{doAn.TenDoAn}: {chiTiet.SoLuong} x {chiTiet.Gia:N0} = {chiTiet.ThanhTien:N0} VND\n\n{Environment.NewLine}{Environment.NewLine}";
                         }
                     }
-                    hoaDon += $"nTổng tiền đồ ăn: {tongTienDoAn:N0} VND\n{Environment.NewLine}{Environment.NewLine}";
+                    hoaDon += $"Tổng tiền đồ ăn: {tongTienDoAn:N0} VND\n\n{Environment.NewLine}{Environment.NewLine}";
                 }
             }
 
-            hoaDon += $"\n\nTổng tiền: {(tongTienVe + tongTienDoAn):N0} VND\n{Environment.NewLine}{Environment.NewLine}";
+            hoaDon += $"\n\nTổng tiền: {(tongTienVe + tongTienDoAn):N0} VND\n\n{Environment.NewLine}{Environment.NewLine}";
             hoaDon += $"\nNgày đặt: {DateTime.Now:dd/MM/yyyy HH:mm:ss}\n\n{Environment.NewLine}{Environment.NewLine}";
-            hoaDon += $"\nCảm ơn quý khách đã sử dụng dịch vụ!{Environment.NewLine}{Environment.NewLine}";
+            hoaDon += $"\nCảm ơn quý khách đã sử dụng dịch vụ!\n\n{Environment.NewLine}{Environment.NewLine}";
 
             txtHoaDon.Text = hoaDon;
         }
@@ -448,20 +392,9 @@ namespace GUI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            string maKhachHang = txtMaKhachHang.Text.Trim();
-            if (string.IsNullOrEmpty(maKhachHang))
+            using (var frm = new frmBanDoAn(maNhanVien, hoTenNhanVien))
             {
-                MessageBox.Show("Vui lòng nhập thông tin khách hàng trước khi mua đồ ăn!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
-            using (var frm = new frmBanDoAn(maKhachHang))
-            {
-                if (frm.ShowDialog() == DialogResult.OK)
-                {
-                    MessageBox.Show("Đã đặt đồ ăn thành công! ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    TinhTongTien(); // Cập nhật lại tổng tiền trong frmBanVe nếu cần
-                }
+                frm.ShowDialog();
             }
         }
 

@@ -142,12 +142,6 @@
     <Compile Include="frmTheLoaiPhim.Designer.cs">
       <DependentUpon>frmTheLoaiPhim.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmVe.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmVe.Designer.cs">
-      <DependentUpon>frmVe.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmVeAndLoaiVe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -183,6 +177,9 @@
     <EmbeddedResource Include="frmBanVe.resx">
       <DependentUpon>frmBanVe.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmBaoCao.resx">
+      <DependentUpon>frmBaoCao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmLichChieu.resx">
       <DependentUpon>frmLichChieu.cs</DependentUpon>
     </EmbeddedResource>
@@ -197,9 +194,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmTheLoaiPhim.resx">
       <DependentUpon>frmTheLoaiPhim.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmVe.resx">
-      <DependentUpon>frmVe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmVeAndLoaiVe.resx">
       <DependentUpon>frmVeAndLoaiVe.cs</DependentUpon>
