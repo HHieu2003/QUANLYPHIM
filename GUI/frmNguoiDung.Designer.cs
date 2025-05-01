@@ -93,7 +93,7 @@ namespace GUI
             lblTimKiem.AutoSize = true;
 
             txtTimKiem.Font = new Font("Segoe UI", 12F);
-            txtTimKiem.Location = new Point(110, 12);
+            txtTimKiem.Location = new Point(150, 12);
             txtTimKiem.Width = 160;
 
             btnTim.Text = "🔍 Tìm";
@@ -101,12 +101,12 @@ namespace GUI
             btnTim.ForeColor = Color.White;
             btnTim.BackColor = Color.FromArgb(26, 166, 154);
             btnTim.FlatStyle = FlatStyle.Flat;
-            btnTim.Location = new Point(280, 12);
+            btnTim.Location = new Point(320, 12);
             btnTim.Size = new Size(60, 30);
             btnTim.Click += new System.EventHandler(this.btnTim_Click);
 
             // ======= Form Fields =======
-            int labelX = 5, inputX = 110, width = 230;
+            int labelX = 5, inputX = 150, width = 230;
             int y = 60, yOffset = 40;
 
             void SetLabel(Label lbl, string text)
@@ -170,13 +170,11 @@ namespace GUI
             SetButton(btnSua, "Sửa", Color.FromArgb(0, 150, 136), 105);
             SetButton(btnXoa, "Xóa", Color.FromArgb(211, 47, 47), 200);
             SetButton(btnLamMoi, "Làm mới", Color.FromArgb(120, 120, 120), 295);
-            SetButton(btnHuy, "Hủy", Color.Gray, 390);
 
             btnThem.Click += new System.EventHandler(this.btnThem_Click);
             btnSua.Click += new System.EventHandler(this.btnSua_Click);
             btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
-            btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
 
             pnlInput.Controls.AddRange(new Control[] { lblTimKiem, txtTimKiem, btnTim });
 

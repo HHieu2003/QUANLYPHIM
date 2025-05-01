@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Drawing.Printing;
 using System.Linq;
 using System.Windows.Forms;
 using BUS;
@@ -216,21 +217,11 @@ namespace GUI
                 return;
             }
 
-            string maKhachHang = "KH" + Guid.NewGuid().ToString().Substring(0, 8);
-            KhachHang khachHangMoi = new KhachHang
+            // Use the employee as the customer (like in frmBanDoAn)
+            string maKhachHang = maNhanVien;
+            if (!KhachHangBUS.KiemTraTonTai(maKhachHang))
             {
-                MaKhachHang = maKhachHang,
-                HoTen = "KhachHangMacDinh",
-                SoDienThoai = "0000000000",
-                Email = "khachhang@macdinh.com"
-            };
-            try
-            {
-                KhachHangBUS.Them(khachHangMoi);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Lỗi khi thêm khách hàng mặc định: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Nhân viên không được đăng ký làm khách hàng!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -252,15 +243,14 @@ namespace GUI
             }
 
             string maDonHang = null;
-            if (selectedDoAnDict.Count > 0)
-            {
+           
                 maDonHang = Guid.NewGuid().ToString().Substring(0, 10);
                 DonHang donHang = new DonHang
                 {
                     MaDonHang = maDonHang,
                     MaKhachHang = maKhachHang,
                     NgayTao = DateTime.Now,
-                    TongTien = tongTienDoAn
+                    TongTien = tongTienVe + tongTienDoAn
                 };
                 try
                 {
@@ -297,8 +287,7 @@ namespace GUI
                         }
                     }
                 }
-            }
-
+            
             try
             {
                 string maXacNhan = TaoMaXacNhan();
@@ -311,7 +300,7 @@ namespace GUI
                     NgayGiaoDich = DateTime.Now,
                     TongTien = tongTienVe + tongTienDoAn
                 };
-                GiaoDichBUS.Them(giaoDich);
+                GiaoDichBUS.Themtạiquay(giaoDich);
 
                 foreach (var ve in veListToCreate)
                 {
@@ -345,8 +334,6 @@ namespace GUI
             hoaDon += $"\nSố lượng vé: {veListToCreate.Count}\n{Environment.NewLine}{Environment.NewLine}";
             hoaDon += $"\nTổng tiền vé: {tongTienVe:N0} VND\n{Environment.NewLine}{Environment.NewLine}";
 
-
-
             if (maDonHang != null)
             {
                 var chiTietDoAnList = ChiTietDoAnBUS.LayTheoDon(maDonHang);
@@ -374,7 +361,49 @@ namespace GUI
 
         private void btnInHoaDon_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Hóa đơn đã được in thành công!\n\n" + txtHoaDon.Text, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            SaveFileDialog saveDialog = new SaveFileDialog();
+            saveDialog.Filter = "PDF files (*.pdf)|*.pdf";
+            saveDialog.FileName = "HoaDonBanVe.pdf";
+
+            if (saveDialog.ShowDialog() == DialogResult.OK)
+            {
+                string pdfPath = saveDialog.FileName;
+
+                PrintDocument printDoc = new PrintDocument();
+                printDoc.PrintPage += (s, ev) =>
+                {
+                    Font font = new Font("Segoe UI", 12);
+                    float y = 100;
+                    float x = 100;
+                    float lineHeight = 30;
+
+                    string[] lines = txtHoaDon.Text.Split(new[] { Environment.NewLine }, StringSplitOptions.None);
+                    foreach (string line in lines)
+                    {
+                        ev.Graphics.DrawString(line, font, Brushes.Black, x, y);
+                        y += lineHeight;
+                    }
+                };
+
+                PrintDialog dialog = new PrintDialog();
+                dialog.Document = printDoc;
+
+                if (dialog.ShowDialog() == DialogResult.OK)
+                {
+                    printDoc.PrinterSettings.PrintToFile = true;
+                    printDoc.PrinterSettings.PrintFileName = pdfPath;
+                    try
+                    {
+                        printDoc.Print();
+                        MessageBox.Show("Đã lưu hóa đơn thành file PDF thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Lỗi khi in hóa đơn: " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+
             ResetForm();
         }
 
@@ -405,5 +434,6 @@ namespace GUI
                 frm.ShowDialog();
             }
         }
+
     }
 }

@@ -15,7 +15,7 @@ namespace GUI
         private TextBox txtMaLichChieu, txtGiaVe, txtTimKiem;
         private ComboBox cboPhim, cboPhong;
         private DateTimePicker dtpGioBatDau;
-        private Button btnThem, btnSua, btnXoa, btnLamMoi, btnHuy, btnTimKiem;
+        private Button btnThem, btnSua, btnXoa, btnLamMoi, btnTimKiem;
 
         protected override void Dispose(bool disposing)
         {
@@ -43,7 +43,6 @@ namespace GUI
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnLamMoi = new System.Windows.Forms.Button();
-            this.btnHuy = new System.Windows.Forms.Button();
             this.lblTimKiem = new System.Windows.Forms.Label();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.btnTimKiem = new System.Windows.Forms.Button();
@@ -81,8 +80,8 @@ namespace GUI
             // tblLayout
             // 
             this.tblLayout.ColumnCount = 2;
-            this.tblLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tblLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tblLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.6875F));
+            this.tblLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65.3125F));
             this.tblLayout.Controls.Add(this.pnlInput, 0, 0);
             this.tblLayout.Controls.Add(this.dgvLichChieu, 1, 0);
             this.tblLayout.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -112,7 +111,6 @@ namespace GUI
             this.pnlInput.Controls.Add(this.btnSua);
             this.pnlInput.Controls.Add(this.btnXoa);
             this.pnlInput.Controls.Add(this.btnLamMoi);
-            this.pnlInput.Controls.Add(this.btnHuy);
             this.pnlInput.Controls.Add(this.lblTimKiem);
             this.pnlInput.Controls.Add(this.txtTimKiem);
             this.pnlInput.Controls.Add(this.btnTimKiem);
@@ -121,14 +119,14 @@ namespace GUI
             this.pnlInput.Margin = new System.Windows.Forms.Padding(2);
             this.pnlInput.Name = "pnlInput";
             this.pnlInput.Padding = new System.Windows.Forms.Padding(15, 13, 15, 13);
-            this.pnlInput.Size = new System.Drawing.Size(380, 425);
+            this.pnlInput.Size = new System.Drawing.Size(329, 425);
             this.pnlInput.TabIndex = 0;
             // 
             // lblMaLichChieu
             // 
             this.lblMaLichChieu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.lblMaLichChieu.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(166)))), ((int)(((byte)(154)))));
-            this.lblMaLichChieu.Location = new System.Drawing.Point(14, 46);
+            this.lblMaLichChieu.Location = new System.Drawing.Point(5, 100);
             this.lblMaLichChieu.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMaLichChieu.Name = "lblMaLichChieu";
             this.lblMaLichChieu.Size = new System.Drawing.Size(123, 20);
@@ -139,7 +137,7 @@ namespace GUI
             // 
             this.txtMaLichChieu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtMaLichChieu.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtMaLichChieu.Location = new System.Drawing.Point(141, 48);
+            this.txtMaLichChieu.Location = new System.Drawing.Point(132, 102);
             this.txtMaLichChieu.Margin = new System.Windows.Forms.Padding(2);
             this.txtMaLichChieu.Name = "txtMaLichChieu";
             this.txtMaLichChieu.Size = new System.Drawing.Size(226, 29);
@@ -149,7 +147,7 @@ namespace GUI
             // 
             this.lblPhim.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.lblPhim.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(166)))), ((int)(((byte)(154)))));
-            this.lblPhim.Location = new System.Drawing.Point(14, 78);
+            this.lblPhim.Location = new System.Drawing.Point(5, 132);
             this.lblPhim.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPhim.Name = "lblPhim";
             this.lblPhim.Size = new System.Drawing.Size(123, 20);
@@ -160,7 +158,7 @@ namespace GUI
             // 
             this.cboPhim.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboPhim.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.cboPhim.Location = new System.Drawing.Point(141, 80);
+            this.cboPhim.Location = new System.Drawing.Point(132, 134);
             this.cboPhim.Margin = new System.Windows.Forms.Padding(2);
             this.cboPhim.Name = "cboPhim";
             this.cboPhim.Size = new System.Drawing.Size(226, 29);
@@ -170,7 +168,7 @@ namespace GUI
             // 
             this.lblPhong.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.lblPhong.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(166)))), ((int)(((byte)(154)))));
-            this.lblPhong.Location = new System.Drawing.Point(14, 110);
+            this.lblPhong.Location = new System.Drawing.Point(5, 164);
             this.lblPhong.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPhong.Name = "lblPhong";
             this.lblPhong.Size = new System.Drawing.Size(123, 20);
@@ -181,7 +179,7 @@ namespace GUI
             // 
             this.cboPhong.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboPhong.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.cboPhong.Location = new System.Drawing.Point(141, 112);
+            this.cboPhong.Location = new System.Drawing.Point(132, 166);
             this.cboPhong.Margin = new System.Windows.Forms.Padding(2);
             this.cboPhong.Name = "cboPhong";
             this.cboPhong.Size = new System.Drawing.Size(226, 29);
@@ -191,7 +189,7 @@ namespace GUI
             // 
             this.lblGioBatDau.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.lblGioBatDau.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(166)))), ((int)(((byte)(154)))));
-            this.lblGioBatDau.Location = new System.Drawing.Point(14, 143);
+            this.lblGioBatDau.Location = new System.Drawing.Point(5, 197);
             this.lblGioBatDau.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblGioBatDau.Name = "lblGioBatDau";
             this.lblGioBatDau.Size = new System.Drawing.Size(123, 20);
@@ -203,7 +201,7 @@ namespace GUI
             this.dtpGioBatDau.CustomFormat = "dd/MM/yyyy HH:mm";
             this.dtpGioBatDau.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.dtpGioBatDau.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpGioBatDau.Location = new System.Drawing.Point(141, 145);
+            this.dtpGioBatDau.Location = new System.Drawing.Point(132, 199);
             this.dtpGioBatDau.Margin = new System.Windows.Forms.Padding(2);
             this.dtpGioBatDau.Name = "dtpGioBatDau";
             this.dtpGioBatDau.ShowUpDown = true;
@@ -214,7 +212,7 @@ namespace GUI
             // 
             this.lblGiaVe.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.lblGiaVe.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(166)))), ((int)(((byte)(154)))));
-            this.lblGiaVe.Location = new System.Drawing.Point(14, 176);
+            this.lblGiaVe.Location = new System.Drawing.Point(5, 230);
             this.lblGiaVe.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblGiaVe.Name = "lblGiaVe";
             this.lblGiaVe.Size = new System.Drawing.Size(123, 20);
@@ -225,7 +223,7 @@ namespace GUI
             // 
             this.txtGiaVe.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtGiaVe.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtGiaVe.Location = new System.Drawing.Point(141, 178);
+            this.txtGiaVe.Location = new System.Drawing.Point(132, 232);
             this.txtGiaVe.Margin = new System.Windows.Forms.Padding(2);
             this.txtGiaVe.Name = "txtGiaVe";
             this.txtGiaVe.Size = new System.Drawing.Size(226, 29);
@@ -238,7 +236,7 @@ namespace GUI
             this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnThem.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnThem.ForeColor = System.Drawing.Color.White;
-            this.btnThem.Location = new System.Drawing.Point(98, 208);
+            this.btnThem.Location = new System.Drawing.Point(60, 277);
             this.btnThem.Margin = new System.Windows.Forms.Padding(2);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(75, 26);
@@ -256,7 +254,7 @@ namespace GUI
             this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSua.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnSua.ForeColor = System.Drawing.Color.White;
-            this.btnSua.Location = new System.Drawing.Point(180, 208);
+            this.btnSua.Location = new System.Drawing.Point(142, 277);
             this.btnSua.Margin = new System.Windows.Forms.Padding(2);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(75, 26);
@@ -274,7 +272,7 @@ namespace GUI
             this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnXoa.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnXoa.ForeColor = System.Drawing.Color.White;
-            this.btnXoa.Location = new System.Drawing.Point(98, 240);
+            this.btnXoa.Location = new System.Drawing.Point(232, 277);
             this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(75, 26);
@@ -292,10 +290,10 @@ namespace GUI
             this.btnLamMoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLamMoi.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnLamMoi.ForeColor = System.Drawing.Color.White;
-            this.btnLamMoi.Location = new System.Drawing.Point(259, 208);
+            this.btnLamMoi.Location = new System.Drawing.Point(60, 320);
             this.btnLamMoi.Margin = new System.Windows.Forms.Padding(2);
             this.btnLamMoi.Name = "btnLamMoi";
-            this.btnLamMoi.Size = new System.Drawing.Size(100, 26);
+            this.btnLamMoi.Size = new System.Drawing.Size(247, 26);
             this.btnLamMoi.TabIndex = 13;
             this.btnLamMoi.Text = "Làm mới";
             this.btnLamMoi.UseVisualStyleBackColor = false;
@@ -303,29 +301,11 @@ namespace GUI
             this.btnLamMoi.MouseEnter += new System.EventHandler(this.btn_MouseEnter);
             this.btnLamMoi.MouseLeave += new System.EventHandler(this.btn_MouseLeave);
             // 
-            // btnHuy
-            // 
-            this.btnHuy.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(120)))), ((int)(((byte)(120)))));
-            this.btnHuy.FlatAppearance.BorderSize = 0;
-            this.btnHuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHuy.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnHuy.ForeColor = System.Drawing.Color.White;
-            this.btnHuy.Location = new System.Drawing.Point(180, 240);
-            this.btnHuy.Margin = new System.Windows.Forms.Padding(2);
-            this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(75, 26);
-            this.btnHuy.TabIndex = 14;
-            this.btnHuy.Text = "Hủy";
-            this.btnHuy.UseVisualStyleBackColor = false;
-            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
-            this.btnHuy.MouseEnter += new System.EventHandler(this.btn_MouseEnter);
-            this.btnHuy.MouseLeave += new System.EventHandler(this.btn_MouseLeave);
-            // 
             // lblTimKiem
             // 
             this.lblTimKiem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.lblTimKiem.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(26)))), ((int)(((byte)(166)))), ((int)(((byte)(154)))));
-            this.lblTimKiem.Location = new System.Drawing.Point(14, 13);
+            this.lblTimKiem.Location = new System.Drawing.Point(5, 13);
             this.lblTimKiem.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTimKiem.Name = "lblTimKiem";
             this.lblTimKiem.Size = new System.Drawing.Size(123, 20);
@@ -336,10 +316,10 @@ namespace GUI
             // 
             this.txtTimKiem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtTimKiem.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtTimKiem.Location = new System.Drawing.Point(141, 15);
+            this.txtTimKiem.Location = new System.Drawing.Point(132, 15);
             this.txtTimKiem.Margin = new System.Windows.Forms.Padding(2);
             this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.Size = new System.Drawing.Size(150, 29);
+            this.txtTimKiem.Size = new System.Drawing.Size(226, 29);
             this.txtTimKiem.TabIndex = 16;
             // 
             // btnTimKiem
@@ -349,7 +329,7 @@ namespace GUI
             this.btnTimKiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTimKiem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.btnTimKiem.ForeColor = System.Drawing.Color.White;
-            this.btnTimKiem.Location = new System.Drawing.Point(295, 15);
+            this.btnTimKiem.Location = new System.Drawing.Point(132, 48);
             this.btnTimKiem.Margin = new System.Windows.Forms.Padding(2);
             this.btnTimKiem.Name = "btnTimKiem";
             this.btnTimKiem.Size = new System.Drawing.Size(75, 29);
@@ -365,13 +345,14 @@ namespace GUI
             this.dgvLichChieu.AllowUserToAddRows = false;
             this.dgvLichChieu.AllowUserToDeleteRows = false;
             this.dgvLichChieu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvLichChieu.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvLichChieu.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvLichChieu.Location = new System.Drawing.Point(399, 13);
+            this.dgvLichChieu.Location = new System.Drawing.Point(348, 13);
             this.dgvLichChieu.Margin = new System.Windows.Forms.Padding(15, 13, 15, 13);
             this.dgvLichChieu.Name = "dgvLichChieu";
             this.dgvLichChieu.ReadOnly = true;
             this.dgvLichChieu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvLichChieu.Size = new System.Drawing.Size(546, 403);
+            this.dgvLichChieu.Size = new System.Drawing.Size(597, 403);
             this.dgvLichChieu.TabIndex = 1;
             // 
             // frmLichChieu

@@ -14,6 +14,7 @@ namespace GUI
             InitializeComponent();
             LoadDataVe();
             LoadDataLoaiVe();
+            LoadDataGiaoDich(); // Load online transactions
             CustomizeGridViews();
         }
 
@@ -34,7 +35,7 @@ namespace GUI
             dgvVe.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(26, 166, 154);
             dgvVe.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
             dgvVe.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            /*dgvVe.EnableHeadersVisualStyles = false;*/
+            /*dgvVe.EnableHeadersVisualStyles = false;*/ // This line was commented out in the original code
             dgvVe.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(240, 240, 240);
             dgvVe.DefaultCellStyle.Font = new Font("Segoe UI", 11F);
 
@@ -45,6 +46,14 @@ namespace GUI
             dgvLoaiVe.EnableHeadersVisualStyles = false;
             dgvLoaiVe.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(240, 240, 240);
             dgvLoaiVe.DefaultCellStyle.Font = new Font("Segoe UI", 11F);
+
+            // Customize dgvGiaoDich
+            dgvGiaoDich.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(26, 166, 154);
+            dgvGiaoDich.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
+            dgvGiaoDich.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            dgvGiaoDich.EnableHeadersVisualStyles = false;
+            dgvGiaoDich.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(240, 240, 240);
+            dgvGiaoDich.DefaultCellStyle.Font = new Font("Segoe UI", 11F);
         }
 
         private void DgvVe_SelectionChanged(object sender, EventArgs e)
@@ -52,7 +61,7 @@ namespace GUI
             if (dgvVe.SelectedRows.Count > 0)
             {
                 var row = dgvVe.SelectedRows[0];
-                txtMaVe.Text = row.Cells["MaVe"].Value.ToString();
+                txtMaVe.Text = row.Cells["MaVe"].Value?.ToString() ?? "";
             }
         }
 
@@ -117,9 +126,9 @@ namespace GUI
             if (dgvLoaiVe.SelectedRows.Count > 0)
             {
                 var row = dgvLoaiVe.SelectedRows[0];
-                txtMaLoaiVe.Text = row.Cells["MaLoaiVe"].Value.ToString();
-                txtTenLoaiVe.Text = row.Cells["TenLoaiVe"].Value.ToString();
-                txtPhuThu.Text = row.Cells["PhuThu"].Value.ToString();
+                txtMaLoaiVe.Text = row.Cells["MaLoaiVe"].Value?.ToString() ?? "";
+                txtTenLoaiVe.Text = row.Cells["TenLoaiVe"].Value?.ToString() ?? "";
+                txtPhuThu.Text = row.Cells["PhuThu"].Value?.ToString() ?? "";
                 txtMaLoaiVe.Enabled = false;
             }
         }
@@ -228,6 +237,99 @@ namespace GUI
             return true;
         }
 
+        // --- Quản lý vé online (GiaoDich) ---
+
+        private void LoadDataGiaoDich()
+        {
+            var giaoDichList = GiaoDichBUS.LayTatCa();
+            dgvGiaoDich.DataSource = giaoDichList;
+            ResetFormGiaoDich();
+        }
+
+        private void ResetFormGiaoDich()
+        {
+            txtMaGiaoDich.Clear();
+            txtMaXacNhan.Clear();
+            cboTrangThai.SelectedIndex = -1;
+            dgvGiaoDich.ClearSelection();
+        }
+
+        private void DgvGiaoDich_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgvGiaoDich.SelectedRows.Count > 0)
+            {
+                var row = dgvGiaoDich.SelectedRows[0];
+                txtMaGiaoDich.Text = row.Cells["MaGiaoDich"].Value?.ToString() ?? "";
+                txtMaXacNhan.Text = row.Cells["MaXacNhan"].Value?.ToString() ?? "";
+                cboTrangThai.SelectedItem = row.Cells["TrangThai"].Value?.ToString() ?? "";
+            }
+        }
+
+        private void btnXoaGiaoDich_Click(object sender, EventArgs e)
+        {
+            if (dgvGiaoDich.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Vui lòng chọn giao dịch để xóa!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            var maGiaoDich = txtMaGiaoDich.Text.Trim();
+            var result = MessageBox.Show($"Bạn có chắc chắn muốn xóa giao dịch {maGiaoDich}?", "Xác nhận",
+                                         MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                try
+                {
+                    GiaoDichBUS.Xoa(maGiaoDich);
+                    MessageBox.Show("Xóa giao dịch thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadDataGiaoDich();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void btnSuaGiaoDich_Click(object sender, EventArgs e)
+        {
+            if (dgvGiaoDich.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Vui lòng chọn giao dịch để sửa!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (!ValidateInputGiaoDich()) return;
+
+            GiaoDich giaoDich = new GiaoDich
+            {
+                MaGiaoDich = txtMaGiaoDich.Text.Trim(),
+                MaXacNhan = txtMaXacNhan.Text.Trim(),
+                TrangThai = cboTrangThai.SelectedItem.ToString()
+            };
+
+            try
+            {
+                GiaoDichBUS.Sua(giaoDich);
+                MessageBox.Show("Sửa giao dịch thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LoadDataGiaoDich();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Lỗi: {ex.Message}", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private bool ValidateInputGiaoDich()
+        {
+            if (cboTrangThai.SelectedIndex == -1)
+            {
+                MessageBox.Show("Vui lòng chọn trạng thái giao dịch!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return false;
+            }
+            return true;
+        }
+
         private void btn_MouseEnter(object sender, EventArgs e)
         {
             var btn = (Button)sender;
@@ -237,12 +339,12 @@ namespace GUI
         private void btn_MouseLeave(object sender, EventArgs e)
         {
             var btn = (Button)sender;
-            if (btn == btnXoaVe || btn == btnXoaLoaiVe)
+            if (btn == btnXoaVe || btn == btnXoaLoaiVe || btn == btnXoaGiaoDich)
                 btn.BackColor = Color.FromArgb(211, 47, 47);
             else if (btn == btnLamMoiLoaiVe)
-                btn.BackColor = Color.FromArgb(120, 120, 120);
+                btn.BackColor = Color.Gray;
             else
-                btn.BackColor = Color.FromArgb(26, 166, 154);
+                btn.BackColor = Color.Teal;
         }
     }
 }

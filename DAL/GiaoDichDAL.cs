@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data.SqlClient;
 using DTO;
 
@@ -21,6 +22,32 @@ namespace DAL
                 cmd.Parameters.AddWithValue("@NgayGiaoDich", giaoDich.NgayGiaoDich);
                 cmd.Parameters.AddWithValue("@TongTien", giaoDich.TongTien);
                 cmd.Parameters.AddWithValue("@TrangThai", "ChuaXuLy"); // Đảm bảo cột TrangThai đã được thêm vào bảng
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Lỗi khi thêm giao dịch '{giaoDich.MaGiaoDich}': {ex.Message}");
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+        public static void Themtạiquay(GiaoDich giaoDich)
+        {
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(
+                    "INSERT INTO GiaoDich (MaGiaoDich, MaXacNhan, MaKhachHang, MaDonHang, NgayGiaoDich, TongTien, TrangThai) " +
+                    "VALUES (@MaGiaoDich, @MaXacNhan, @MaKhachHang, @MaDonHang, @NgayGiaoDich, @TongTien, @TrangThai)", conn);
+                cmd.Parameters.AddWithValue("@MaGiaoDich", giaoDich.MaGiaoDich);
+                cmd.Parameters.AddWithValue("@MaXacNhan", giaoDich.MaXacNhan);
+                cmd.Parameters.AddWithValue("@MaKhachHang", giaoDich.MaKhachHang);
+                cmd.Parameters.AddWithValue("@MaDonHang", (object)giaoDich.MaDonHang ?? DBNull.Value);
+                cmd.Parameters.AddWithValue("@NgayGiaoDich", giaoDich.NgayGiaoDich);
+                cmd.Parameters.AddWithValue("@TongTien", giaoDich.TongTien);
+                cmd.Parameters.AddWithValue("@TrangThai", "DaXuLy"); // Đảm bảo cột TrangThai đã được thêm vào bảng
                 cmd.ExecuteNonQuery();
             }
             catch (Exception ex)
@@ -103,6 +130,83 @@ namespace DAL
             catch (Exception ex)
             {
                 throw new Exception($"Lỗi khi cập nhật trạng thái '{maXacNhan}': {ex.Message}");
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        public static List<GiaoDich> LayTatCa()
+        {
+            List<GiaoDich> giaoDichList = new List<GiaoDich>();
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("SELECT * FROM GiaoDich", conn);
+                SqlDataReader reader = cmd.ExecuteReader();
+                while (reader.Read())
+                {
+                    GiaoDich giaoDich = new GiaoDich
+                    {
+                        MaGiaoDich = reader["MaGiaoDich"].ToString(),
+                        MaXacNhan = reader["MaXacNhan"].ToString(),
+                        MaKhachHang = reader["MaKhachHang"].ToString(),
+                        MaDonHang = reader["MaDonHang"] != DBNull.Value ? reader["MaDonHang"].ToString() : null,
+                        NgayGiaoDich = Convert.ToDateTime(reader["NgayGiaoDich"]),
+                        TongTien = Convert.ToDecimal(reader["TongTien"]),
+                        TrangThai = reader["TrangThai"].ToString()
+                    };
+                    giaoDichList.Add(giaoDich);
+                }
+                return giaoDichList;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Lỗi khi lấy danh sách giao dịch: {ex.Message}");
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+        public static void Sua(GiaoDich giaoDich)
+        {
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand(
+                    "UPDATE GiaoDich SET TrangThai = @TrangThai WHERE MaGiaoDich = @MaGiaoDich", conn);
+                cmd.Parameters.AddWithValue("@MaGiaoDich", giaoDich.MaGiaoDich);
+                cmd.Parameters.AddWithValue("@TrangThai", giaoDich.TrangThai);
+                int rowsAffected = cmd.ExecuteNonQuery();
+                if (rowsAffected == 0)
+                    throw new Exception("Không tìm thấy giao dịch để cập nhật!");
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Lỗi khi cập nhật giao dịch '{giaoDich.MaGiaoDich}': {ex.Message}");
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+
+        public static void Xoa(string maGiaoDich)
+        {
+            try
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("DELETE FROM GiaoDich WHERE MaGiaoDich = @MaGiaoDich", conn);
+                cmd.Parameters.AddWithValue("@MaGiaoDich", maGiaoDich);
+                int rowsAffected = cmd.ExecuteNonQuery();
+                if (rowsAffected == 0)
+                    throw new Exception("Không tìm thấy giao dịch để xóa!");
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Lỗi khi xóa giao dịch '{maGiaoDich}': {ex.Message}");
             }
             finally
             {

@@ -40,7 +40,7 @@ namespace GUI
                 Form mainForm;
                 if (nguoiDung.VaiTro == "admin")
                 {
-                    mainForm = new MainFormAdmin();
+                    mainForm = new MainFormAdmin(nguoiDung.MaNguoiDung, nguoiDung.TenDangNhap);
                 }
                 else if (nguoiDung.VaiTro == "nhanvien")
                 {

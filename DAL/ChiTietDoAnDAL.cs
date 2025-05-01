@@ -96,5 +96,31 @@ namespace DAL
                 cmd.ExecuteNonQuery();
             }
         }
+        public static List<ChiTietDoAn> LayTatCa()
+        {
+            List<ChiTietDoAn> list = new List<ChiTietDoAn>();
+            using (SqlConnection conn = GetConnection())
+            {
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("SELECT * FROM ChiTietDoAn", conn);
+                using (SqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        list.Add(new ChiTietDoAn
+                        {
+                            MaChiTiet = reader["MaChiTiet"].ToString(),
+                            MaDonHang = reader["MaDonHang"].ToString(),
+                            MaDoAn = reader["MaDoAn"].ToString(),
+                            SoLuong = Convert.ToInt32(reader["SoLuong"]),
+                            Gia = Convert.ToDecimal(reader["Gia"]),
+                            ThanhTien = Convert.ToDecimal(reader["ThanhTien"])
+                        });
+                    }
+                }
+            }
+            return list;
+        }
+
     }
 }

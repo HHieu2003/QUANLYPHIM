@@ -12,7 +12,7 @@ namespace DAL
             List<Ve> list = new List<Ve>();
             using (SqlConnection conn = GetConnection())
             {
-              conn.Open();
+                conn.Open();
                 SqlCommand cmd = new SqlCommand("SELECT * FROM Ve", conn);
                 using (SqlDataReader reader = cmd.ExecuteReader())
                 {
@@ -28,7 +28,9 @@ namespace DAL
                             SoGhe = reader["SoGhe"].ToString(),
                             NgayDat = reader["NgayDat"] != DBNull.Value
                                 ? Convert.ToDateTime(reader["NgayDat"])
-                                : default(DateTime)
+                                : default(DateTime),
+                            MaGiaoDich = reader["MaGiaoDich"] != DBNull.Value ? reader["MaGiaoDich"].ToString() : null
+
                         });
                     }
                 }
@@ -63,7 +65,7 @@ namespace DAL
             }
         }
 
-   
+
 
         public static List<Ve> LayTheoGiaoDich(string maGiaoDich)
         {
@@ -133,7 +135,7 @@ namespace DAL
                         SoGhe = reader["SoGhe"].ToString(),
                         NgayDat = reader["NgayDat"] != DBNull.Value
                             ? Convert.ToDateTime(reader["NgayDat"])
-                            : default(DateTime)
+                            : default(DateTime),
                     });
                 }
                 reader.Close();

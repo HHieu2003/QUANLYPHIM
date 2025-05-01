@@ -128,10 +128,7 @@ namespace GUI
             LoadData();
         }
 
-        private void btnHuy_Click(object sender, EventArgs e)
-        {
-            ResetForm();
-        }
+       
 
         private void btnTim_Click(object sender, EventArgs e)
         {

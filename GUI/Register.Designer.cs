@@ -46,6 +46,9 @@
             this.label7 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -54,7 +57,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label1.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label1.Location = new System.Drawing.Point(75, 93);
+            this.label1.Location = new System.Drawing.Point(75, 70);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(86, 20);
             this.label1.TabIndex = 0;
@@ -66,7 +69,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtUsername.BackColor = System.Drawing.Color.Silver;
             this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtUsername.Location = new System.Drawing.Point(79, 116);
+            this.txtUsername.Location = new System.Drawing.Point(79, 93);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(245, 29);
             this.txtUsername.TabIndex = 1;
@@ -77,7 +80,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPassword.BackColor = System.Drawing.Color.Silver;
             this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtPassword.Location = new System.Drawing.Point(79, 265);
+            this.txtPassword.Location = new System.Drawing.Point(79, 372);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(245, 29);
@@ -89,7 +92,7 @@
             this.btnRegister.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnRegister.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnRegister.Location = new System.Drawing.Point(204, 360);
+            this.btnRegister.Location = new System.Drawing.Point(197, 437);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(120, 40);
             this.btnRegister.TabIndex = 7;
@@ -101,7 +104,7 @@
             this.btnCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
-            this.btnCancel.Location = new System.Drawing.Point(374, 360);
+            this.btnCancel.Location = new System.Drawing.Point(367, 437);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(120, 40);
             this.btnCancel.TabIndex = 8;
@@ -115,7 +118,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label2.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label2.Location = new System.Drawing.Point(75, 242);
+            this.label2.Location = new System.Drawing.Point(75, 349);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(82, 20);
             this.label2.TabIndex = 9;
@@ -127,7 +130,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label3.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label3.Location = new System.Drawing.Point(370, 242);
+            this.label3.Location = new System.Drawing.Point(363, 349);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(157, 20);
             this.label3.TabIndex = 10;
@@ -139,7 +142,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtConfirmPassword.BackColor = System.Drawing.Color.Silver;
             this.txtConfirmPassword.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtConfirmPassword.Location = new System.Drawing.Point(374, 265);
+            this.txtConfirmPassword.Location = new System.Drawing.Point(367, 372);
             this.txtConfirmPassword.Name = "txtConfirmPassword";
             this.txtConfirmPassword.PasswordChar = '*';
             this.txtConfirmPassword.Size = new System.Drawing.Size(245, 29);
@@ -152,7 +155,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label4.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label4.Location = new System.Drawing.Point(75, 166);
+            this.label4.Location = new System.Drawing.Point(75, 137);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(86, 20);
             this.label4.TabIndex = 12;
@@ -164,7 +167,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtFullName.BackColor = System.Drawing.Color.Silver;
             this.txtFullName.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtFullName.Location = new System.Drawing.Point(79, 189);
+            this.txtFullName.Location = new System.Drawing.Point(79, 160);
             this.txtFullName.Name = "txtFullName";
             this.txtFullName.Size = new System.Drawing.Size(245, 29);
             this.txtFullName.TabIndex = 4;
@@ -175,7 +178,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label5.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label5.Location = new System.Drawing.Point(370, 93);
+            this.label5.Location = new System.Drawing.Point(75, 207);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(106, 20);
             this.label5.TabIndex = 14;
@@ -187,7 +190,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPhoneNumber.BackColor = System.Drawing.Color.Silver;
             this.txtPhoneNumber.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtPhoneNumber.Location = new System.Drawing.Point(374, 116);
+            this.txtPhoneNumber.Location = new System.Drawing.Point(79, 230);
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.Size = new System.Drawing.Size(245, 29);
             this.txtPhoneNumber.TabIndex = 5;
@@ -198,7 +201,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label6.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label6.Location = new System.Drawing.Point(370, 166);
+            this.label6.Location = new System.Drawing.Point(75, 279);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(51, 20);
             this.label6.TabIndex = 16;
@@ -210,7 +213,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtEmail.BackColor = System.Drawing.Color.Silver;
             this.txtEmail.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txtEmail.Location = new System.Drawing.Point(374, 189);
+            this.txtEmail.Location = new System.Drawing.Point(79, 302);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(245, 29);
             this.txtEmail.TabIndex = 6;
@@ -233,7 +236,7 @@
             this.linkLabel1.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.linkLabel1.Location = new System.Drawing.Point(76, 323);
+            this.linkLabel1.Location = new System.Drawing.Point(76, 417);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(117, 15);
             this.linkLabel1.TabIndex = 20;
@@ -246,11 +249,34 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label8.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label8.Location = new System.Drawing.Point(370, 93);
+            this.label8.Location = new System.Drawing.Point(75, 207);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(106, 20);
             this.label8.TabIndex = 14;
             this.label8.Text = "Số điện thoại";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label9.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.label9.Location = new System.Drawing.Point(75, 349);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(82, 20);
+            this.label9.TabIndex = 9;
+            this.label9.Text = "Mật khẩu:";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(367, 93);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(267, 216);
+            this.pictureBox1.TabIndex = 24;
+            this.pictureBox1.TabStop = false;
             // 
             // Register
             // 
@@ -260,7 +286,8 @@
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(755, 461);
+            this.ClientSize = new System.Drawing.Size(755, 514);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtEmail);
@@ -272,6 +299,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtConfirmPassword);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnRegister);
@@ -284,6 +312,7 @@
             this.Name = "Register";
             this.Text = "Đăng ký";
             this.Load += new System.EventHandler(this.Register_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -308,5 +337,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

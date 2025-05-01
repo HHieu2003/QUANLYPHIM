@@ -7,6 +7,17 @@ namespace BUS
 {
     public class ChiTietDoAnBUS
     {
+        public static List<ChiTietDoAn> LayTatCa()
+        {
+            try
+            {
+                return ChiTietDoAnDAL.LayTatCa();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"Lỗi khi lấy danh sách chi tiết đồ ăn: {ex.Message}");
+            }
+        }
         public static List<ChiTietDoAn> LayTheoDon(string maDon)
         {
             if (string.IsNullOrEmpty(maDon))

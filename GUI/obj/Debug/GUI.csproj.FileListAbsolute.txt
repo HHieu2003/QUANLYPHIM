@@ -105,4 +105,216 @@ C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\itextsharp.dll
 C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\BouncyCastle.Cryptography.xml
 C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\itextsharp.xml
 C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\obj\Debug\GUI.Register.resources
-C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\obj\Debug\GUI.frmBaoCao.resources
+D:\Visual Studio\QUANLYPHIM\GUI\bin\Debug\BouncyCastle.Cryptography.dll
+D:\Visual Studio\QUANLYPHIM\GUI\bin\Debug\itextsharp.dll
+D:\Visual Studio\QUANLYPHIM\GUI\bin\Debug\BouncyCastle.Cryptography.xml
+D:\Visual Studio\QUANLYPHIM\GUI\bin\Debug\itextsharp.xml
+D:\Visual Studio\QUANLYPHIM\GUI\obj\Debug\GUI.frmBanVe.resources
+D:\Visual Studio\QUANLYPHIM\GUI\obj\Debug\GUI.frmBaoCao.resources
+D:\Visual Studio\QUANLYPHIM\GUI\obj\Debug\GUI.frmLichChieu.resources
+D:\Visual Studio\QUANLYPHIM\GUI\obj\Debug\GUI.frmPhim.resources
+D:\Visual Studio\QUANLYPHIM\GUI\obj\Debug\GUI.frmPhongChieu.resources
+D:\Visual Studio\QUANLYPHIM\GUI\obj\Debug\GUI.frmSoDoGhe.resources
+D:\Visual Studio\QUANLYPHIM\GUI\obj\Debug\GUI.frmTheLoaiPhim.resources
+D:\Visual Studio\QUANLYPHIM\GUI\obj\Debug\GUI.frmVeAndLoaiVe.resources
+D:\Visual Studio\QUANLYPHIM\GUI\obj\Debug\GUI.Login.resources
+D:\Visual Studio\QUANLYPHIM\GUI\obj\Debug\GUI.MainFormAdmin.resources
+D:\Visual Studio\QUANLYPHIM\GUI\obj\Debug\GUI.Register.resources
+D:\Visual Studio\QUANLYPHIM\GUI\bin\Debug\itext.barcodes.dll
+D:\Visual Studio\QUANLYPHIM\GUI\bin\Debug\itext.bouncy-castle-connector.dll
+D:\Visual Studio\QUANLYPHIM\GUI\bin\Debug\itext.commons.dll
+D:\Visual Studio\QUANLYPHIM\GUI\bin\Debug\itext.forms.dll
+D:\Visual Studio\QUANLYPHIM\GUI\bin\Debug\itext.io.dll
+D:\Visual Studio\QUANLYPHIM\GUI\bin\Debug\itext.kernel.dll
+D:\Visual Studio\QUANLYPHIM\GUI\bin\Debug\itext.layout.dll
+D:\Visual Studio\QUANLYPHIM\GUI\bin\Debug\itext.pdfa.dll
+D:\Visual Studio\QUANLYPHIM\GUI\bin\Debug\itext.pdfua.dll
+D:\Visual Studio\QUANLYPHIM\GUI\bin\Debug\itext.sign.dll
+D:\Visual Studio\QUANLYPHIM\GUI\bin\Debug\itext.styledxmlparser.dll
+D:\Visual Studio\QUANLYPHIM\GUI\bin\Debug\itext.svg.dll
+D:\Visual Studio\QUANLYPHIM\GUI\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Visual Studio\QUANLYPHIM\GUI\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Visual Studio\QUANLYPHIM\GUI\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+D:\Visual Studio\QUANLYPHIM\GUI\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Visual Studio\QUANLYPHIM\GUI\bin\Debug\Microsoft.Extensions.Logging.dll
+D:\Visual Studio\QUANLYPHIM\GUI\bin\Debug\Microsoft.Extensions.Options.dll
+D:\Visual Studio\QUANLYPHIM\GUI\bin\Debug\Microsoft.Extensions.Primitives.dll
+D:\Visual Studio\QUANLYPHIM\GUI\bin\Debug\Newtonsoft.Json.dll
+D:\Visual Studio\QUANLYPHIM\GUI\bin\Debug\System.Buffers.dll
+D:\Visual Studio\QUANLYPHIM\GUI\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+D:\Visual Studio\QUANLYPHIM\GUI\bin\Debug\System.Memory.dll
+D:\Visual Studio\QUANLYPHIM\GUI\bin\Debug\System.Numerics.Vectors.dll
+D:\Visual Studio\QUANLYPHIM\GUI\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Visual Studio\QUANLYPHIM\GUI\bin\Debug\System.Threading.Tasks.Extensions.dll
+D:\Visual Studio\QUANLYPHIM\GUI\bin\Debug\System.ValueTuple.dll
+D:\Visual Studio\QUANLYPHIM\GUI\bin\Debug\itext.barcodes.xml
+D:\Visual Studio\QUANLYPHIM\GUI\bin\Debug\itext.bouncy-castle-connector.xml
+D:\Visual Studio\QUANLYPHIM\GUI\bin\Debug\itext.commons.xml
+D:\Visual Studio\QUANLYPHIM\GUI\bin\Debug\itext.forms.xml
+D:\Visual Studio\QUANLYPHIM\GUI\bin\Debug\itext.io.xml
+D:\Visual Studio\QUANLYPHIM\GUI\bin\Debug\itext.kernel.xml
+D:\Visual Studio\QUANLYPHIM\GUI\bin\Debug\itext.layout.xml
+D:\Visual Studio\QUANLYPHIM\GUI\bin\Debug\itext.pdfa.xml
+D:\Visual Studio\QUANLYPHIM\GUI\bin\Debug\itext.pdfua.xml
+D:\Visual Studio\QUANLYPHIM\GUI\bin\Debug\itext.sign.xml
+D:\Visual Studio\QUANLYPHIM\GUI\bin\Debug\itext.styledxmlparser.xml
+D:\Visual Studio\QUANLYPHIM\GUI\bin\Debug\itext.svg.xml
+D:\Visual Studio\QUANLYPHIM\GUI\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+D:\Visual Studio\QUANLYPHIM\GUI\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
+D:\Visual Studio\QUANLYPHIM\GUI\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+D:\Visual Studio\QUANLYPHIM\GUI\bin\Debug\Microsoft.Extensions.Logging.xml
+D:\Visual Studio\QUANLYPHIM\GUI\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+D:\Visual Studio\QUANLYPHIM\GUI\bin\Debug\Microsoft.Extensions.Options.xml
+D:\Visual Studio\QUANLYPHIM\GUI\bin\Debug\Microsoft.Extensions.Primitives.xml
+D:\Visual Studio\QUANLYPHIM\GUI\bin\Debug\Newtonsoft.Json.xml
+D:\Visual Studio\QUANLYPHIM\GUI\bin\Debug\System.Buffers.xml
+D:\Visual Studio\QUANLYPHIM\GUI\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+D:\Visual Studio\QUANLYPHIM\GUI\bin\Debug\System.Memory.xml
+D:\Visual Studio\QUANLYPHIM\GUI\bin\Debug\System.Numerics.Vectors.xml
+D:\Visual Studio\QUANLYPHIM\GUI\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+D:\Visual Studio\QUANLYPHIM\GUI\bin\Debug\System.Threading.Tasks.Extensions.xml
+D:\Visual Studio\QUANLYPHIM\GUI\bin\Debug\System.ValueTuple.xml
+D:\Visual Studio\QUANLYPHIM\GUI\bin\Debug\fonts\NotoSans-Regular.ttf
+D:\Visual Studio\QUANLYPHIM\GUI\bin\Debug\fonts\arialuni.ttf
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\bin\Debug\fonts\NotoSans-Regular.ttf
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\bin\Debug\fonts\arialuni.ttf
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\bin\Debug\GUI.exe.config
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\bin\Debug\GUI.exe
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\bin\Debug\GUI.pdb
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\bin\Debug\BouncyCastle.Cryptography.dll
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\bin\Debug\BUS.dll
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\bin\Debug\DAL.dll
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\bin\Debug\DTO.dll
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\bin\Debug\itext.barcodes.dll
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\bin\Debug\itext.bouncy-castle-connector.dll
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\bin\Debug\itext.commons.dll
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\bin\Debug\itext.forms.dll
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\bin\Debug\itext.io.dll
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\bin\Debug\itext.kernel.dll
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\bin\Debug\itext.layout.dll
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\bin\Debug\itext.pdfa.dll
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\bin\Debug\itext.pdfua.dll
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\bin\Debug\itext.sign.dll
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\bin\Debug\itext.styledxmlparser.dll
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\bin\Debug\itext.svg.dll
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\bin\Debug\itextsharp.dll
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\bin\Debug\Microsoft.Extensions.Logging.dll
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\bin\Debug\Microsoft.Extensions.Options.dll
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\bin\Debug\Microsoft.Extensions.Primitives.dll
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\bin\Debug\Newtonsoft.Json.dll
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\bin\Debug\System.Buffers.dll
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\bin\Debug\System.Memory.dll
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\bin\Debug\System.ValueTuple.dll
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\bin\Debug\BUS.pdb
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\bin\Debug\DAL.pdb
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\bin\Debug\DTO.pdb
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\bin\Debug\BouncyCastle.Cryptography.xml
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\bin\Debug\itext.barcodes.xml
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\bin\Debug\itext.bouncy-castle-connector.xml
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\bin\Debug\itext.commons.xml
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\bin\Debug\itext.forms.xml
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\bin\Debug\itext.io.xml
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\bin\Debug\itext.kernel.xml
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\bin\Debug\itext.layout.xml
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\bin\Debug\itext.pdfa.xml
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\bin\Debug\itext.pdfua.xml
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\bin\Debug\itext.sign.xml
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\bin\Debug\itext.styledxmlparser.xml
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\bin\Debug\itext.svg.xml
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\bin\Debug\itextsharp.xml
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\bin\Debug\Microsoft.Extensions.Logging.xml
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\bin\Debug\Microsoft.Extensions.Options.xml
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\bin\Debug\Microsoft.Extensions.Primitives.xml
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\bin\Debug\Newtonsoft.Json.xml
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\bin\Debug\System.Buffers.xml
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\bin\Debug\System.Memory.xml
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\bin\Debug\System.ValueTuple.xml
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\obj\Debug\GUI.csproj.AssemblyReference.cache
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\obj\Debug\GUI.frmBanVe.resources
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\obj\Debug\GUI.frmLichChieu.resources
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\obj\Debug\GUI.frmPhim.resources
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\obj\Debug\GUI.frmPhongChieu.resources
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\obj\Debug\GUI.frmSoDoGhe.resources
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\obj\Debug\GUI.frmTheLoaiPhim.resources
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\obj\Debug\GUI.frmVeAndLoaiVe.resources
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\obj\Debug\GUI.Login.resources
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\obj\Debug\GUI.MainFormAdmin.resources
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\obj\Debug\GUI.Properties.Resources.resources
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\obj\Debug\GUI.Register.resources
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\obj\Debug\GUI.csproj.GenerateResource.cache
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\obj\Debug\GUI.csproj.Up2Date
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\obj\Debug\GUI.exe
+C:\Users\H I U\Desktop\QUANLYPHIM 22222\QUANLYPHIM\GUI\obj\Debug\GUI.pdb
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\fonts\NotoSans-Regular.ttf
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\fonts\arialuni.ttf
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\itext.barcodes.dll
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\itext.bouncy-castle-connector.dll
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\itext.commons.dll
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\itext.forms.dll
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\itext.io.dll
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\itext.kernel.dll
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\itext.layout.dll
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\itext.pdfa.dll
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\itext.pdfua.dll
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\itext.sign.dll
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\itext.styledxmlparser.dll
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\itext.svg.dll
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\Microsoft.Extensions.Logging.dll
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\Microsoft.Extensions.Options.dll
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\Microsoft.Extensions.Primitives.dll
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\Newtonsoft.Json.dll
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\System.Buffers.dll
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\System.Memory.dll
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\System.ValueTuple.dll
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\itext.barcodes.xml
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\itext.bouncy-castle-connector.xml
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\itext.commons.xml
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\itext.forms.xml
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\itext.io.xml
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\itext.kernel.xml
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\itext.layout.xml
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\itext.pdfa.xml
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\itext.pdfua.xml
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\itext.sign.xml
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\itext.styledxmlparser.xml
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\itext.svg.xml
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\Microsoft.Extensions.DependencyInjection.xml
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\Microsoft.Extensions.Logging.xml
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\Microsoft.Extensions.Options.xml
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\Microsoft.Extensions.Primitives.xml
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\Newtonsoft.Json.xml
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\System.Buffers.xml
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\System.Memory.xml
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\H I U\Desktop\QUANLYPHIM\QUANLYPHIM\GUI\bin\Debug\System.ValueTuple.xml

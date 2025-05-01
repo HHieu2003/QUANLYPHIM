@@ -155,13 +155,11 @@ namespace GUI
             SetButton(btnSua, "Sửa", Color.FromArgb(0, 150, 136), 105);
             SetButton(btnXoa, "Xóa", Color.FromArgb(211, 47, 47), 200);
             SetButton(btnLamMoi, "Làm mới", Color.FromArgb(120, 120, 120), 295);
-            SetButton(btnHuy, "Hủy", Color.Gray, 390);
 
             btnThem.Click += new System.EventHandler(this.btnThem_Click);
             btnSua.Click += new System.EventHandler(this.btnSua_Click);
             btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
-            btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
 
             pnlInput.Controls.AddRange(new Control[] { lblTimKiem, txtTimKiem, btnTim });
 

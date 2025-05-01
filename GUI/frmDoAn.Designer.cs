@@ -30,7 +30,6 @@ namespace GUI
         private Button btnSua;
         private Button btnXoa;
         private Button btnLamMoi;
-        private Button btnHuy;
 
         protected override void Dispose(bool disposing)
         {
@@ -40,151 +39,294 @@ namespace GUI
 
         private void InitializeComponent()
         {
-            pnlHeader = new Panel();
-            lblTitle = new Label();
-            tblLayout = new TableLayoutPanel();
-            pnlInput = new Panel();
+            this.pnlHeader = new System.Windows.Forms.Panel();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.tblLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.pnlInput = new System.Windows.Forms.Panel();
+            this.lblTimKiem = new System.Windows.Forms.Label();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
+            this.btnTim = new System.Windows.Forms.Button();
+            this.dgvDoAn = new System.Windows.Forms.DataGridView();
+            this.lblMaDoAn = new System.Windows.Forms.Label();
+            this.txtMaDoAn = new System.Windows.Forms.TextBox();
+            this.lblTenDoAn = new System.Windows.Forms.Label();
+            this.txtTenDoAn = new System.Windows.Forms.TextBox();
+            this.lblGia = new System.Windows.Forms.Label();
+            this.txtGia = new System.Windows.Forms.TextBox();
+            this.lblMoTa = new System.Windows.Forms.Label();
+            this.txtMoTa = new System.Windows.Forms.TextBox();
+            this.btnThem = new System.Windows.Forms.Button();
+            this.btnSua = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.btnLamMoi = new System.Windows.Forms.Button();
+            this.pnlHeader.SuspendLayout();
+            this.tblLayout.SuspendLayout();
+            this.pnlInput.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDoAn)).BeginInit();
+            this.SuspendLayout();
 
-            lblTimKiem = new Label();
-            txtTimKiem = new TextBox();
-            btnTim = new Button();
-            dgvDoAn = new DataGridView();
+            // pnlHeader
+            this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(26, 166, 154);
+            this.pnlHeader.Controls.Add(this.lblTitle);
+            this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlHeader.Location = new System.Drawing.Point(0, 0);
+            this.pnlHeader.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlHeader.Name = "pnlHeader";
+            this.pnlHeader.Size = new System.Drawing.Size(1047, 39);
+            this.pnlHeader.TabIndex = 1;
 
-            lblMaDoAn = new Label();
-            txtMaDoAn = new TextBox();
-            lblTenDoAn = new Label();
-            txtTenDoAn = new TextBox();
-            lblGia = new Label();
-            txtGia = new TextBox();
-            lblMoTa = new Label();
-            txtMoTa = new TextBox();
+            // lblTitle
+            this.lblTitle.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
+            this.lblTitle.ForeColor = System.Drawing.Color.White;
+            this.lblTitle.Location = new System.Drawing.Point(0, 0);
+            this.lblTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(1047, 39);
+            this.lblTitle.TabIndex = 0;
+            this.lblTitle.Text = "Quản lý đồ ăn";
+            this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
 
-            btnThem = new Button();
-            btnSua = new Button();
-            btnXoa = new Button();
-            btnLamMoi = new Button();
-            btnHuy = new Button();
+            // tblLayout
+            this.tblLayout.ColumnCount = 2;
+            this.tblLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.9064F));
+            this.tblLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.0936F));
+            this.tblLayout.Controls.Add(this.pnlInput, 0, 0);
+            this.tblLayout.Controls.Add(this.dgvDoAn, 1, 0);
+            this.tblLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tblLayout.Location = new System.Drawing.Point(0, 39);
+            this.tblLayout.Margin = new System.Windows.Forms.Padding(2);
+            this.tblLayout.Name = "tblLayout";
+            this.tblLayout.RowCount = 1;
+            this.tblLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tblLayout.Size = new System.Drawing.Size(1047, 515);
+            this.tblLayout.TabIndex = 0;
 
-            // Header
-            pnlHeader.Dock = DockStyle.Top;
-            pnlHeader.Height = 50;
-            pnlHeader.BackColor = Color.FromArgb(0, 150, 136);
-            lblTitle.Text = "Quản lý đồ ăn";
-            lblTitle.Dock = DockStyle.Fill;
-            lblTitle.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
-            lblTitle.ForeColor = Color.White;
-            lblTitle.TextAlign = ContentAlignment.MiddleCenter;
-            pnlHeader.Controls.Add(lblTitle);
+            // pnlInput
+            this.pnlInput.BackColor = System.Drawing.Color.White;
+            this.pnlInput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlInput.Controls.Add(this.lblMaDoAn);
+            this.pnlInput.Controls.Add(this.txtMaDoAn);
+            this.pnlInput.Controls.Add(this.lblTenDoAn);
+            this.pnlInput.Controls.Add(this.txtTenDoAn);
+            this.pnlInput.Controls.Add(this.lblGia);
+            this.pnlInput.Controls.Add(this.txtGia);
+            this.pnlInput.Controls.Add(this.lblMoTa);
+            this.pnlInput.Controls.Add(this.txtMoTa);
+            this.pnlInput.Controls.Add(this.btnThem);
+            this.pnlInput.Controls.Add(this.btnSua);
+            this.pnlInput.Controls.Add(this.btnXoa);
+            this.pnlInput.Controls.Add(this.btnLamMoi);
+            this.pnlInput.Controls.Add(this.lblTimKiem);
+            this.pnlInput.Controls.Add(this.txtTimKiem);
+            this.pnlInput.Controls.Add(this.btnTim);
+            this.pnlInput.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlInput.Location = new System.Drawing.Point(2, 2);
+            this.pnlInput.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlInput.Name = "pnlInput";
+            this.pnlInput.Padding = new System.Windows.Forms.Padding(15, 13, 15, 13);
+            this.pnlInput.Size = new System.Drawing.Size(351, 511);
+            this.pnlInput.TabIndex = 0;
 
-            // Layout
-            tblLayout.Dock = DockStyle.Fill;
-            tblLayout.ColumnCount = 2;
-            tblLayout.RowCount = 1;
-            tblLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 37F));
-            tblLayout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 63F));
-            tblLayout.RowStyles.Add(new RowStyle(SizeType.Percent, 100F));
+            // lblTimKiem
+            this.lblTimKiem.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.lblTimKiem.ForeColor = System.Drawing.Color.FromArgb(26, 166, 154);
+            this.lblTimKiem.Location = new System.Drawing.Point(0, 17);
+            this.lblTimKiem.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTimKiem.Name = "lblTimKiem";
+            this.lblTimKiem.Size = new System.Drawing.Size(110, 20);
+            this.lblTimKiem.TabIndex = 15;
+            this.lblTimKiem.Text = "Tìm kiếm:";
 
-            // Panel Input
-            pnlInput.Dock = DockStyle.Fill;
-            pnlInput.BackColor = Color.WhiteSmoke;
-            pnlInput.Padding = new Padding(20);
+            // txtTimKiem
+            this.txtTimKiem.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTimKiem.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtTimKiem.Location = new System.Drawing.Point(114, 17);
+            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(231, 29);
+            this.txtTimKiem.TabIndex = 16;
 
-            lblTimKiem.Text = "Tìm kiếm:";
-            lblTimKiem.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            lblTimKiem.ForeColor = Color.FromArgb(26, 166, 154);
-            lblTimKiem.Location = new Point(5, 15);
-            lblTimKiem.AutoSize = true;
+            // btnTim
+            this.btnTim.BackColor = System.Drawing.Color.FromArgb(26, 166, 154);
+            this.btnTim.FlatAppearance.BorderSize = 0;
+            this.btnTim.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTim.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnTim.ForeColor = System.Drawing.Color.White;
+            this.btnTim.Location = new System.Drawing.Point(114, 50);
+            this.btnTim.Margin = new System.Windows.Forms.Padding(2);
+            this.btnTim.Name = "btnTim";
+            this.btnTim.Size = new System.Drawing.Size(107, 29);
+            this.btnTim.TabIndex = 17;
+            this.btnTim.Text = "🔍 Tìm";
+            this.btnTim.UseVisualStyleBackColor = false;
+            this.btnTim.Click += new System.EventHandler(this.btnTim_Click);
 
-            txtTimKiem.Font = new Font("Segoe UI", 12F);
-            txtTimKiem.Location = new Point(110, 12);
-            txtTimKiem.Width = 160;
+            // lblMaDoAn
+            this.lblMaDoAn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.lblMaDoAn.ForeColor = System.Drawing.Color.FromArgb(26, 166, 154);
+            this.lblMaDoAn.Location = new System.Drawing.Point(0, 90);
+            this.lblMaDoAn.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMaDoAn.Name = "lblMaDoAn";
+            this.lblMaDoAn.Size = new System.Drawing.Size(110, 20);
+            this.lblMaDoAn.TabIndex = 0;
+            this.lblMaDoAn.Text = "Mã đồ ăn:";
 
-            btnTim.Text = "🔍 Tìm";
-            btnTim.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            btnTim.ForeColor = Color.White;
-            btnTim.BackColor = Color.FromArgb(26, 166, 154);
-            btnTim.FlatStyle = FlatStyle.Flat;
-            btnTim.Location = new Point(280, 12);
-            btnTim.Size = new Size(60, 30);
-            btnTim.Click += new System.EventHandler(this.btnTim_Click);
+            // txtMaDoAn
+            this.txtMaDoAn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMaDoAn.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtMaDoAn.Location = new System.Drawing.Point(114, 90);
+            this.txtMaDoAn.Margin = new System.Windows.Forms.Padding(2);
+            this.txtMaDoAn.Name = "txtMaDoAn";
+            this.txtMaDoAn.Size = new System.Drawing.Size(231, 29);
+            this.txtMaDoAn.TabIndex = 1;
 
-            int labelX = 5, inputX = 110, width = 230;
-            int y = 60, yOffset = 40;
+            // lblTenDoAn
+            this.lblTenDoAn.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.lblTenDoAn.ForeColor = System.Drawing.Color.FromArgb(26, 166, 154);
+            this.lblTenDoAn.Location = new System.Drawing.Point(0, 132);
+            this.lblTenDoAn.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTenDoAn.Name = "lblTenDoAn";
+            this.lblTenDoAn.Size = new System.Drawing.Size(110, 20);
+            this.lblTenDoAn.TabIndex = 2;
+            this.lblTenDoAn.Text = "Tên đồ ăn:";
 
-            void SetLabel(Label lbl, string text)
-            {
-                lbl.Text = text;
-                lbl.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-                lbl.ForeColor = Color.FromArgb(26, 166, 154);
-                lbl.Location = new Point(labelX, y);
-                lbl.AutoSize = true;
-            }
+            // txtTenDoAn
+            this.txtTenDoAn.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtTenDoAn.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtTenDoAn.Location = new System.Drawing.Point(114, 132);
+            this.txtTenDoAn.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTenDoAn.Name = "txtTenDoAn";
+            this.txtTenDoAn.Size = new System.Drawing.Size(231, 29);
+            this.txtTenDoAn.TabIndex = 3;
 
-            void SetTextBox(TextBox txt)
-            {
-                txt.Font = new Font("Segoe UI", 12F);
-                txt.Location = new Point(inputX, y);
-                txt.Width = width;
-            }
+            // lblGia
+            this.lblGia.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.lblGia.ForeColor = System.Drawing.Color.FromArgb(26, 166, 154);
+            this.lblGia.Location = new System.Drawing.Point(0, 175);
+            this.lblGia.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblGia.Name = "lblGia";
+            this.lblGia.Size = new System.Drawing.Size(110, 20);
+            this.lblGia.TabIndex = 4;
+            this.lblGia.Text = "Giá:";
 
-            SetLabel(lblMaDoAn, "Mã đồ ăn:"); pnlInput.Controls.Add(lblMaDoAn);
-            SetTextBox(txtMaDoAn); pnlInput.Controls.Add(txtMaDoAn); y += yOffset;
+            // txtGia
+            this.txtGia.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtGia.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtGia.Location = new System.Drawing.Point(114, 175);
+            this.txtGia.Margin = new System.Windows.Forms.Padding(2);
+            this.txtGia.Name = "txtGia";
+            this.txtGia.Size = new System.Drawing.Size(231, 29);
+            this.txtGia.TabIndex = 5;
 
-            SetLabel(lblTenDoAn, "Tên đồ ăn:"); pnlInput.Controls.Add(lblTenDoAn);
-            SetTextBox(txtTenDoAn); pnlInput.Controls.Add(txtTenDoAn); y += yOffset;
+            // lblMoTa
+            this.lblMoTa.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold);
+            this.lblMoTa.ForeColor = System.Drawing.Color.FromArgb(26, 166, 154);
+            this.lblMoTa.Location = new System.Drawing.Point(0, 217);
+            this.lblMoTa.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblMoTa.Name = "lblMoTa";
+            this.lblMoTa.Size = new System.Drawing.Size(110, 20);
+            this.lblMoTa.TabIndex = 6;
+            this.lblMoTa.Text = "Mô tả:";
 
-            SetLabel(lblGia, "Giá:"); pnlInput.Controls.Add(lblGia);
-            SetTextBox(txtGia); pnlInput.Controls.Add(txtGia); y += yOffset;
+            // txtMoTa
+            this.txtMoTa.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtMoTa.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtMoTa.Location = new System.Drawing.Point(114, 217);
+            this.txtMoTa.Margin = new System.Windows.Forms.Padding(2);
+            this.txtMoTa.Multiline = true;
+            this.txtMoTa.Name = "txtMoTa";
+            this.txtMoTa.Size = new System.Drawing.Size(231, 139);
+            this.txtMoTa.TabIndex = 7;
 
-            SetLabel(lblMoTa, "Mô tả:"); pnlInput.Controls.Add(lblMoTa);
-            SetTextBox(txtMoTa); pnlInput.Controls.Add(txtMoTa); y += yOffset;
+            // btnThem
+            this.btnThem.BackColor = System.Drawing.Color.FromArgb(26, 166, 154);
+            this.btnThem.FlatAppearance.BorderSize = 0;
+            this.btnThem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnThem.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnThem.ForeColor = System.Drawing.Color.White;
+            this.btnThem.Location = new System.Drawing.Point(17, 422);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(2);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(89, 34);
+            this.btnThem.TabIndex = 8;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.UseVisualStyleBackColor = false;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
 
-            void SetButton(Button btn, string text, Color color, int offsetX)
-            {
-                btn.Text = text;
-                btn.Font = new Font("Segoe UI", 11F, FontStyle.Bold);
-                btn.ForeColor = Color.White;
-                btn.BackColor = color;
-                btn.FlatStyle = FlatStyle.Flat;
-                btn.Size = new Size(85, 36);
-                btn.Location = new Point(offsetX, y);
-                pnlInput.Controls.Add(btn);
-            }
+            // btnSua
+            this.btnSua.BackColor = System.Drawing.Color.FromArgb(26, 166, 154);
+            this.btnSua.FlatAppearance.BorderSize = 0;
+            this.btnSua.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSua.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnSua.ForeColor = System.Drawing.Color.White;
+            this.btnSua.Location = new System.Drawing.Point(132, 422);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(89, 34);
+            this.btnSua.TabIndex = 9;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.UseVisualStyleBackColor = false;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
 
-            SetButton(btnThem, "Thêm", Color.FromArgb(0, 150, 136), 10);
-            SetButton(btnSua, "Sửa", Color.FromArgb(0, 150, 136), 105);
-            SetButton(btnXoa, "Xóa", Color.FromArgb(211, 47, 47), 200);
-            SetButton(btnLamMoi, "Làm mới", Color.FromArgb(120, 120, 120), 295);
-            SetButton(btnHuy, "Hủy", Color.Gray, 390);
+            // btnXoa
+            this.btnXoa.BackColor = System.Drawing.Color.FromArgb(211, 47, 47);
+            this.btnXoa.FlatAppearance.BorderSize = 0;
+            this.btnXoa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXoa.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnXoa.ForeColor = System.Drawing.Color.White;
+            this.btnXoa.Location = new System.Drawing.Point(243, 422);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(2);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(89, 34);
+            this.btnXoa.TabIndex = 10;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.UseVisualStyleBackColor = false;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
 
-            btnThem.Click += new System.EventHandler(this.btnThem_Click);
-            btnSua.Click += new System.EventHandler(this.btnSua_Click);
-            btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
-            btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
-            btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
+            // btnLamMoi
+            this.btnLamMoi.BackColor = System.Drawing.Color.FromArgb(120, 120, 120);
+            this.btnLamMoi.FlatAppearance.BorderSize = 0;
+            this.btnLamMoi.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLamMoi.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
+            this.btnLamMoi.ForeColor = System.Drawing.Color.White;
+            this.btnLamMoi.Location = new System.Drawing.Point(17, 467);
+            this.btnLamMoi.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLamMoi.Name = "btnLamMoi";
+            this.btnLamMoi.Size = new System.Drawing.Size(89, 34);
+            this.btnLamMoi.TabIndex = 11;
+            this.btnLamMoi.Text = "Làm mới";
+            this.btnLamMoi.UseVisualStyleBackColor = false;
+            this.btnLamMoi.Click += new System.EventHandler(this.btnLamMoi_Click);
 
-            pnlInput.Controls.AddRange(new Control[] { lblTimKiem, txtTimKiem, btnTim });
+            // dgvDoAn
+            this.dgvDoAn.AllowUserToAddRows = false;
+            this.dgvDoAn.AllowUserToDeleteRows = false;
+            this.dgvDoAn.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDoAn.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvDoAn.Location = new System.Drawing.Point(370, 13);
+            this.dgvDoAn.Margin = new System.Windows.Forms.Padding(15, 13, 15, 13);
+            this.dgvDoAn.Name = "dgvDoAn";
+            this.dgvDoAn.ReadOnly = true;
+            this.dgvDoAn.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvDoAn.Size = new System.Drawing.Size(662, 489);
+            this.dgvDoAn.TabIndex = 1;
 
-            // DataGridView
-            dgvDoAn.Dock = DockStyle.Fill;
-            dgvDoAn.Font = new Font("Segoe UI", 11F);
-            dgvDoAn.DefaultCellStyle.Font = new Font("Segoe UI", 11F);
-            dgvDoAn.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            dgvDoAn.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(26, 166, 154);
-            dgvDoAn.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
-            dgvDoAn.EnableHeadersVisualStyles = false;
-            dgvDoAn.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvDoAn.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvDoAn.ReadOnly = true;
-
-            tblLayout.Controls.Add(pnlInput, 0, 0);
-            tblLayout.Controls.Add(dgvDoAn, 1, 0);
-
+            // frmDoAn
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ClientSize = new System.Drawing.Size(1047, 554);
+            this.Controls.Add(this.tblLayout);
+            this.Controls.Add(this.pnlHeader);
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "frmDoAn";
             this.Text = "Quản lý đồ ăn";
-            this.BackColor = Color.WhiteSmoke;
-            this.ClientSize = new Size(1000, 600);
-            this.Controls.Add(tblLayout);
-            this.Controls.Add(pnlHeader);
+            this.pnlHeader.ResumeLayout(false);
+            this.tblLayout.ResumeLayout(false);
+            this.pnlInput.ResumeLayout(false);
+            this.pnlInput.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDoAn)).EndInit();
             this.ResumeLayout(false);
         }
     }

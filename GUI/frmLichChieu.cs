@@ -260,8 +260,7 @@ namespace GUI
             var btn = (Button)sender;
             if (btn == btnXoa)
                 btn.BackColor = Color.FromArgb(211, 47, 47);
-            else if (btn == btnLamMoi || btn == btnHuy)
-                btn.BackColor = Color.FromArgb(120, 120, 120);
+         
             else
                 btn.BackColor = Color.FromArgb(26, 166, 154);
         }
